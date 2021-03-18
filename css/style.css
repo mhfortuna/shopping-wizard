@@ -1,0 +1,40 @@
+/* 
+============================
+general styles
+============================
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+img{
+    width: 100%;
+}
+/*
+===========================
+Product pages styles
+===========================
+*/
+.product-page {
+  display: flex;
+  max-width: 100%;
+}
+div.left-wrapper {
+  width: 50%;
+  overflow: hidden;
+  display: flex;
+}
+div.right-wrapper {
+  width: 50%;
+}
+.thumbnail-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 10%;
+}
+
+.img-thumbnail {
+  max-width: 100%;
+  margin: 10px 0;
+}
+
