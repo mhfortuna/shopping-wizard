@@ -3,38 +3,151 @@
 general styles
 ============================
 */
+
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+
 * {
   margin: 0;
   padding: 0;
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
 }
-img{
-    width: 100%;
+img {
+  width: 100%;
 }
+
+/*
+===========================
+Header styles
+===========================
+*/
+header {
+  width: 100%;
+  height: 10vh;
+  background-color: darkseagreen;
+}
+div.logo {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 10%;
+  font-weight: bold;
+}
+
+div.progress-bar {
+  height: 100%;
+}
+
+div.header-hide {
+  display: none;
+}
+
 /*
 ===========================
 Product pages styles
 ===========================
 */
-.product-page {
+section.product-page {
   display: flex;
   max-width: 100%;
+  height: 76vh;
+  margin: 2vh 2vw;
 }
+/* ! ----------left---------- */
 div.left-wrapper {
-  width: 50%;
+  width: 50vw;
   overflow: hidden;
   display: flex;
+  justify-content: center;
 }
-div.right-wrapper {
-  width: 50%;
-}
-.thumbnail-wrapper {
+
+div.thumbnail-wrapper {
   display: flex;
   flex-direction: column;
-  width: 10%;
+  width: 12%;
+  padding: 2%;
 }
 
-.img-thumbnail {
+img.img-thumbnail {
   max-width: 100%;
-  margin: 10px 0;
+  margin: 1px 0;
 }
 
+div.big-picture {
+  width: 60%;
+  padding-left: 5%;
+}
+
+/* ! ----------right---------- */
+
+div.right-wrapper {
+  width: 50vw;
+  padding-left: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  max-height: 400px;
+}
+
+div.right-wrapper h3 {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+div.price-wrapper h4 {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+select#idSize {
+  background: transparent;
+  border: solid 2px;
+  border-radius: 5px;
+  font-size: 1rem;
+  height: 30px;
+  padding: 5px;
+  width: 40%;
+}
+
+div.color-thumbnails-wrapper {
+  width: 40%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div.color-thumbnails-wrapper img {
+  width: 10%;
+  margin-right: 2%;
+  margin-bottom: 2%;
+}
+
+div.btn-buy input {
+  background-color: black;
+  color: white;
+  padding: 5px 20px;
+  border-radius: 5px;
+  opacity: 0.8;
+}
+/*
+===========================
+Footer styles
+===========================
+*/
+footer {
+  width: 100%;
+  height: 10vh;
+  background-color: darkseagreen;
+}
+
+div.footer-text {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.footer-hide {
+  display: none;
+}

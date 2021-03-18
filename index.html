@@ -1,70 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
-  <body>
-    <!--
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shopping wizard</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <!--
         =================================
         HEADER
         =================================
     -->
-    <header></header>
-    <!--
+  <header>
+    <div class="logo ">
+      <p>LOGO</p>
+    </div>
+    <div class="progress-bar header-hide">
+      <!-- TODO: better comments -->
+    </div>
+  </header>
+  <!--
       =================================
       MAIN
       =================================
       -->
 
-    <main>
-      <section class="product-page">
-        <div class="left-wrapper">
-          <div class="thumbnail-wrapper">
-            <img
-              src="./images/black-nike.jpg"
-              alt="Black nike thumbnail"
-              class="img-thumbnail"
-            />
-            <img
-              src="./images/black-nike.jpg"
-              alt="Black nike thumbnail"
-              class="img-thumbnail"
-            />
-            <img
-              src="./images/black-nike.jpg"
-              alt="Black nike thumbnail"
-              class="img-thumbnail"
-            />
-            <img
-              src="./images/black-nike.jpg"
-              alt="Black nike thumbnail"
-              class="img-thumbnail"
-            />
-            <img
-              src="./images/black-nike.jpg"
-              alt="Black nike thumbnail"
-              class="img-thumbnail"
-            />
-          </div>
-          <div class="big-picture">
-            <img src="./images/black-nike.jpg" alt="" />
+  <main>
+    <section class="product-page">
+      <!--  -->
+      <div class="left-wrapper">
+        <div class="thumbnail-wrapper">
+          <img src="./images/black-nike.jpg" alt="Black nike thumbnail" class="img-thumbnail" />
+          <img src="./images/black-nike.jpg" alt="Black nike thumbnail" class="img-thumbnail" />
+          <img src="./images/black-nike.jpg" alt="Black nike thumbnail" class="img-thumbnail" />
+          <img src="./images/black-nike.jpg" alt="Black nike thumbnail" class="img-thumbnail" />
+          <img src="./images/black-nike.jpg" alt="Black nike thumbnail" class="img-thumbnail" />
+        </div>
+        <div class="big-picture">
+          <img src="./images/black-nike.jpg" alt="" />
+        </div>
+      </div>
+      <!--  -->
+      <div class="right-wrapper">
+        <h3>Black shoe</h3>
+        <div class="price-wrapper">
+          <h4>Price</h4>
+          <h3>14.55€</h3>
+        </div>
+        <div class="size-wrapper">
+          <h4>Size</h4>
+          <select name="size" id="idSize">
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+          </select>
+        </div>
+        <div class="color-wrapper">
+          <h4>Color</h4>
+          <div class="color-thumbnails-wrapper">
+            <img src="./images/black-nike.jpg" alt="Black">
+            <img src="./images/black-nike.jpg" alt="Red">
+            <img src="./images/black-nike.jpg" alt="Blue">
+            <img src="./images/black-nike.jpg" alt="Blue">
+            <img src="./images/black-nike.jpg" alt="Blue">
+            <img src="./images/black-nike.jpg" alt="Blue">
+            <img src="./images/black-nike.jpg" alt="Blue">
+            <img src="./images/black-nike.jpg" alt="Blue">
+            <img src="./images/black-nike.jpg" alt="Blue">
+            <img src="./images/black-nike.jpg" alt="Blue">
+            <img src="./images/black-nike.jpg" alt="Blue">
+            <img src="./images/black-nike.jpg" alt="Blue">
+            <img src="./images/black-nike.jpg" alt="Blue">
+            <img src="./images/black-nike.jpg" alt="Blue">
           </div>
         </div>
-        <div class="right-wrapper">
-          
+        <div class="btn-buy">
+          <input type="submit" value="Enviar">
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
+  </main>
 
-    <!-- 
+  <!-- 
     =================================
     FOOTER
     =================================
  -->
-    <footer></footer>
-  </body>
+  <footer>
+    <div class="footer-text">
+      <p>FOOTER TEXT</p>
+    </div>
+    <div class="page-buttons footer-hide">
+      <!-- TODO: better comments -->
+    </div>
+  </footer>
+</body>
+
 </html>
