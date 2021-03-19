@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shopping wizard</title>
   <link rel="stylesheet" href="./css/style.css" />
+  <script src="./js/progress-bar.js" defer></script> <!-- Progress bar script -->
 </head>
 
 <body>
@@ -15,11 +16,31 @@
         =================================
     -->
   <header>
-    <div class="logo ">
+    <div class="logo">
       <p>LOGO</p>
     </div>
-    <div class="progress-bar hide">
-      <!-- TODO: better comments -->
+    <div class="container-pbar hide">
+        <div id="stepProgressBar">
+            <div class="step-pbar">
+                <div class="bullet-pbar first-bullet-pbar"></div>
+                <p class="step-text-pbar">Profile</p>
+            </div>
+            <div class="bar-pbar"></div>
+            <div class="step-pbar">
+                <div class="bullet-pbar"></div>
+                <p class="step-text-pbar">Address</p>
+            </div>
+            <div  class="bar-pbar"></div>
+            <div class="step-pbar">
+                <div class="bullet-pbar"></div>
+                <p class="step-text-pbar">Shipping</p>
+            </div>
+            <div  class="bar-pbar"></div>
+            <div class="step-pbar">
+                <div class="bullet-pbar "></div>
+                <p class="step-text-pbar">Finish</p>
+            </div>
+        </div>
     </div>
   </header>
   <!--
