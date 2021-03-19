@@ -16,6 +16,9 @@ general styles
 img {
   width: 100%;
 }
+.hide {
+  display:none;
+}
 
 /*
 ===========================
@@ -37,10 +40,6 @@ div.logo {
 
 div.progress-bar {
   height: 100%;
-}
-
-div.header-hide {
-  display: none;
 }
 
 /*
@@ -146,8 +145,4 @@ div.footer-text {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-div.footer-hide {
-  display: none;
 }
