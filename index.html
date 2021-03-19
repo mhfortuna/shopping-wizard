@@ -35,7 +35,7 @@
       PRODUCT PAGE
       =================================
       -->
-    <section class="product-page">
+    <section class="product-page hide">
       <!--  -->
       <div class="left-wrapper">
         <div class="thumbnail-wrapper">
@@ -88,12 +88,68 @@
         </div>
       </div>
     </section>
-  <!--
+    <!--
       =================================
       NEW SECTION
       =================================
       -->
 
+
+    <!--
+      =================================
+      SHIPPING SECTION
+      =================================
+      -->
+    <section class="shipping-page">
+      <!-- Headings -->
+      <div>
+        <h3>Shipping</h3>
+        <h4>Shipping type</h4>
+      </div>
+      <!-- Shipping form -->
+      <form action="">
+        <!-- radio buttons - shipping type -->
+        <div class="shipping-type">
+          <div>
+            <input type="radio" id="free" name="type" value="free">
+            <label for="free">Free shipment (72H)</label>
+          </div>
+          <div>
+            <input type="radio" id="extra" name="type" value="extra">
+            <label for="extra">Extra shipping (48H) <span>4,99€</span></label>
+          </div>
+          <div>
+            <input type="radio" id="premium" name="type" value="premium">
+            <label for="extra">Premium (24H)</label>
+          </div>
+        </div>
+        <!-- checkbox - gift -->
+        <div class="gift">
+          <!-- <input type="checkbox" id="is-gift" name="is-gift" value="gift">
+          <label for="is-gift"> Is it a gift?</label> -->
+
+
+          <label class="form-checkbox">
+            <!-- Input oculto -->
+            <input class="form-checkbox__input" type="checkbox" name="conditions" value="conditions">
+            <!-- Imagen en sustitucion -->
+            <span class="form-checkbox__show form-checkbox__show--checkbox"></span>
+            <!-- Texto -->
+            <span class="form-checkbox__text">Acepto las condiciones de uso y privacidad</span>
+        </label>
+  
+
+        </div>
+        <!-- gift message -->
+        <div class="wrp-gift-message">
+          <textarea id="gift-message" name="gift-message" rows="7" cols="50"></textarea>
+        </div>
+        <!-- upload file -->
+        <div class="upload-file">
+          <input type="file" id="img-gift" name="filename">
+        </div>
+      </form>
+    </section>
 
 
   </main>
