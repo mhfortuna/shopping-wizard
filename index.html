@@ -7,6 +7,7 @@
   <title>Shopping wizard</title>
   <link rel="stylesheet" href="./css/style.css" />
   <script src="./js/progress-bar.js" defer></script> <!-- Progress bar script -->
+  <script src="./js/timeout.js" defer></script> <!--time out-->
 </head>
 
 <body>
@@ -18,6 +19,7 @@
   <header>
     <div class="logo">
       <p>LOGO</p>
+      
     </div>
     <div class="container-pbar hide">
         <div id="stepProgressBar">
@@ -56,6 +58,11 @@
       =================================
       -->
     <section class="product-page">
+      <article class="timer" id="timer">
+        <span>You started registering</span><br>
+        <span id="timeResult"></span>
+        <p>Hurry up!</p>
+      </article>
       <!--  -->
       <div class="left-wrapper">
         <div class="thumbnail-wrapper">
@@ -104,7 +111,7 @@
           </div>
         </div>
         <div class="btn-buy">
-          <input type="submit" value="Enviar">
+          <input type="submit" value="Enviar" id="btn">
         </div>
       </div>
     </section>

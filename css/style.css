@@ -222,6 +222,19 @@ div.btn-buy input {
 }
 /*
 ===========================
+! Timer
+===========================
+*/
+article.timer{
+  position:absolute;
+  border: solid 1px;
+  width: auto;
+  height: auto;
+  left: 80%;
+  top: 25%;
+}
+/*
+===========================
 ! Footer styles
 ===========================
 */
