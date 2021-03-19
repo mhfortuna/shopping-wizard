@@ -33,6 +33,15 @@ img {
 .hide {
   display:none !important;
 }
+main{
+  overflow: hidden;
+}
+.maindiv{
+  display: flex;
+  width: 500vw;
+  transition-delay: 1s;
+  /* transform: translateX(0vw); */
+}
 
 
 /*
