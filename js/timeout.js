@@ -1,7 +1,7 @@
 // button from html //
-const btn = document.getElementById("btn");
+let btn = document.getElementById("btn");
 // work time from html //
-let timeResult = document.getElementById("timeResult");
+let display = document.getElementById("timeResult");
 // hold timer //
 let timerResult;
 //counter
@@ -13,23 +13,21 @@ btn.addEventListener('click' , function(e){
     e.preventDefault;
     timerResult = setInterval(() => {
         counterTime++;
-    timeResult.innerHTML = timerFormat(counterTime);
+    timeResult.innerHTML = "llevas 1 minuto";
 }, 1000);
 })
-
+/*
 //display the timeformat
-let timeFormat = function(counter) {
+let timerFormat = function(counter) {
     let displayTime = function (counter) {
-        if (counter < 10){
+        if (counter === 60000){
             return "0"+counter;
         }
         else {
             return counter;
         }
     }
-    return [
-        displayTime(math.floor(counter/ 3600)),
-        displayTime(math.floor(counter % 3600/60)),
-        displayTime(math.floor(counter % 60))
-    ].join(' : ');
-}
+    return
+}*/
+
+
