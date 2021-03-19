@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Wizard Progress Bar</title>
+    <link href="progress-bar.css" rel="stylesheet">
+    <script src="progress-bar.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div id="stepProgressBar">
+            <div class="step">
+                <div class="bullet first-bullet"></div>
+                <p class="step-text">Profile</p>
+            </div>
+            <div class="step">
+                <div class="bullet"></div>
+                <p class="step-text">Adress</p>
+            </div>
+            <div class="step">
+                <div class="bullet"></div>
+                <p class="step-text">Shipping</p>
+            </div>
+            <div class="step">
+                <div class="bullet "></div>
+                <p class="step-text">Finish</p>
+            </div>
+        </div>
+        <div id="main">
+            <p id="content"  class="text-center">Step Number 1</p>
+            <button id="previousBtn" >Previous</button>
+            <button id="nextBtn">Next</button>
+            <button id="finishBtn" >Finish</button>
+        </div>
+    </div>
+</body>
+</html>
