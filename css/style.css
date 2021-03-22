@@ -38,7 +38,7 @@ main{
 
 .maindiv {
   display: flex;
-  width: 500vw;
+  width: 600vw;
   transform: translateX(0vw);
   /* transition-delay: 1s ease-in-out; */
 }
@@ -460,15 +460,16 @@ section p.text-form-error {
 ===========================
 */
 article.timer {
-  position: absolute;
+  position: fixed;
   width: auto;
   height: auto;
-  left: 80%;
-  top: 25%;
+  right: 100px;
+  top: 100px;
   background-color: var(--teamLightblue);
   color: var(--teamGreen);
   font-weight: bold;
   padding: 10px;
+  z-index: 99;
 }
 article > p {
   font-size: 1rem;

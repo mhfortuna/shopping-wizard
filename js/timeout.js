@@ -41,8 +41,9 @@ btn.addEventListener('click' , function(e){
         /* document.querySelector(".tested").innerHTML = timeFormat(counterTime); */
 }, 1000);
     setTimeout(() => {
-        document.querySelector(".product-page").innerHTML+= htmlCode1;
+        document.querySelector("header").innerHTML+= htmlCode1;
     }, 5000);
+
     setTimeout(() => {
         document.getElementById("timer").remove();
     }, 65000);
