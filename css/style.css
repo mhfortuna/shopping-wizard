@@ -293,6 +293,11 @@ span.form-checkbox__show {
   height: 15px;
   background-size: cover;
 }
+span.form-checkbox__text {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
 input.form-checkbox__input:checked + span.form-checkbox__show--checkbox {
   background-image: url(/images/checkbox-check.png);
 }
@@ -315,10 +320,6 @@ section.profile h3 {
 
 label.label-form {
   display: block;
-}
-
-.gift {
-  margin: 0 0 15px 0;
 }
 
 /*
@@ -361,6 +362,59 @@ div.div-phone {
 ! Shipping page styles
 ===========================
 */
+
+label[for="type"] {
+  font-weight: bold;
+}
+
+div.shipping-type div {
+  padding: 0.8vh 0;
+}
+
+div.gift {
+  margin-top: 2vh;
+}
+
+label[for="gift-message"] {
+  display: block;
+  margin-top: 2vh;
+}
+
+textarea#gift-message {
+  resize: none;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin-top: 1vh;
+  outline: none;
+  width: 20%;
+}
+
+div.custom-input-file {
+  background-color: var(--teamLightblue);
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  min-height: 10px;
+  padding: 1.1vh;
+  margin-top: 2vh;
+  border-radius: 5px;
+  text-align: center;
+  width: 20%;
+}
+
+div.custom-input-file .input-file {
+ border: 10000px solid transparent;
+ cursor: pointer;
+ font-size: 10000px;
+ margin: 0;
+ opacity: 0;
+ outline: 0 none;
+ padding: 0;
+ position: absolute;
+ right: -1000px;
+ top: -1000px;
+}
 
 /*
 ===========================
