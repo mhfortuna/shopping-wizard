@@ -18,3 +18,30 @@ checkbox.addEventListener("change", function () {
   }
 });
 
+/*
+ * This functions calculates shipping date
+ * and returns an object:
+ * First date: today + 24H
+ * Second date: First date + 24H
+ * @ author:
+ */
+function shippingDates() {
+    const obj = {};
+    // First date
+    const date = new Date();
+    date.setDate(date.getDate() + 1);
+    obj.firstDate = date.toLocaleDateString();
+    // second date
+    date.setDate(date.getDate() + 2);
+    obj.secondDate = date.toLocaleDateString();
+    return obj;
+  }
+  
+  // console.log(shippingDates());
+  /*
+   * This functions calculates shipping date
+   * and returns an object:
+   * First date: today + 24H
+   * Second date: First date + 24H
+   * @ author:
+   */
