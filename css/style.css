@@ -32,9 +32,7 @@ img {
 .hide {
   display: none !important;
 }
-main {
-  /*overflow: hidden; */
-}
+
 .maindiv {
   display: flex;
   width: 500vw;
@@ -68,7 +66,7 @@ h4 {
 
 /*
 ===========================
-Header styles
+ ! Header styles
 ===========================
 */
 header {
@@ -251,7 +249,7 @@ div.btn-buy input {
 
 /*
 ===========================
-Generic form styles
+ ! Generic form styles
 ===========================
 */
 /*  ? Form container */
@@ -306,7 +304,7 @@ select.select-form {
 
 /*
 ===========================
-Profile form styles
+! Profile form styles
 ===========================
 */
 
@@ -325,7 +323,7 @@ label.label-form {
 
 /*
 ===========================
-Address form styles
+! Address form styles
 ===========================
 */
 
@@ -360,7 +358,13 @@ div.div-phone {
 
 /*
 ===========================
-Error Handler form styles
+! Shipping page styles
+===========================
+*/
+
+/*
+===========================
+! Error Handler form styles
 ===========================
 */
 section label.label-form-error {
@@ -385,7 +389,7 @@ section p.text-form-error {
 
 /*
 ===========================
- Timer
+ ! Timer
 ===========================
 */
 article.timer {
