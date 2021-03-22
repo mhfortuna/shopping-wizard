@@ -50,9 +50,6 @@ section{
   height: 76vh;
   margin: 2vh 2vw;
 }
-section.product-page{
-  flex-direction: row;
-}
 h2 {
   font-weight: bold;
   font-size: 1.8rem;
@@ -171,6 +168,9 @@ div.first-bullet-pbar{
 ! Product pages styles
 ===========================
 */
+section.product-page{
+  flex-direction: row;
+}
 /* ! ----------left---------- */
 div.left-wrapper {
   width: 50vw;
@@ -394,46 +394,54 @@ button.testing:disabled:hover  {
     ! Finish Form
     ===========================================
  */
+ section.finished{
+   background-color: var(--teamGreen);
+   padding:20px;
+   flex-direction: row;
+   justify-content: space-between;
+ }
  div.left-wrapper-finish{
-   /*width: 70vw;*/
+   width: 65%;
    background-color: white;
    color: var(--teamBlue);
-   padding: 15px;
+   padding: 15px 15px 25px 15px;
+   height: fit-content;
  }
-/*  div.finish-page {
-   
-   width: auto;
- } */
-/* div#merchant-buy {
-  
-  background-color: black;
-  color: white;
-  flex-grow: 2;
-} */
 div.left-finish{
   width: auto;
   display: flex;
   width: 100%;
   justify-content: space-between;
+  margin: 10px 0 15px 0;
 }
 div.product-finish-text {
 /* display: inline-block; */
 /* flex-grow: 1; */
 width: 60%;
-
+padding: 15px;
+line-height: 1.5;
 }
-div.finish{
+div.right-wrapper-finish{
   max-height: 150px;
-  width: 150px;
+  width: 25%;
   background: white;
   color: var(--teamBlue);
-  margin: 0px 0px 0px 30px;
-  text-align: left;
-  padding: 0px;
+  /* margin: 0px 0px 0px 30px; */
+  /* text-align: left; */
+  padding: 10px;
 }
 #img-purchase {
-  width: 15%;
+  width: 30%;
+  max-width: 250px;
+  /* max-height: 400px; */
 }
 div.container-finished{
   background:  var(--teamLightblue);
+}
+#accept-terms{
+background-color: #ff000062;
+color: #c00000f3;
+}
+.not-visible{
+  visibility: hidden;
 }
