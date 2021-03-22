@@ -252,13 +252,17 @@
           <div class="gift">
             <label class="form-checkbox">
               <!-- Input oculto -->
-              <input class="form-checkbox__input" type="checkbox" name="conditions" value="conditions">
+              <input class="form-checkbox__input" type="checkbox" id="check-gift" name="conditions" value="conditions">
               <!-- Imagen en sustitucion -->
               <span class="form-checkbox__show form-checkbox__show--checkbox"></span>
               <!-- Texto -->
               <span class="form-checkbox__text">It is a gift?</span>
             </label>
           </div>
+          <template id="shipping-template">
+            <label for="">Shipping date</label>
+            <b></b>
+          </template>
           <!-- gift message -->
           <div class="wrp-gift-message">
             <label for="gift-message"> Gift message</label>
@@ -380,6 +384,7 @@
   <script src="./js/change-big-picture.js" defer></script> <!-- Change big picture-->
   <script src="./js/buttonpage-demo.js" defer></script>
   <!--Submit button demo-->
+  <script src="./js/shipping.js" defer></script>
 </body>
 
 </html>
