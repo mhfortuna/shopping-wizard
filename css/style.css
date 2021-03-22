@@ -34,15 +34,21 @@ img {
   display:none !important;
 }
 main{
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .maindiv{
   display: flex;
   width: 500vw;
   transition-delay: 1s;
-  /* transform: translateX(0vw); */
+  transform: translateX(0vw);
 }
 
+section {
+  display: flex;
+  width: 100vw;
+  height: 76vh;
+  margin: 2vh 2vw;
+}
 
 /*
 ===========================
@@ -105,18 +111,18 @@ text-align:  center;
 p.step-text-pbar  {
 margin-top: 5px;
 margin-bottom:  5px;
-color:  #000e03;
+color: var(--teamYellow);
 font-size: 12px;
 font-weight: 700;
 }
 
 div.bullet-pbar {
   margin-top: 5px;
-	border: 2px solid #000e03;
+	border: 2px solid var(--teamYellow);
 	height: 20px;
 	width: 20px;
 	border-radius: 100%;
-	color: #000e03;
+	color: var(--teamYellow);
 	display: inline-block;
 	position: relative;
 	transition: background-color 1000ms;
@@ -132,15 +138,15 @@ div.bar-pbar{
   top: 5px; */
 }
 div.bar-pbar-completed{
-  background-color: #000e03ad;
+  background-color: var(--teamYellow);
 }
 
 div.first-bullet-pbar{
-	background-color:  #000e03;
+	background-color:  var(--teamYellow);
 }
 
 .bullet-pbar.completed-pbar  {
-	background-color:  #000e03;
+	background-color:  var(--teamYellow);
 }
 
 /*
@@ -148,12 +154,6 @@ div.first-bullet-pbar{
 ! Product pages styles
 ===========================
 */
-section.product-page {
-  display: flex;
-  max-width: 100%;
-  height: 76vh;
-  margin: 2vh 2vw;
-}
 /* ! ----------left---------- */
 div.left-wrapper {
   width: 50vw;
@@ -228,6 +228,134 @@ div.btn-buy input {
   padding: 5px 20px;
   border-radius: 5px;
   opacity: 0.8;
+}
+
+/*
+===========================
+Generic form styles
+===========================
+*/
+/*  ? All form labels */
+label.label-form{
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+/* ? All form inputs*/
+input.input-form{
+  border: 1.75px solid black  ;
+  border-radius: 5px;
+  margin: 5px 0 15px 0;
+  width: 90%;
+}
+
+/* ? Form checkbox */
+input.form-checkbox {
+  font-size: 1rem;
+  align-items: center;
+  cursor: pointer;
+}
+.form-checkbox__show--checkbox {
+  background-image: url(/images/checkbox-uncheck.png);
+}
+input.form-checkbox__input {
+  display: none;
+}
+span.form-checkbox__show {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-size: cover;
+}
+input.form-checkbox__input:checked + span.form-checkbox__show--checkbox {
+  background-image: url(/images/checkbox-check.png);
+}
+
+/* ? Form select */
+select.select-form{
+  margin: 5px 0 15px 0;
+}
+
+/*
+===========================
+Profile form styles
+===========================
+*/
+/* section.profile {
+  max-width: 100%;
+  height: 76vh;
+  margin: 5vh 20vw;
+} */
+section.profile h3{
+  font-weight: 700;
+}
+.gift{
+  margin: 0 0 15px 0;
+}
+/*
+===========================
+Address form styles
+===========================
+*/
+/* section.adress {
+  max-width: 100%;
+  height: 76vh;
+  margin: 5vh 20vw;
+} */
+
+.select-country{
+  width: 90%;
+  height: 23.5px;
+  border-radius: 5px;
+  border: 1.75px solid black  ;
+
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.div-phone{
+  display: inline-flex;
+  width: 90%;
+}
+
+.select-phone{
+  width: 40%;
+  border-radius: 5px;
+  border: 1.75px solid black  ;
+
+}
+.input-phone{
+  width: 60%;
+}
+
+/*
+===========================
+! Timer
+===========================
+*/
+article.timer{
+  position:absolute;
+  width: auto;
+  height: auto;
+  left: 80%;
+  top: 25%;
+  background-color: var(--teamLightblue);
+  color: var(--teamGreen);
+  font-weight: bold;
+  padding: 10px;
+}
+article > p{
+font-size: 1rem;
+color: var(--teamYellow);
+}
+span.minutes{
+  color: white;
+  font-weight: bold;
+
 }
 /*
 ===========================
