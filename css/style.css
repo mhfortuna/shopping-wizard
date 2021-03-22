@@ -254,6 +254,13 @@ div.btn-buy input {
 Generic form styles
 ===========================
 */
+/*  ? Form container */
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2%;
+}
+
 /*  ? All form labels */
 label.label-form {
   font-size: 1rem;
@@ -270,11 +277,12 @@ input.input-form {
 }
 
 /* ? Form checkbox */
-input.form-checkbox {
+label.form-checkbox {
   font-size: 1rem;
   align-items: center;
   cursor: pointer;
 }
+
 .form-checkbox__show--checkbox {
   background-image: url(/images/checkbox-uncheck.png);
 }
@@ -301,20 +309,10 @@ select.select-form {
 Profile form styles
 ===========================
 */
-/* section.profile {
-  max-width: 100%;
-  height: 76vh;
-  margin: 5vh 20vw;
-} */
+
 section.profile h3 {
   font-weight: 700;
   display: inline-flex;
-}
-
-section.profile form {
-  display: flex;
-  flex-direction: column;
-  margin-top: 2%;
 }
 
 label.label-form {
@@ -330,13 +328,9 @@ label.label-form {
 Address form styles
 ===========================
 */
-/* section.adress {
-  max-width: 100%;
-  height: 76vh;
-  margin: 5vh 20vw;
-} */
 
-.select-country {
+select.select-country {
+  max-width: 350px;
   width: 90%;
   height: 23.5px;
   border-radius: 5px;
@@ -349,9 +343,10 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: 0;
 }
 
-.div-phone {
+div.div-phone {
   display: inline-flex;
   width: 90%;
+  max-width: 350px;
 }
 
 .select-phone {
