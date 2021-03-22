@@ -4,8 +4,10 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shopping wizard</title>
   <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <title>Shopping wizard</title>
 </head>
 
 <body>
@@ -263,14 +265,13 @@
             <textarea id="gift-message" name="gift-message" rows="7" cols="50"></textarea>
           </div>
           <!-- upload file -->
-          <!-- <div class="upload-file">
-            <input type="file" id="img-gift" name="filename">
-          </div> -->
-          <!-- <div class="custom-input-file">
-            <input type="file" id="fichero-tarifas" class="input-file">
-            Select image...
-          </div> -->
-
+          <div class="file-input">
+            <label for="file">Gift wrapper image</label>
+            <input type="file" id="file" class="file">
+            <label for="file" class="loadFile">Select image
+              <i class="far fa-file-image"></i>
+            </label>
+          </div>
         </form>
       </section>
 

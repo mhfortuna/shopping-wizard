@@ -30,9 +30,9 @@ img {
   width: 100%;
 }
 .hide {
-  display:none !important;
+  display: none !important;
 }
-main{
+main {
   overflow: hidden;
 }
 
@@ -43,7 +43,7 @@ main{
   /* transition-delay: 1s ease-in-out; */
 }
 .horizTranslate {
- /*  -webkit-transition: 3s;
+  /*  -webkit-transition: 3s;
   -moz-transition: 3s;
   -ms-transition: 3s;
   -o-transition: 3s; */
@@ -395,41 +395,48 @@ label[for="gift-message"] {
 
 textarea#gift-message {
   resize: none;
-  border: 2px solid black;
+  border: 1.75px solid black;
   border-radius: 5px;
   margin-top: 1vh;
   outline: none;
-  width: 20%;
+  width: 25%;
+  max-width: 500px;
+  min-width: 200px;
 }
 
-div.custom-input-file {
-  background-color: var(--teamLightblue);
-  color: #fff;
-  cursor: pointer;
-  font-size: 1.2rem;
+input.file {
+  display: none;
+}
+
+div.file-input .loadFile {
+  display: block;
+  width: 25%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: bold;
-  min-height: 10px;
-  padding: 1.1vh;
-  margin-top: 2vh;
-  border-radius: 5px;
-  text-align: center;
-  width: 20%;
-}
-
-div.custom-input-file .input-file {
-  border: 10000px solid transparent;
   cursor: pointer;
-  font-size: 10000px;
-  margin: 0;
-  opacity: 0;
-  outline: 0 none;
-  padding: 0;
-  position: absolute;
-  right: -1000px;
-  top: -1000px;
+  border: 1.75px solid black;
+  border-radius: 5px;
+  margin: 10px 0 15px 0;
+  max-width: 500px;
+  min-width: 200px;
 }
 
-/*
+div.file-input {
+  padding-top: 3vh;
+}
+
+div.file-input i {
+  font-size: 1.5rem;
+  margin-left: 10px;
+}
+
+input.form-checkbox__input:checked ~ div{
+  display: none;
+}
+/* 
 ===========================
 ! Error Handler form styles
 ===========================
@@ -549,9 +556,9 @@ div.left-finish {
 }
 
 div.product-finish-text {
-width: 60%;
-padding: 15px;
-line-height: 1.5;
+  width: 60%;
+  padding: 15px;
+  line-height: 1.5;
 }
 
 div.right-wrapper-finish {
@@ -567,7 +574,6 @@ div.right-wrapper-finish {
 #img-purchase {
   width: 30%;
   max-width: 250px;
-
 }
 div.container-finished {
   background: var(--teamLightblue);
