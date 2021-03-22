@@ -334,6 +334,31 @@ input[type=number]::-webkit-outer-spin-button {
 
 /*
 ===========================
+! Timer
+===========================
+*/
+article.timer{
+  position:absolute;
+  width: auto;
+  height: auto;
+  left: 80%;
+  top: 25%;
+  background-color: var(--teamLightblue);
+  color: var(--teamGreen);
+  font-weight: bold;
+  padding: 10px;
+}
+article > p{
+font-size: 1rem;
+color: var(--teamYellow);
+}
+span.minutes{
+  color: white;
+  font-weight: bold;
+
+}
+/*
+===========================
 ! Footer styles
 ===========================
 */
