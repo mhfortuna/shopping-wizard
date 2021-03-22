@@ -535,11 +535,9 @@ div.left-finish {
 }
 
 div.product-finish-text {
-  /* display: inline-block; */
-  /* flex-grow: 1; */
-  width: 60%;
-  padding: 15px;
-  line-height: 1.5;
+width: 60%;
+padding: 15px;
+line-height: 1.5;
 }
 
 div.right-wrapper-finish {
@@ -549,15 +547,13 @@ div.right-wrapper-finish {
   color: var(--teamBlue);
   margin-top: 20px;
   line-height: 1.5;
-  /* margin: 0px 0px 0px 30px; */
-  /* text-align: left; */
   padding: 10px;
 }
 
 #img-purchase {
   width: 30%;
   max-width: 250px;
-  /* max-height: 400px; */
+
 }
 div.container-finished {
   background: var(--teamLightblue);
@@ -591,7 +587,6 @@ h3.text-thanks {
 }
 label.timerFinal {
   text-align: center;
-  /* color: var(--teamBlue); */
   font-size: 1.5em;
   font-style: italic;
 }
