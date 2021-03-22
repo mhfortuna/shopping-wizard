@@ -426,6 +426,11 @@ div.file-input .loadFile {
 
 div.file-input {
   padding-top: 3vh;
+  display: none;
+}
+
+div.wrp-gift-message {
+  display: none;
 }
 
 div.file-input i {
@@ -433,7 +438,7 @@ div.file-input i {
   margin-left: 10px;
 }
 
-input.form-checkbox__input:checked ~ div{
+input.form-checkbox__input:checked ~ div {
   display: none;
 }
 /* 
