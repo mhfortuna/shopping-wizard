@@ -15,11 +15,11 @@
         =================================
     -->
   <header>
-    <div class="logo hide">
+    <div class="logo">
       <p>LOGO</p>
 
     </div>
-    <div class="container-pbar">
+    <div class="container-pbar hide">
       <div id="stepProgressBar">
         <div class="step-pbar">
           <div class="bullet-pbar first-bullet-pbar"></div>
@@ -109,9 +109,9 @@
               <img src="./images/black-sport.jpg" alt="Blue" data-color="Blue">
             </div>
           </div>
-          <div class="btn-buy">
-            <input type="submit" value="Enviar" id="btn">
-          </div>
+        <div class="btn-buy">
+          <input type="submit" value="Enviar" id="btn" class="submitbutton">
+        </div>
       </section>
       <!--
       =================================
@@ -362,11 +362,10 @@
   <footer>
     <div class="footer-text">
       <p>FOOTER TEXT</p>
-      <input type="reset" value="Clear Form" tabindex="-1">
-      <input type="submit" value="Next" tabindex="0">
     </div>
     <div class="page-buttons hide">
-      <!-- TODO: better comments -->
+      <input type="reset" value="Clear Form" tabindex="-1">
+      <input type="submit" class="submitbutton" value="Next" tabindex="0">
     </div>
   </footer>
 
@@ -376,6 +375,7 @@
   <script src="./js/timeout.js" defer></script>
   <!--time out-->
   <script src="./js/change-big-picture.js" defer></script> <!-- Change big picture-->
+  <script src="./js/buttonpage-demo.js" defer></script> <!--Submit button demo-->
 </body>
 
 </html>
