@@ -17,30 +17,30 @@
   <header>
     <div class="logo hide">
       <p>LOGO</p>
-      
+
     </div>
     <div class="container-pbar">
-        <div id="stepProgressBar">
-            <div class="step-pbar">
-                <div class="bullet-pbar first-bullet-pbar"></div>
-                <p class="step-text-pbar">Profile</p>
-            </div>
-            <div class="bar-pbar"></div>
-            <div class="step-pbar">
-                <div class="bullet-pbar"></div>
-                <p class="step-text-pbar">Address</p>
-            </div>
-            <div  class="bar-pbar"></div>
-            <div class="step-pbar">
-                <div class="bullet-pbar"></div>
-                <p class="step-text-pbar">Shipping</p>
-            </div>
-            <div  class="bar-pbar"></div>
-            <div class="step-pbar">
-                <div class="bullet-pbar "></div>
-                <p class="step-text-pbar">Finish</p>
-            </div>
+      <div id="stepProgressBar">
+        <div class="step-pbar">
+          <div class="bullet-pbar first-bullet-pbar"></div>
+          <p class="step-text-pbar">Profile</p>
         </div>
+        <div class="bar-pbar"></div>
+        <div class="step-pbar">
+          <div class="bullet-pbar"></div>
+          <p class="step-text-pbar">Address</p>
+        </div>
+        <div class="bar-pbar"></div>
+        <div class="step-pbar">
+          <div class="bullet-pbar"></div>
+          <p class="step-text-pbar">Shipping</p>
+        </div>
+        <div class="bar-pbar"></div>
+        <div class="step-pbar">
+          <div class="bullet-pbar "></div>
+          <p class="step-text-pbar">Finish</p>
+        </div>
+      </div>
     </div>
   </header>
   <!--
@@ -109,48 +109,61 @@
               <img src="./images/black-sport.jpg" alt="Blue" data-color="Blue">
             </div>
           </div>
-        <div class="btn-buy">
-          <input type="submit" value="Enviar" id="btn">
-        </div>
+          <div class="btn-buy">
+            <input type="submit" value="Enviar" id="btn">
+          </div>
       </section>
-        <!--
+      <!--
       =================================
       FORM 1 - PROFILE
       =================================
       -->
-    <section class="profile">
-      <h3>Profile</h3>
-      <form action="/action_page.php">
-        <label class="label-form label-profile" for="Uname">Username</label>
-        <input class="input-form input-profile" type="text" id="Uname" name="Uname" maxlength="20" required pattern="/^[a-zo-9_-]{5,20}$/">
-        <p class="text-form-error hide">Insert valid username</p>
-        <label class="label-form label-profile"  for="email">Email</label>
-        <input class="input-form input-profile" type="email" name="write_email" id="email" required placeholder ="test@gmail.com" pattern="([a-z\d]+(\.|_|-)?)+@[a-z\d]+\.[a-z]{2,50}\b">
-        <p class="text-form-error hide">Insert valid email</p>
-        <label class="label-form label-profile"  for="pwd">Password</label>
-        <input class="input-form input-profile" type="password" id="pwd" title="Password must contain at least 8 characters, including UPPER/lowercase and numbers" name="pwd" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}">
-        <p class="text-form-error hide">Insert valid password</p>
-        <label class="label-form label-profile"  for="pwd2">Confirm Password</label>
-        <input class="input-form input-profile" type="password" title="Please enter the same Password as above" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}">
-        <p class="text-form-error hide">Check valid password</p>
-        
-      </form>
-
-    </section>
-    <!--
+      <section class="profile">
+        <h3>Profile</h3>
+        <form action="/action_page.php">
+          <div>
+            <label class="label-form label-profile" for="Uname">Username</label>
+            <input class="input-form input-profile" type="text" id="Uname" name="Uname" maxlength="20" required
+              pattern="/^[a-zo-9_-]{5,20}$/">
+            <p class="text-form-error hide">Insert valid username</p>
+          </div>
+          <div>
+            <label class="label-form label-profile" for="email">Email</label>
+            <input class="input-form input-profile" type="email" name="write_email" id="email" required
+              placeholder="test@gmail.com" pattern="([a-z\d]+(\.|_|-)?)+@[a-z\d]+\.[a-z]{2,50}\b">
+            <p class="text-form-error hide">Insert valid email</p>
+          </div>
+          <div>
+            <label class="label-form label-profile" for="pwd">Password</label>
+            <input class="input-form input-profile" type="password" id="pwd"
+              title="Password must contain at least 8 characters, including UPPER/lowercase and numbers" name="pwd"
+              required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}">
+            <p class="text-form-error hide">Insert valid password</p>
+          </div>
+          <div>
+            <label class="label-form label-profile" for="pwd2">Confirm Password</label>
+            <input class="input-form input-profile" type="password" title="Please enter the same Password as above"
+              required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}">
+            <p class="text-form-error hide">Check valid password</p>
+          </div>
+        </form>
+      </section>
+      <!--
       =================================
       FORM 2 - Address
       =================================
       -->
       <section class="address">
-        
+
         <h3>Address</h3>
         <form action="/action_page.php">
           <label class="label-form label-adress" for="Fname">First Name</label>
-          <input class="input-form input-adress" type="text" id="fname" name="fname" maxlength="20" required tabindex="0">
+          <input class="input-form input-adress" type="text" id="fname" name="fname" maxlength="20" required
+            tabindex="0">
 
           <label class="label-form label-adress" for="Lname">Last Name</label>
-          <input class="input-form input-adress" type="text" id="lname" name="lname" maxlength="20" required tabindex="0">
+          <input class="input-form input-adress" type="text" id="lname" name="lname" maxlength="20" required
+            tabindex="0">
 
           <label class="label-form label-adress" for="Birthday">Birthday</label>
           <input class="input-form input-adress" type="date" id="Birthday" name="Birthday" required tabindex="0">
@@ -177,15 +190,16 @@
           <div class="div-phone">
             <select class="select-form select-phone" name="PhoneCountryCode" id="PhoneCountryCode" tabindex="0">
               <option value="376-AND">AND +376</option>
-              <option value="34-ES" selected>ES   +34</option>
-              <option value="33-FR">FR   +33</option>
+              <option value="34-ES" selected>ES +34</option>
+              <option value="33-FR">FR +33</option>
               <option value="49-GER">GER +49</option>
               <option value="30-GRC">GRC +30</option>
             </select>
-            <input class="input-form input-adress input-phone" type="number" name="tel" id="tel" maxlength="9" required tabindex="0">
+            <input class="input-form input-adress input-phone" type="number" name="tel" id="tel" maxlength="9" required
+              tabindex="0">
           </div>
           <label class="form-checkbox">
-            
+
             <input class="form-checkbox__input" id="Habitual" type="checkbox" name="conditions" value="conditions">
             <span class="form-checkbox__show form-checkbox__show--checkbox"></span>
           </label>
@@ -199,95 +213,95 @@
       =================================
       -->
       <section class="finished">
-          <div class="left-wrapper-finish">
-            <!-- <div class="finish-page"> -->
-              <h1>Your Purchase</h1>
-              <div class="left-finish">
-                <!-- <div id="merchant-buy"> -->
-                <img src="./images/vans.jpg" alt="" id="img-purchase">
-                <!-- </div> -->
-                <div class="product-finish-text">
-                  <h3>Modelo de producto</h3>
-                  <p>size :</p>
-                  <p>color:</p>
-                  <p>ESTIMATE DELIVERY DATE:</p>
-                  <P>Beetween:</P>
-                  <p>and:</p>
-                </div>
-              <!-- </div> -->
+        <div class="left-wrapper-finish">
+          <!-- <div class="finish-page"> -->
+          <h1>Your Purchase</h1>
+          <div class="left-finish">
+            <!-- <div id="merchant-buy"> -->
+            <img src="./images/vans.jpg" alt="" id="img-purchase">
+            <!-- </div> -->
+            <div class="product-finish-text">
+              <h3>Modelo de producto</h3>
+              <p>size :</p>
+              <p>color:</p>
+              <p>ESTIMATE DELIVERY DATE:</p>
+              <P>Beetween:</P>
+              <p>and:</p>
             </div>
-            <div>
-              <label class="form-checkbox">
-                
-                <input class="form-checkbox__input" id="conditions" type="checkbox" name="conditions" value="conditions">
-                <span class="form-checkbox__show form-checkbox__show--checkbox"></span>
-              </label>
-              <label for="conditions">I have read and I accept the terms and conditions.</label>
-              <button>Buy now</button>
-            </div>
+            <!-- </div> -->
           </div>
+          <div>
+            <label class="form-checkbox">
 
-          <div class="right-wrapper finish">
-            <h4>Your Order</h4>
-            <hr>
-            <p>Shoes:</p>
-            <p>Shipping:</p>
-            <hr>
-            <p>total:</p>
+              <input class="form-checkbox__input" id="conditions" type="checkbox" name="conditions" value="conditions">
+              <span class="form-checkbox__show form-checkbox__show--checkbox"></span>
+            </label>
+            <label for="conditions">I have read and I accept the terms and conditions.</label>
+            <button>Buy now</button>
           </div>
+        </div>
+
+        <div class="right-wrapper finish">
+          <h4>Your Order</h4>
+          <hr>
+          <p>Shoes:</p>
+          <p>Shipping:</p>
+          <hr>
+          <p>total:</p>
+        </div>
       </section>
 
-       <!--
+      <!--
       =================================
       SHIPPING SECTION
       =================================
       -->
-    <section class="shipping-page">
-      <!-- Headings -->
-      <div>
-        <h3>Shipping</h3>
-        <h4>Shipping type</h4>
-      </div>
-      <!-- Shipping form -->
-      <form action="">
-        <!-- radio buttons - shipping type -->
-        <div class="shipping-type">
-          <div>
-            <input type="radio" id="free" name="type" value="free">
-            <label for="free">Free shipment (72H)</label>
+      <section class="shipping-page">
+        <!-- Headings -->
+        <div>
+          <h3>Shipping</h3>
+          <h4>Shipping type</h4>
+        </div>
+        <!-- Shipping form -->
+        <form action="">
+          <!-- radio buttons - shipping type -->
+          <div class="shipping-type">
+            <div>
+              <input type="radio" id="free" name="type" value="free">
+              <label for="free">Free shipment (72H)</label>
+            </div>
+            <div>
+              <input type="radio" id="extra" name="type" value="extra">
+              <label for="extra">Extra shipping (48H) <span>4,99€</span></label>
+            </div>
+            <div>
+              <input type="radio" id="premium" name="type" value="premium">
+              <label for="extra">Premium (24H)</label>
+            </div>
           </div>
-          <div>
-            <input type="radio" id="extra" name="type" value="extra">
-            <label for="extra">Extra shipping (48H) <span>4,99€</span></label>
+          <!-- checkbox - gift -->
+          <div class="gift">
+            <label class="form-checkbox">
+              <!-- Input oculto -->
+              <input class="form-checkbox__input" type="checkbox" name="conditions" value="conditions">
+              <!-- Imagen en sustitucion -->
+              <span class="form-checkbox__show form-checkbox__show--checkbox"></span>
+              <!-- Texto -->
+              <span class="form-checkbox__text">Acepto las condiciones de uso y privacidad</span>
+            </label>
           </div>
-          <div>
-            <input type="radio" id="premium" name="type" value="premium">
-            <label for="extra">Premium (24H)</label>
+          <!-- gift message -->
+          <div class="wrp-gift-message">
+            <textarea id="gift-message" name="gift-message" rows="7" cols="50"></textarea>
           </div>
-        </div>
-        <!-- checkbox - gift -->
-        <div class="gift">
-          <label class="form-checkbox">
-            <!-- Input oculto -->
-            <input class="form-checkbox__input" type="checkbox" name="conditions" value="conditions">
-            <!-- Imagen en sustitucion -->
-            <span class="form-checkbox__show form-checkbox__show--checkbox"></span>
-            <!-- Texto -->
-            <span class="form-checkbox__text">Acepto las condiciones de uso y privacidad</span>
-        </label>
-        </div>
-        <!-- gift message -->
-        <div class="wrp-gift-message">
-          <textarea id="gift-message" name="gift-message" rows="7" cols="50"></textarea>
-        </div>
-        <!-- upload file -->
-        <div class="upload-file">
-          <input type="file" id="img-gift" name="filename">
-        </div>
-      </form>
-    </section>
+          <!-- upload file -->
+          <div class="upload-file">
+            <input type="file" id="img-gift" name="filename">
+          </div>
+        </form>
+      </section>
 
-  <!--
+      <!--
       =================================
       NEW SECTION
       =================================
@@ -305,7 +319,7 @@
       <p>FOOTER TEXT</p>
       <input type="reset" value="Clear Form" tabindex="-1">
       <input type="submit" value="Next" tabindex="0">
-      </div>
+    </div>
     <div class="page-buttons hide">
       <!-- TODO: better comments -->
     </div>
@@ -314,7 +328,8 @@
   <script src="/js/price.js"></script>
   <script src="./js/progress-bar.js" defer></script> <!-- Progress bar script -->
   <script src="./js/form-validation-test.js" defer></script> <!-- Progress bar script -->
-  <script src="./js/timeout.js" defer></script> <!--time out-->
+  <script src="./js/timeout.js" defer></script>
+  <!--time out-->
   <script src="./js/change-big-picture.js" defer></script> <!-- Change big picture-->
 </body>
 
