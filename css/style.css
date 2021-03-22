@@ -45,6 +45,7 @@ main{
 
 section {
   display: flex;
+  flex-direction: column;
   width: 100vw;
   height: 76vh;
   margin: 2vh 2vw;
@@ -154,6 +155,9 @@ div.first-bullet-pbar{
 ! Product pages styles
 ===========================
 */
+section.product-page{
+  flex-direction: row;
+}
 /* ! ----------left---------- */
 div.left-wrapper {
   width: 50vw;
@@ -247,6 +251,7 @@ input.input-form{
   border-radius: 5px;
   margin: 5px 0 15px 0;
   width: 90%;
+  max-width: 350px;
 }
 
 /* ? Form checkbox */
@@ -276,6 +281,7 @@ select.select-form{
   margin: 5px 0 15px 0;
 }
 
+
 /*
 ===========================
 Profile form styles
@@ -288,6 +294,7 @@ Profile form styles
 } */
 section.profile h3{
   font-weight: 700;
+  display:inline-flex;
 }
 .gift{
   margin: 0 0 15px 0;
@@ -334,7 +341,33 @@ input[type=number]::-webkit-outer-spin-button {
 
 /*
 ===========================
-! Timer
+Error Handler form styles
+===========================
+*/
+section label.label-form-error{
+  color: red;
+  opacity: 1;
+}
+section input.input-form-error{
+  border: 1.75px solid red  ;
+}
+section p.text-form-error{
+  font-size: 12px;
+  color: red;
+  padding-left: 5px;
+  margin-top: -10px;
+  margin-bottom: 18px;
+  width: 90%;
+  max-width: 350px;
+  background-color: rgba(255, 0, 0, 0.178);
+  border: 1.75px solid rgba(255, 0, 0, 0.178);
+  border-radius: 5px;
+}
+
+
+/*
+===========================
+ Timer
 ===========================
 */
 article.timer{
