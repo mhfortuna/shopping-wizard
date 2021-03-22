@@ -38,7 +38,7 @@ btn.addEventListener('click' , function(e){
     timerResult = setInterval(() => {
         console.log("your registration took: " + format(counterTime));
         counterTime++;
-        document.querySelector(".tested").innerHTML = timeFormat(counterTime);
+        /* document.querySelector(".tested").innerHTML = timeFormat(counterTime); */
 }, 1000);
     setTimeout(() => {
         document.querySelector(".product-page").innerHTML+= htmlCode1;
