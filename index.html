@@ -6,9 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shopping wizard</title>
   <link rel="stylesheet" href="./css/style.css" />
-  <script src="./js/progress-bar.js" defer></script> <!-- Progress bar script -->
+ <!--  <script src="./js/progress-bar.js" defer></script> Progress bar script -->
   <script src="./js/form-validation-test.js" defer></script> <!-- Progress bar script -->
   <script src="./js/timeout.js" defer></script> <!--time out-->
+  <script src="./js/buttonpage-demo.js" defer></script> <!--Submit button demo-->
 </head>
 
 <body>
@@ -18,11 +19,11 @@
         =================================
     -->
   <header>
-    <div class="logo hide">
+    <div class="logo">
       <p>LOGO</p>
       
     </div>
-    <div class="container-pbar">
+    <div class="container-pbar hide">
         <div id="stepProgressBar">
             <div class="step-pbar">
                 <div class="bullet-pbar first-bullet-pbar"></div>
@@ -109,7 +110,7 @@
             </div>
           </div>
         <div class="btn-buy">
-          <input type="submit" value="Enviar" id="btn">
+          <input type="submit" value="Enviar" id="btn" class="submitbutton">
         </div>
       </section>
         <!--
@@ -209,11 +210,10 @@
   <footer>
     <div class="footer-text">
       <p>FOOTER TEXT</p>
-      <input type="reset" value="Clear Form" tabindex="-1">
-      <input type="submit" value="Next" tabindex="0">
-      </div>
+    </div>
     <div class="page-buttons hide">
-      <!-- TODO: better comments -->
+      <input type="reset" value="Clear Form" tabindex="-1">
+      <input type="submit" class="submitbutton" value="Next" tabindex="0">
     </div>
 </footer>
 </body>

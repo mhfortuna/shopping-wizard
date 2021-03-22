@@ -34,13 +34,22 @@ img {
   display:none !important;
 }
 main{
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 .maindiv{
   display: flex;
   width: 500vw;
-  transition-delay: 1s;
   transform: translateX(0vw);
+  /* transition-delay: 1s ease-in-out; */
+}
+.horizTranslate {
+ /*  -webkit-transition: 3s;
+  -moz-transition: 3s;
+  -ms-transition: 3s;
+  -o-transition: 3s; */
+  transition: 1s;
+  /* transform: translateX(-100vw) !important; */
+  /* margin-left: 50% !important; */
 }
 
 section {
@@ -279,6 +288,7 @@ input.form-checkbox__input:checked + span.form-checkbox__show--checkbox {
 /* ? Form select */
 select.select-form{
   margin: 5px 0 15px 0;
+  max-width: 350px;
 }
 
 
