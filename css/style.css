@@ -248,6 +248,7 @@ input.input-form{
   border-radius: 5px;
   margin: 5px 0 15px 0;
   width: 90%;
+  max-width: 350px;
 }
 
 /* ? Form checkbox */
