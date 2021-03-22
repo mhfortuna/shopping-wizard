@@ -404,16 +404,16 @@ div.custom-input-file {
 }
 
 div.custom-input-file .input-file {
- border: 10000px solid transparent;
- cursor: pointer;
- font-size: 10000px;
- margin: 0;
- opacity: 0;
- outline: 0 none;
- padding: 0;
- position: absolute;
- right: -1000px;
- top: -1000px;
+  border: 10000px solid transparent;
+  cursor: pointer;
+  font-size: 10000px;
+  margin: 0;
+  opacity: 0;
+  outline: 0 none;
+  padding: 0;
+  position: absolute;
+  right: -1000px;
+  top: -1000px;
 }
 
 /*
@@ -509,45 +509,89 @@ button.testing:disabled:hover {
     ! Finish Form
     ===========================================
  */
+section.finished {
+  background-color: var(--teamGreen);
+  padding: 20px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 div.left-wrapper-finish {
-  /*width: 70vw;*/
+  width: 65%;
   background-color: white;
   color: var(--teamBlue);
-  padding: 15px;
+  padding: 15px 15px 25px 15px;
+  height: fit-content;
+  margin-left: 20px;
+  margin-top: 20px;
 }
-/*  div.finish-page {
-   
-   width: auto;
- } */
-/* div#merchant-buy {
-  
-  background-color: black;
-  color: white;
-  flex-grow: 2;
-} */
+
 div.left-finish {
   width: auto;
   display: flex;
   width: 100%;
   justify-content: space-between;
+  margin: 10px 0 15px 0;
 }
+
 div.product-finish-text {
   /* display: inline-block; */
   /* flex-grow: 1; */
   width: 60%;
+  padding: 15px;
+  line-height: 1.5;
 }
-div.finish {
+
+div.right-wrapper-finish {
   max-height: 150px;
-  width: 150px;
+  width: 25%;
   background: white;
   color: var(--teamBlue);
-  margin: 0px 0px 0px 30px;
-  text-align: left;
-  padding: 0px;
+  margin-top: 20px;
+  line-height: 1.5;
+  /* margin: 0px 0px 0px 30px; */
+  /* text-align: left; */
+  padding: 10px;
 }
+
 #img-purchase {
-  width: 15%;
+  width: 30%;
+  max-width: 250px;
+  /* max-height: 400px; */
 }
 div.container-finished {
   background: var(--teamLightblue);
+}
+#accept-terms {
+  background-color: #ff000062;
+  color: #c00000f3;
+}
+.not-visible {
+  visibility: hidden;
+}
+section.thankyou {
+  background-color: var(--teamGreen);
+}
+
+div.finished {
+  padding: 20px;
+  flex-direction: row;
+  justify-content: space-between;
+  display: flex;
+}
+h1.text-thanks {
+  font-size: 3em;
+  color: var(--teamYellow);
+  font-weight: bold;
+  padding: 40px 0px 0px 40px;
+}
+h3.text-thanks {
+  font-size: 1.5em;
+  padding: 0px 0px 5px 40px;
+}
+label.timerFinal {
+  text-align: center;
+  /* color: var(--teamBlue); */
+  font-size: 1.5em;
+  font-style: italic;
 }
