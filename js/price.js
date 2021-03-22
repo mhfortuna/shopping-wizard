@@ -3,17 +3,22 @@
 changing prices
 ==========================================
 */
+// get thumbnails images from DOM
 const colorThumbails = document.querySelectorAll(
   ".color-thumbnails-wrapper img"
 );
-
+// add listeners to all thumbnails images from DOM
 colorThumbails.forEach((element) => {
   element.addEventListener("click", fnColorThumbails);
 });
 
 function fnColorThumbails(event) {
-  // get DOM elements
+  // get DOM element price
   const $price = document.querySelector(".price-wrapper h3");
+  // get custom proporty yellow color
+  const borderColor = getComputedStyle(
+    document.documentElement
+  ).getPropertyValue("--teamLightblue");
   // clear previous selection
   colorThumbails.forEach((element) => {
     element.style.border = "none";
@@ -33,5 +38,5 @@ function fnColorThumbails(event) {
       break;
   }
   // Set border color
-  event.target.style.border = "2px solid red";
+  event.target.style.border = `2px solid ${borderColor}`;
 }
