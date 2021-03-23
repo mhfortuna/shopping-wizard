@@ -55,12 +55,14 @@ main {
 section {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100vw;
   height: 76vh;
   margin: 2vh 2vw;
 }
 section.product-page {
   flex-direction: row;
+  align-items: flex-start;
 }
 h2 {
   font-weight: bold;
@@ -76,6 +78,19 @@ h4 {
   font-size: 1.2rem;
 }
 
+
+/* Loaded page */
+body.fadein {
+  opacity: 0;
+  -moz-transition: opacity 1.5s;
+  -webkit-transition: opacity 1.5s;
+  -o-transition: opacity 1.5s;
+  transition: opacity 1.5s;
+}
+
+body.loaded{
+  opacity: 1;
+}
 /*
 ===========================
  ! Header styles
@@ -86,14 +101,34 @@ header {
   height: 10vh;
   background-color: var(--teamLightblue);
   overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 div.logo {
-  height: 100%;
+  /* width: 30%; */
+  height: 90%;
   display: flex;
   align-items: center;
   margin-left: 10%;
   color: var(--teamYellow);
   font-weight: bold;
+}
+img.dream-logo {
+  height: 90%;
+  width: auto;
+}
+div.quote{
+  max-width: 400px;
+  margin-right: 15%;
+  display: flex;
+  text-align: center;
+}
+blockquote.header-quote{
+  color: var(--teamYellow);
+  font-weight: 900;
+  font-size: 15px;
 }
 
 /*
@@ -188,55 +223,85 @@ div.left-wrapper {
   width: 50vw;
   overflow: hidden;
   display: flex;
-  justify-content: center;
+  justify-content:flex-end;
+  padding-right: 25px;
+  max-height: 100%;
 }
 
 div.thumbnail-wrapper {
   display: flex;
   flex-direction: column;
-  width: 12%;
-  padding: 2%;
+  width: 11%;
+  margin: 5px;
+  padding: 2px;
+  /* border: 2px solid var(--teamLightblue); */
+  height: fit-content;
 }
 
 img.img-thumbnail {
   max-width: 100%;
   margin: 1px 0;
+  transition-duration: 0.5s;
+}
+img.img-thumbnail:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transform: scale(1.1);
 }
 
 div.big-picture {
-  width: 60%;
+  width: 58%;
   padding-left: 5%;
+  margin: 5px; \\for alignment
+}
+.big-picture>img {
+  width: 100%;
+  max-height: 100%;
+
 }
 
 /* ! ----------right---------- */
 
 div.right-wrapper {
-  width: 50vw;
+  width: 45vw;
   padding-left: 2%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  max-height: 400px;
+  justify-content:space-between;
+  height: 70%;
+  max-height: 450px;
 }
 
+div.right-wrapper h2 {
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
 div.right-wrapper h3 {
   font-weight: bold;
   font-size: 2rem;
+  margin-bottom: 10px;
 }
 
 div.price-wrapper h4 {
   font-weight: bold;
   font-size: 1rem;
+  margin-bottom: 5px;
+}
+div.color-wrapper h4 {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
 }
 
 select#idSize {
   background: transparent;
-  border: solid 2px;
+  border: solid 1.75px var(--teamLightblue);
   border-radius: 5px;
-  font-size: 1rem;
-  height: 30px;
-  padding: 5px;
-  width: 40%;
+  font-size: 1.2rem;
+  font-weight: 900;
+  height: fit-content;
+  padding: 1px;
+  width: fit-content;
 }
 
 div.color-thumbnails-wrapper {
@@ -246,17 +311,32 @@ div.color-thumbnails-wrapper {
 }
 
 div.color-thumbnails-wrapper img {
-  width: 10%;
+  width: 15%;
   margin-right: 2%;
   margin-bottom: 2%;
+  transition-duration: 0.5s;
+}
+div.color-thumbnails-wrapper img:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transform: scale(1.1);
 }
 
 div.btn-buy input {
-  background-color: black;
-  color: white;
-  padding: 5px 20px;
+  background-color: var(--teamLightblue);
+  color: var(--teamYellow);
+  padding: 8px 25px;
   border-radius: 5px;
-  opacity: 0.8;
+  /* opacity: 0.8; */
+  font-size: 28px;
+  font-weight: 900;
+  border: 2px;
+  border:solid 2px transparent;
+  box-sizing: border-box;
+  transition-duration: 0.5s;
+}
+div.btn-buy input:hover{
+  border: solid 2px var(--teamYellow);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /*
@@ -282,8 +362,8 @@ input.input-form {
   border: 1.75px solid black;
   border-radius: 5px;
   margin: 5px 0 15px 0;
-  width: 90%;
-  max-width: 350px;
+  width:340px;
+  max-width: 500px;
 }
 
 /* ? Form checkbox */
@@ -317,8 +397,13 @@ input.form-checkbox__input:checked + span.form-checkbox__show--checkbox {
 /* ? Form select */
 select.select-form {
   margin: 5px 0 15px 0;
-  max-width: 350px;
+  /* width: 350px; */
 }
+
+section form h3 {
+  padding-bottom: 20px;
+}
+
 
 /*
 ===========================
@@ -326,10 +411,7 @@ select.select-form {
 ===========================
 */
 
-section.profile h3 {
-  font-weight: 700;
-  display: inline-flex;
-}
+
 
 label.label-form {
   display: block;
@@ -341,9 +423,24 @@ label.label-form {
 ===========================
 */
 
+section.address h3{
+  /* align-self: baseline; */
+  width: 100%;
+}
+.address-flex{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-height: 100%;
+  gap: 20px;
+  align-content: center;
+  max-width: 700px;
+}
+.address-wrapper-right{
+}
+
 select.select-country {
-  max-width: 350px;
-  width: 90%;
+  width: 100%;
   height: 23.5px;
   border-radius: 5px;
   border: 1.75px solid black;
@@ -357,17 +454,17 @@ input[type="number"]::-webkit-outer-spin-button {
 
 div.div-phone {
   display: inline-flex;
-  width: 90%;
-  max-width: 350px;
+  width: 100%;
+  /* max-width: 350px; */
 }
 
 .select-phone {
-  width: 40%;
+  width: 120px;
   border-radius: 5px;
   border: 1.75px solid black;
 }
 .input-phone {
-  width: 60%;
+  width: 100% !important;
 }
 
 /*
@@ -375,6 +472,9 @@ div.div-phone {
 ! Shipping page styles
 ===========================
 */
+.shipping-page form{
+  width: 340px;
+}
 
 label[for="type"] {
   font-weight: bold;
@@ -391,17 +491,17 @@ div.gift {
 label[for="gift-message"] {
   display: block;
   margin-top: 2vh;
+  font-weight: bolder;
 }
 
 textarea#gift-message {
   resize: none;
-  border: 1.75px solid black;
+  border: 2px solid var(--teamGreen);
   border-radius: 5px;
   margin-top: 1vh;
   outline: none;
-  width: 25%;
-  max-width: 500px;
-  min-width: 200px;
+  width: 100%;
+  padding: 10px;
 }
 
 input.file {
@@ -498,23 +598,77 @@ span.minutes {
 }
 /*
 ===========================
-! Footer styles
+! Foot styles
 ===========================
 */
-footer {
+div.foot {
   width: 100%;
   height: 10vh;
   background-color: var(--teamLightblue);
   color: var(--teamYellow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
 }
 
-div.footer-text {
+div.logo-foot{
+  margin:0 100px 0 0;
+}
+
+div.foot-sm{
+  display: flex;
+  align-items: center;
+}
+div.foot-sm a i{
+  color: var(--teamYellow);
+  font-size: 25px;
+  padding: 0px 5px;
+}
+
+div.foot-sm p{
+  padding-left: 50px;
+  font-weight: bold;  
+}
+
+div.foot-text {
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+
+/*
+===========================
+! Page Buttons
+===========================
+*/
+input.page-input-button{
+  color: var(--teamLightblue);
+  background-color: var(--teamYellow);
+  padding: 6px;
+  border-radius: 5px;
+  /* opacity: 0.8; */
+  font-size: 22px;
+  font-weight: 900;
+  border: 2px;
+  border:solid 2px transparent;
+  box-sizing: border-box;
+  transition-duration: 0.5s;
+}
+input.page-input-button:hover{
+  border: solid 2px var(--teamYellow);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+input.page-input-button:active{
+  border: solid 2px var(--teamYellow);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
 
 /* ===========================================
     ! Testing Buttons style
@@ -537,53 +691,79 @@ button.testing:disabled:hover {
   cursor: not-allowed;
 }
 /* ===========================================
-    ! Finish Form
+    ! Finished Form
     ===========================================
  */
-section.finished {
-  background-color: var(--teamGreen);
+div.finished-container {
+  background-color: white;
+  margin: 0;
   padding: 20px;
+  display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  /*justify-content: space-between;*/
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 1000px;
 }
 
 div.left-wrapper-finish {
-  width: 65%;
-  background-color: white;
+  width: 320px;
   color: var(--teamBlue);
-  padding: 15px 15px 25px 15px;
   height: fit-content;
+  text-align: center;
+  /*
   margin-left: 20px;
   margin-top: 20px;
+  */
 }
-
-div.left-finish {
-  width: auto;
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  margin: 10px 0 15px 0;
-}
-
-div.product-finish-text {
-  width: 60%;
-  padding: 15px;
-  line-height: 1.5;
+div.central-wrapper-finish {
+  width: 320px;
+  /* background-color: #2e405744; */
+  border-left: var(--teamYellow) solid 2px;
+  padding: 10px;
+  
 }
 
 div.right-wrapper-finish {
-  max-height: 150px;
+  border-radius: 8px;
+  border: 2px solid var(--teamLightblue);
+  height: fit-content;
   width: 25%;
   background: white;
   color: var(--teamBlue);
   margin-top: 20px;
-  line-height: 1.5;
+  line-height: 1.8;
   padding: 10px;
 }
+div.finished-checkbox{
+  width: 90vw;
+  text-align: center;
+  padding-top: 10px;
+}
 
-#img-purchase {
-  width: 30%;
-  max-width: 250px;
+div.product-finish-text {
+  line-height: 1.2;
+}
+
+div.product-finish-text h3{
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+
+div.product-finish-text p{
+  padding: 5px 0px;
+}
+
+div.product-finish-text p.delivery-estimation{
+  font-weight: bold;
+  color:var(--teamGreen);
+}
+
+#img-purchase1, #img-purchase2 {
+  width: 250px;
 }
 div.container-finished {
   background: var(--teamLightblue);
@@ -594,9 +774,6 @@ div.container-finished {
 }
 .not-visible {
   visibility: hidden;
-}
-section.thankyou {
-  background-color: var(--teamGreen);
 }
 
 div.finished {
@@ -620,3 +797,28 @@ label.timerFinal {
   font-size: 1.5em;
   font-style: italic;
 }
+#btn-buy-now-finished {
+  background-color: var(--teamLightblue);
+  color: var(--teamYellow);
+  padding: 8px 25px;
+  border-radius: 5px;
+  /* opacity: 0.8; */
+  font-size: 20px;
+  border: 2px;
+  border:solid 2px transparent;
+  box-sizing: border-box;
+  transition-duration: 0.5s;
+  margin-top: 10px;
+}
+#btn-buy-now-finished:hover{
+  border: solid 2px var(--teamYellow);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.thankyou-box{
+  border: 2px solid var(--teamLightblue);
+  padding: 10px;
+  border-radius: 8px;
+  background-color: var(--teamGreen);
+  color: rgba(255, 255, 255, 0.801);
+}
+

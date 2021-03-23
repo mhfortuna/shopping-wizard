@@ -36,7 +36,7 @@ let htmlCode1 = `
 btn.addEventListener('click' , function(e){
     e.preventDefault;
     timerResult = setInterval(() => {
-        console.log("your registration took: " + format(counterTime));
+        /* console.log("your registration took: " + format(counterTime)); */
         counterTime++;
         /* document.querySelector(".tested").innerHTML = timeFormat(counterTime); */
 }, 1000);

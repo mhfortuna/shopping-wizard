@@ -8,3 +8,8 @@ for (let thumb of thumbs) {
 function changeBigPicture (event) {
     bigPict.src = event.target.src;
 }
+
+/* Page load */
+window.addEventListener("load", () => {
+    document.querySelector("body").classList.add("loaded"); 
+   });
