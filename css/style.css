@@ -76,6 +76,19 @@ h4 {
   font-size: 1.2rem;
 }
 
+
+/* Loaded page */
+body.fadein {
+  opacity: 0;
+  -moz-transition: opacity 1.5s;
+  -webkit-transition: opacity 1.5s;
+  -o-transition: opacity 1.5s;
+  transition: opacity 1.5s;
+}
+
+body.loaded{
+  opacity: 1;
+}
 /*
 ===========================
  ! Header styles
@@ -86,14 +99,34 @@ header {
   height: 10vh;
   background-color: var(--teamLightblue);
   overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 div.logo {
-  height: 100%;
+  /* width: 30%; */
+  height: 90%;
   display: flex;
   align-items: center;
   margin-left: 10%;
   color: var(--teamYellow);
   font-weight: bold;
+}
+img.dream-logo {
+  height: 90%;
+  width: auto;
+}
+div.quote{
+  max-width: 400px;
+  margin-right: 15%;
+  display: flex;
+  text-align: center;
+}
+blockquote.header-quote{
+  color: var(--teamYellow);
+  font-weight: 900;
+  font-size: 15px;
 }
 
 /*
@@ -188,24 +221,40 @@ div.left-wrapper {
   width: 50vw;
   overflow: hidden;
   display: flex;
-  justify-content: center;
+  justify-content:flex-end;
+  padding-right: 25px;
+  max-height: 100%;
 }
 
 div.thumbnail-wrapper {
   display: flex;
   flex-direction: column;
-  width: 12%;
-  padding: 2%;
+  width: 11%;
+  margin: 5px;
+  padding: 2px;
+  /* border: 2px solid var(--teamLightblue); */
+  height: fit-content;
 }
 
 img.img-thumbnail {
   max-width: 100%;
   margin: 1px 0;
+  transition-duration: 0.5s;
+}
+img.img-thumbnail:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transform: scale(1.1);
 }
 
 div.big-picture {
-  width: 60%;
+  width: 58%;
   padding-left: 5%;
+  margin: 5px; \\for alignment
+}
+.big-picture>img {
+  width: 100%;
+  max-height: 100%;
+
 }
 
 /* ! ----------right---------- */
@@ -215,28 +264,42 @@ div.right-wrapper {
   padding-left: 2%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  max-height: 400px;
+  justify-content:space-between;
+  height: 70%;
+  max-height: 450px;
 }
 
+div.right-wrapper h2 {
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
 div.right-wrapper h3 {
   font-weight: bold;
   font-size: 2rem;
+  margin-bottom: 10px;
 }
 
 div.price-wrapper h4 {
   font-weight: bold;
   font-size: 1rem;
+  margin-bottom: 5px;
+}
+div.color-wrapper h4 {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
 }
 
 select#idSize {
   background: transparent;
-  border: solid 2px;
+  border: solid 1.75px var(--teamLightblue);
   border-radius: 5px;
-  font-size: 1rem;
-  height: 30px;
-  padding: 5px;
-  width: 40%;
+  font-size: 1.2rem;
+  font-weight: 900;
+  height: fit-content;
+  padding: 1px;
+  width: fit-content;
 }
 
 div.color-thumbnails-wrapper {
@@ -246,17 +309,32 @@ div.color-thumbnails-wrapper {
 }
 
 div.color-thumbnails-wrapper img {
-  width: 10%;
+  width: 15%;
   margin-right: 2%;
   margin-bottom: 2%;
+  transition-duration: 0.5s;
+}
+div.color-thumbnails-wrapper img:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transform: scale(1.1);
 }
 
 div.btn-buy input {
-  background-color: black;
-  color: white;
-  padding: 5px 20px;
+  background-color: var(--teamLightblue);
+  color: var(--teamYellow);
+  padding: 8px 25px;
   border-radius: 5px;
-  opacity: 0.8;
+  /* opacity: 0.8; */
+  font-size: 28px;
+  font-weight: 900;
+  border: 2px;
+  border:solid 2px transparent;
+  box-sizing: border-box;
+  transition-duration: 0.5s;
+}
+div.btn-buy input:hover{
+  border: solid 2px var(--teamYellow);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /*
@@ -537,23 +615,71 @@ span.minutes {
 }
 /*
 ===========================
-! Footer styles
+! Foot styles
 ===========================
 */
-footer {
+div.foot {
   width: 100%;
   height: 10vh;
   background-color: var(--teamLightblue);
   color: var(--teamYellow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-div.footer-text {
+div.foot-sm{
+  display: flex;
+  align-items: center;
+}
+div.foot-sm a i{
+  color: var(--teamYellow);
+  font-size: 25px;
+  padding: 0px 5px;
+}
+
+div.foot-sm p{
+  padding-left: 50px;
+}
+
+div.foot-text {
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+
+/*
+===========================
+! Page Buttons
+===========================
+*/
+input.page-input-button{
+  color: var(--teamLightblue);
+  background-color: var(--teamYellow);
+  padding: 6px;
+  border-radius: 5px;
+  /* opacity: 0.8; */
+  font-size: 16px;
+  font-weight: 900;
+  border: 2px;
+  border:solid 2px transparent;
+  box-sizing: border-box;
+  transition-duration: 0.5s;
+}
+input.page-input-button:hover{
+  border: solid 2px var(--teamYellow);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+input.page-input-button:active{
+  border: solid 2px var(--teamYellow);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
 
 /* ===========================================
     ! Testing Buttons style
