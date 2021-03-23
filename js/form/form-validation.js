@@ -1,5 +1,11 @@
 import { validaUsername } from "./profiePage.js";
-import { validFirstName } from "./profiePage.js";
+import {
+  validFirstName,
+  validLastName,
+  validBirthday,
+  validAdress,
+} from "./addressPage.js";
+
 /*
  * This section validates form of:
  * Profile page
@@ -17,3 +23,9 @@ document.getElementById("email").addEventListener("focusout", validaUsername);
  */
 // Validate first name
 document.getElementById("fname").addEventListener("focusout", validFirstName);
+// Validate last name
+document.getElementById("lname").addEventListener("focusout", validLastName);
+// Validate Birthday
+document.getElementById("Birthday").addEventListener("focusout", validBirthday);
+// Validate Adress
+document.getElementById("address1").addEventListener("focusout", validAdress);
