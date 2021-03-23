@@ -13,9 +13,10 @@ let indexpage = 1;
 
 /* Show hide elements */
 const logo = document.querySelector('.logo');
+const quote = document.querySelector('.quote');
 const containerPbar = document.querySelector('.container-pbar');
 const footerButtons = document.querySelector('.page-buttons');
-const footerText = document.querySelector('.footer-text');
+const footerSm = document.querySelector('.foot-sm');
 /* Event Listeners */
 for (let i = 0; i < buttonpage.length; i++) {
     
@@ -30,7 +31,8 @@ function changePage(){
         
         if (indexpage == 1) {
             logo.classList.add('hide');
-            footerText.classList.add('hide');
+            quote.classList.add('hide');
+            footerSm.classList.add('hide');
             containerPbar.classList.toggle('hide');
             footerButtons.classList.toggle('hide');
         } else {
