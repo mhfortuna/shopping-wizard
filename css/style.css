@@ -747,7 +747,7 @@ div.product-finish-text p.delivery-estimation{
   color:var(--teamGreen);
 }
 
-#img-purchase {
+#img-purchase1, #img-purchase2 {
   width: 250px;
 }
 div.container-finished {
@@ -759,9 +759,6 @@ div.container-finished {
 }
 .not-visible {
   visibility: hidden;
-}
-section.thankyou {
-  background-color: var(--teamGreen);
 }
 
 div.finished {
@@ -801,5 +798,12 @@ label.timerFinal {
 #btn-buy-now-finished:hover{
   border: solid 2px var(--teamYellow);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.thankyou-box{
+  border: 2px solid var(--teamLightblue);
+  padding: 10px;
+  border-radius: 8px;
+  background-color: var(--teamGreen);
+  color: rgba(255, 255, 255, 0.801);
 }
 
