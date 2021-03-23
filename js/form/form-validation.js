@@ -1,4 +1,9 @@
-import { validaUsername } from "./username.js";
+import { validaUsername } from "./profiePage.js";
 
-document.getElementById("Uname").addEventListener("focusout", validaUsername)
-
+/*
+ * This section validates form of:
+ * Profile page
+ * @ author:
+ */
+// Validate username
+document.getElementById("Uname").addEventListener("focusout", validaUsername);
