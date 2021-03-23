@@ -25,15 +25,17 @@ function removeClasses(input, label, p) {
  * from adress page
  * @ author:
  */
-export function validFirstName() {
+export function validFirstName(element = this) {
   // get DOM elements
   const xLabel = document.querySelector('label[for="Fname"]');
   const xp = document.querySelector(".p-fname");
   // toggle classes
-  if (this.value == "") {
-    addClasses(this, xLabel, xp);
+  if (element.value == "") {
+    addClasses(element, xLabel, xp);
+    return false;
   } else {
-    removeClasses(this, xLabel, xp);
+    removeClasses(element, xLabel, xp);
+    return true;
   }
 }
 
@@ -42,15 +44,15 @@ export function validFirstName() {
  * from adress page
  * @ author:
  */
-export function validLastName() {
+export function validLastName(element = this) {
   // get DOM elements
   const xLabel = document.querySelector('label[for="Lname"]');
   const xp = document.querySelector(".p-lname");
   // toggle classes
-  if (this.value == "") {
-    addClasses(this, xLabel, xp);
+  if (element.value == "") {
+    addClasses(element, xLabel, xp);
   } else {
-    removeClasses(this, xLabel, xp);
+    removeClasses(element, xLabel, xp);
   }
 }
 
@@ -59,15 +61,15 @@ export function validLastName() {
  * from adress page
  * @ author:
  */
-export function validBirthday() {
+export function validBirthday(element = this) {
   // get DOM elements
   const xLabel = document.querySelector('label[for="Birthday"]');
   const xp = document.querySelector(".p-birthday");
   // toggle classes
-  if (!this.validity.valid) {
-    addClasses(this, xLabel, xp);
+  if (!element.validity.valid) {
+    addClasses(element, xLabel, xp);
   } else {
-    removeClasses(this, xLabel, xp);
+    removeClasses(element, xLabel, xp);
   }
 }
 
@@ -76,15 +78,15 @@ export function validBirthday() {
  * from adress page
  * @ author:
  */
-export function validAdress() {
+export function validAdress(element = this) {
   // get DOM elements
   const xLabel = document.querySelector('label[for="address1"]');
   const xp = document.querySelector(".p-address1");
   // toggle classes
-  if (!this.validity.valid) {
-    addClasses(this, xLabel, xp);
+  if (!element.validity.valid) {
+    addClasses(element, xLabel, xp);
   } else {
-    removeClasses(this, xLabel, xp);
+    removeClasses(element, xLabel, xp);
   }
 }
 
@@ -93,15 +95,15 @@ export function validAdress() {
  * from adress page
  * @ author:
  */
-export function validPostalCode() {
+export function validPostalCode(element = this) {
   // get DOM elements
   const xLabel = document.querySelector('label[for="pcode"]');
   const xp = document.querySelector(".p-pcode");
   // toggle classes
-  if (!this.validity.valid) {
-    addClasses(this, xLabel, xp);
+  if (!element.validity.valid) {
+    addClasses(element, xLabel, xp);
   } else {
-    removeClasses(this, xLabel, xp);
+    removeClasses(element, xLabel, xp);
   }
 }
 
@@ -110,14 +112,14 @@ export function validPostalCode() {
  * from adress page
  * @ author:
  */
-export function validPhoneNumber() {
+export function validPhoneNumber(element = this) {
   // get DOM elements
   const xLabel = document.querySelector('label[for="Phone"]');
   const xp = document.querySelector(".p-tel");
   // toggle classes
-  if (!this.validity.valid) {
-    addClasses(this, xLabel, xp);
+  if (!element.validity.valid) {
+    addClasses(element, xLabel, xp);
   } else {
-    removeClasses(this, xLabel, xp);
+    removeClasses(element, xLabel, xp);
   }
 }
