@@ -4,6 +4,8 @@ import {
   validLastName,
   validBirthday,
   validAdress,
+  validPostalCode,
+  validPhoneNumber,
 } from "./addressPage.js";
 
 /*
@@ -29,3 +31,7 @@ document.getElementById("lname").addEventListener("focusout", validLastName);
 document.getElementById("Birthday").addEventListener("focusout", validBirthday);
 // Validate Adress
 document.getElementById("address1").addEventListener("focusout", validAdress);
+// Validate postal code
+document.getElementById("pcode").addEventListener("focusout", validPostalCode);
+// Validate phone number
+document.getElementById("tel").addEventListener("focusout", validPhoneNumber);

@@ -27,14 +27,13 @@ function removeClasses(input, label, p) {
  */
 export function validFirstName() {
   // get DOM elements
-  const x = document.getElementById("fname");
   const xLabel = document.querySelector('label[for="Fname"]');
   const xp = document.querySelector(".p-fname");
   // toggle classes
-  if (x.value == "") {
-    addClasses(x, xLabel, xp);
+  if (this.value == "") {
+    addClasses(this, xLabel, xp);
   } else {
-    removeClasses(x, xLabel, xp);
+    removeClasses(this, xLabel, xp);
   }
 }
 
@@ -45,14 +44,13 @@ export function validFirstName() {
  */
 export function validLastName() {
   // get DOM elements
-  const x = document.getElementById("lname");
   const xLabel = document.querySelector('label[for="Lname"]');
   const xp = document.querySelector(".p-lname");
   // toggle classes
-  if (x.value == "") {
-    addClasses(x, xLabel, xp);
+  if (this.value == "") {
+    addClasses(this, xLabel, xp);
   } else {
-    removeClasses(x, xLabel, xp);
+    removeClasses(this, xLabel, xp);
   }
 }
 
@@ -63,14 +61,13 @@ export function validLastName() {
  */
 export function validBirthday() {
   // get DOM elements
-  const x = document.getElementById("Birthday");
   const xLabel = document.querySelector('label[for="Birthday"]');
   const xp = document.querySelector(".p-birthday");
   // toggle classes
-  if (!x.validity.valid) {
-    addClasses(x, xLabel, xp);
+  if (!this.validity.valid) {
+    addClasses(this, xLabel, xp);
   } else {
-    removeClasses(x, xLabel, xp);
+    removeClasses(this, xLabel, xp);
   }
 }
 
@@ -81,13 +78,46 @@ export function validBirthday() {
  */
 export function validAdress() {
   // get DOM elements
-  const x = document.getElementById("address1");
   const xLabel = document.querySelector('label[for="address1"]');
   const xp = document.querySelector(".p-address1");
   // toggle classes
-  if (!x.validity.valid) {
-    addClasses(x, xLabel, xp);
+  if (!this.validity.valid) {
+    addClasses(this, xLabel, xp);
   } else {
-    removeClasses(x, xLabel, xp);
+    removeClasses(this, xLabel, xp);
+  }
+}
+
+/*
+ * This function validates postal code input
+ * from adress page
+ * @ author:
+ */
+export function validPostalCode() {
+  // get DOM elements
+  const xLabel = document.querySelector('label[for="pcode"]');
+  const xp = document.querySelector(".p-pcode");
+  // toggle classes
+  if (!this.validity.valid) {
+    addClasses(this, xLabel, xp);
+  } else {
+    removeClasses(this, xLabel, xp);
+  }
+}
+
+/*
+ * This function validates phone number input
+ * from adress page
+ * @ author:
+ */
+export function validPhoneNumber() {
+  // get DOM elements
+  const xLabel = document.querySelector('label[for="Phone"]');
+  const xp = document.querySelector(".p-tel");
+  // toggle classes
+  if (!this.validity.valid) {
+    addClasses(this, xLabel, xp);
+  } else {
+    removeClasses(this, xLabel, xp);
   }
 }
