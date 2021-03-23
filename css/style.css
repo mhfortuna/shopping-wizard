@@ -322,6 +322,45 @@ select.select-form {
 
 /*
 ===========================
+!password field validation
+===========================
+*/
+#checksField {
+  display: none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#checksField p {
+  padding: 10px 35px;
+  font-size: 18px;
+}
+
+.correct {
+  color: rgb(28, 0, 128);
+}
+
+.correct:before {
+  position: relative;
+  left: -35px;
+  content: "✔";
+}
+
+.wrong {
+  color: red;
+}
+
+.wrong:before {
+  position: relative;
+  left: -35px;
+  content: "✖";
+}
+
+/*
+===========================
 ! Profile form styles
 ===========================
 */

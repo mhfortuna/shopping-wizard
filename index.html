@@ -136,17 +136,25 @@
             <p class="text-form-error hide p-email">Insert valid email</p>
           </div>
           <div>
-            <label class="label-form label-profile" for="pwd">Password</label>
-            <input class="input-form input-profile" type="password" id="pwd"
+            <label class="label-form label-profile" for="pass">Password</label>
+            <input class="input-form input-profile" type="password" id="pass"
               title="Password must contain at least 8 characters, including UPPER/lowercase and numbers" name="pwd"
               required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}">
-            <p class="text-form-error hide">Insert valid password</p>
+            <p class="text-form-error hide p-Pass">Insert valid Password</p>
+            <div id="checksField">
+              <h3>Password must contain the following:</h3>
+              <p id="letter" class="wrong">A <b>lowercase</b> letter</p>
+              <p id="capital" class="wrong">A <b>capital (uppercase)</b>letter</p>
+              <p id="number" class="wrong">A <b>number</b></p>
+              <p id="special" class="wrong"> a <b>special</b></p>
+              <p id="lenght" class="wrong"> <b>Min Length 8 characters</b></p>
+            </div>
           </div>
           <div>
             <label class="label-form label-profile" for="pwd2">Confirm Password</label>
-            <input class="input-form input-profile" type="password" title="Please enter the same Password as above"
-              required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}">
-            <p class="text-form-error hide">Check valid password</p>
+            <input class="input-form input-profile" id="pwd2" type="password"
+              title="Please enter the same Password as above" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}">
+            <p class="text-form-error hide p-pass2">Password do not match</p>
           </div>
         </form>
       </section>

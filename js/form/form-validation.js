@@ -1,4 +1,9 @@
-import { validaUsername } from "./profiePage.js";
+import {
+  validaUsername,
+  validateEmail,
+  validatePass,
+  confirmPass,
+} from "./profiePage.js";
 import {
   validFirstName,
   validLastName,
@@ -16,7 +21,11 @@ import {
 // Validate username
 document.getElementById("Uname").addEventListener("focusout", validaUsername);
 // validate email
-document.getElementById("email").addEventListener("focusout", validaUsername);
+document.getElementById("email").addEventListener("focusout", validateEmail);
+// validate pass
+document.getElementById("pass").addEventListener("focusout", validatePass);
+// confirm pass
+document.getElementById("pwd2").addEventListener("focusout", confirmPass);
 
 /*
  * This section validates form of:
@@ -45,7 +54,5 @@ document.getElementById("tel").addEventListener("focusout", validPhoneNumber);
 document.getElementById("btnNext").addEventListener("click", function () {
   // console.log("Hello from click next");
   // check page
-
   // get data and store it in object
-  
 });
