@@ -434,6 +434,7 @@ section.address h3{
   max-height: 100%;
   gap: 20px;
   align-content: center;
+  max-width: 700px;
 }
 .address-wrapper-right{
 }
@@ -679,7 +680,8 @@ button.testing:disabled:hover {
     ===========================================
  */
 section.finished {
-  background-color: var(--teamGreen);
+  background-color: white;
+  margin: 0;
   padding: 20px;
   flex-direction: row;
   justify-content: space-between;
