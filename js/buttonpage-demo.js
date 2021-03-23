@@ -38,8 +38,17 @@ function changePage(){
             containerPbar.classList.toggle('hide');
             footerButtons.classList.toggle('hide');
         } else {
-            bullets[indexpage-1].classList.add('completed-pbar');
-            bars[indexpage-2].classList.add('bar-pbar-completed');
+            if (indexpage != 4) {
+                if (indexpage != 5){
+                    bullets[indexpage-1].classList.add('completed-pbar');
+                    bars[indexpage-2].classList.add('bar-pbar-completed');
+                } else {
+                    bullets[indexpage-2].classList.add('completed-pbar');
+                    bars[indexpage-3].classList.add('bar-pbar-completed');
+
+                }
+            }
+
         }
         indexpage += 1;
     } else {
