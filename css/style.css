@@ -251,7 +251,7 @@ img.img-thumbnail:hover {
 div.big-picture {
   width: 58%;
   padding-left: 5%;
-  margin: 5px; \\for alignment
+  margin: 5px; /* for alignment */
 }
 .big-picture>img {
   width: 100%;
@@ -435,8 +435,6 @@ section.address h3{
   gap: 20px;
   align-content: center;
   max-width: 700px;
-}
-.address-wrapper-right{
 }
 
 select.select-country {
