@@ -438,8 +438,13 @@ div.file-input i {
   margin-left: 10px;
 }
 
-input.form-checkbox__input:checked ~ div {
+div.shiptemplate {
   display: none;
+  padding: 2vh 0px;
+}
+
+div.shipping-show {
+  display: block;
 }
 /* 
 ===========================
