@@ -25,11 +25,11 @@ function removeClasses(input, label, p) {
  * from profile page
  * @ author:
  */
-export function validaUsername() {
+export function validFirstName() {
   // get DOM elements
-  const x = document.getElementById("Uname");
-  const xLabel = document.querySelector('label[for="Uname"]');
-  const xp = document.querySelector(".p-Uname");
+  const x = document.getElementById("fname");
+  const xLabel = document.querySelector('label[for="fname"]');
+  const xp = document.querySelector(".p-fname");
   // toggle classes
   if (x.value == "") {
     addClasses(x, xLabel, xp);
@@ -44,18 +44,3 @@ export function validaUsername() {
  * from profile page
  * @ author:
  */
-
-export function validateEmail() {
-  // get DOM elements
-  const email = document.getElementById("email");
-  const elabel = document.querySelector('label[for="email"]');
-  const ep = document.queryselector(".p-email");
-  //regular expresion
-  const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-  if (re.test(email.value.trim())) {
-    removeClasses(email, elabel, ep);
-  } else {
-    addClases(email, elabel, ep);
-  }
-}
