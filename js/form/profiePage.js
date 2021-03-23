@@ -25,16 +25,16 @@ function removeClasses(input, label, p) {
  * from profile page
  * @ author:
  */
-export function validaUsername() {
+export function validaUsername(element = this) {
   // get DOM elements
-  const x = document.getElementById("Uname");
+  // const x = document.getElementById("Uname");
   const xLabel = document.querySelector('label[for="Uname"]');
   const xp = document.querySelector(".p-Uname");
   // toggle classes
-  if (x.value == "") {
-    addClasses(x, xLabel, xp);
+  if (element.value == "") {
+    addClasses(element, xLabel, xp);
   } else {
-    removeClasses(x, xLabel, xp);
+    removeClasses(element, xLabel, xp);
   }
 }
 
