@@ -133,7 +133,7 @@
             <label class="label-form label-profile" for="email">Email</label>
             <input class="input-form input-profile" type="email" name="write_email" id="email" required
               placeholder="test@gmail.com" pattern="([a-z\d]+(\.|_|-)?)+@[a-z\d]+\.[a-z]{2,50}\b">
-            <p class="text-form-error hide">Insert valid email</p>
+            <p class="text-form-error hide p-email">Insert valid email</p>
           </div>
           <div>
             <label class="label-form label-profile" for="pwd">Password</label>
@@ -162,28 +162,34 @@
             <label class="label-form label-adress" for="Fname">First Name</label>
             <input class="input-form input-adress" type="text" id="fname" name="fname" maxlength="20" required
               tabindex="0">
+            <p class="text-form-error hide">Please insert first name</p>
           </div>
           <div>
             <label class="label-form label-adress" for="Lname">Last Name</label>
             <input class="input-form input-adress" type="text" id="lname" name="lname" maxlength="20" required
               tabindex="0">
+            <p class="text-form-error hide">Please insert last name</p>
           </div>
 
           <div>
             <label class="label-form label-adress" for="Birthday">Birthday</label>
             <input class="input-form input-adress" type="date" id="Birthday" name="Birthday" required tabindex="0">
+            <p class="text-form-error hide">Please insert your birthday</p>
           </div>
           <div>
             <label class="label-form label-adress" for="address1">Address 1</label>
             <input class="input-form input-adress" type="text" id="address1" name="address1" required tabindex="0">
+            <p class="text-form-error hide">Please insert your address</p>
           </div>
           <div>
             <label class="label-form label-adress" for="address2">Address 2</label>
             <input class="input-form input-adress" type="text" id="address2" name="address2" tabindex="0">
+            <!-- <p class="text-form-error hide">Check valid password</p> -->
           </div>
           <div>
             <label class="label-form label-adress" for="Pcode">Postal Code</label>
             <input class="input-form input-adress" type="number" id="zip" maxlength="5" tabindex="0">
+            <p class="text-form-error hide">Please insert a valid postal code</p>
           </div>
           <div>
             <label class="label-form label-adress" for="Country">Country</label>
@@ -206,6 +212,7 @@
             </select>
             <input class="input-form input-adress input-phone" type="number" name="tel" id="tel" maxlength="9" required
               tabindex="0">
+            <p class="text-form-error hide">Please insert a valid phone number</p>
           </div>
           <div>
             <label class="form-checkbox">
@@ -248,7 +255,7 @@
               <label for="extra">Premium (24H) <b>9,99€</b></label>
             </div>
           </div>
-          <div class="shiptemplate" >
+          <div class="shiptemplate">
             <label for="">Shipping date: </label>
             <b></b>
           </div>
