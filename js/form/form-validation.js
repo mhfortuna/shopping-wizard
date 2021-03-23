@@ -35,3 +35,17 @@ document.getElementById("address1").addEventListener("focusout", validAdress);
 document.getElementById("pcode").addEventListener("focusout", validPostalCode);
 // Validate phone number
 document.getElementById("tel").addEventListener("focusout", validPhoneNumber);
+
+/*
+ * This section read all form inputs
+ * and prevent user to go to next page
+ * if there is a missing parameter
+ * @ author:
+ */
+document.getElementById("btnNext").addEventListener("click", function () {
+  // console.log("Hello from click next");
+  // check page
+
+  // get data and store it in object
+  
+});
