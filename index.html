@@ -112,9 +112,9 @@
       FORM 1 - PROFILE
       =================================
       -->
-      <section class="profile">
-        <h3>Profile</h3>
+      <section class="section-formulary profile">
         <form action="/action_page.php">
+          <h3>Profile</h3>
           <div>
             <label class="label-form label-profile" for="Uname">Username</label>
             <input class="input-form input-profile" type="text" id="Uname" name="Uname" maxlength="20" required
@@ -148,66 +148,70 @@
       =================================
       -->
       <section class="address">
-        <h3>Address</h3>
-        <form action="/action_page.php">
+        <form class="address-flex" action="/action_page.php">
+          <h3>Address</h3>
           <div>
-            <label class="label-form label-adress" for="Fname">First Name</label>
-            <input class="input-form input-adress" type="text" id="fname" name="fname" maxlength="20" required
-              tabindex="0">
+            <div>
+              <label class="label-form label-adress" for="Fname">First Name</label>
+              <input class="input-form input-adress" type="text" id="fname" name="fname" maxlength="20" required
+                tabindex="0">
+            </div>
+            <div>
+              <label class="label-form label-adress" for="Lname">Last Name</label>
+              <input class="input-form input-adress" type="text" id="lname" name="lname" maxlength="20" required
+                tabindex="0">
+            </div>
+            <div>
+              <label class="label-form label-adress" for="Birthday">Birthday</label>
+              <input class="input-form input-adress" type="date" id="Birthday" name="Birthday" required tabindex="0">
+            </div>
+            <div>
+              <label class="label-form label-adress" for="address1">Address 1</label>
+              <input class="input-form input-adress" type="text" id="address1" name="address1" required tabindex="0">
+            </div>
+            <div>
+              <label class="label-form label-adress" for="address2">Address 2</label>
+              <input class="input-form input-adress" type="text" id="address2" name="address2" tabindex="0">
+            </div>
           </div>
-          <div>
-            <label class="label-form label-adress" for="Lname">Last Name</label>
-            <input class="input-form input-adress" type="text" id="lname" name="lname" maxlength="20" required
-              tabindex="0">
-          </div>
-
-          <div>
-            <label class="label-form label-adress" for="Birthday">Birthday</label>
-            <input class="input-form input-adress" type="date" id="Birthday" name="Birthday" required tabindex="0">
-          </div>
-          <div>
-            <label class="label-form label-adress" for="address1">Address 1</label>
-            <input class="input-form input-adress" type="text" id="address1" name="address1" required tabindex="0">
-          </div>
-          <div>
-            <label class="label-form label-adress" for="address2">Address 2</label>
-            <input class="input-form input-adress" type="text" id="address2" name="address2" tabindex="0">
-          </div>
-          <div>
-            <label class="label-form label-adress" for="Pcode">Postal Code</label>
-            <input class="input-form input-adress" type="number" id="zip" maxlength="5" tabindex="0">
-          </div>
-          <div>
-            <label class="label-form label-adress" for="Country">Country</label>
-            <select class="select-form select-country" name="Country" id="country" required tabindex="0">
-              <option value="Andorra">Andorra</option>
-              <option value="Spain" selected>Spain</option>
-              <option value="France">France</option>
-              <option value="Germany">Germany</option>
-              <option value="Greece">Greece</option>
-            </select>
-          </div>
-          <label class="label-form label-adress" for="Phone">Phone</label>
-          <div class="div-phone">
-            <select class="select-form select-phone" name="PhoneCountryCode" id="PhoneCountryCode" tabindex="0">
-              <option value="376-AND">AND +376</option>
-              <option value="34-ES" selected>ES +34</option>
-              <option value="33-FR">FR +33</option>
-              <option value="49-GER">GER +49</option>
-              <option value="30-GRC">GRC +30</option>
-            </select>
-            <input class="input-form input-adress input-phone" type="number" name="tel" id="tel" maxlength="9" required
-              tabindex="0">
-          </div>
-          <div>
-            <label class="form-checkbox">
-              <!-- Input oculto -->
-              <input class="form-checkbox__input" type="checkbox" name="conditions" value="conditions">
-              <!-- Imagen en sustitucion -->
-              <span class="form-checkbox__show form-checkbox__show--checkbox"></span>
-              <!-- Texto -->
-              <span class="form-checkbox__text">Esta es mi direccion habitual</span>
-            </label>
+          <div class="address-wrapper-right">
+            <div>
+              <label class="label-form label-adress" for="Pcode">Postal Code</label>
+              <input class="input-form input-adress" type="number" id="zip" maxlength="5" tabindex="0">
+            </div>
+            <div>
+              <label class="label-form label-adress" for="Country">Country</label>
+              <select class="select-form select-country" name="Country" id="country" required tabindex="0">
+                <option value="Andorra">Andorra</option>
+                <option value="Spain" selected>Spain</option>
+                <option value="France">France</option>
+                <option value="Germany">Germany</option>
+                <option value="Greece">Greece</option>
+              </select>
+            </div>
+            <label class="label-form label-adress" for="Phone">Phone</label>
+            <div class="div-phone">
+              <select class="select-form select-phone" name="PhoneCountryCode" id="PhoneCountryCode" tabindex="0">
+                <option value="376-AND">AND +376</option>
+                <option value="34-ES" selected>ES +34</option>
+                <option value="33-FR">FR +33</option>
+                <option value="49-GER">GER +49</option>
+                <option value="30-GRC">GRC +30</option>
+              </select>
+              <input class="input-form input-adress input-phone" type="number" name="tel" id="tel" maxlength="9" required
+                tabindex="0">
+            </div>
+            <div>
+              <label class="form-checkbox">
+                <!-- Input oculto -->
+                <input class="form-checkbox__input" type="checkbox" name="conditions" value="conditions">
+                <!-- Imagen en sustitucion -->
+                <span class="form-checkbox__show form-checkbox__show--checkbox"></span>
+                <!-- Texto -->
+                <span class="form-checkbox__text">Esta es mi direccion habitual</span>
+              </label>
+            </div>
+  
           </div>
         </form>
       </section>
@@ -218,13 +222,10 @@
       =================================
       -->
       <section class="shipping-page">
-        <!-- Headings -->
-        <div>
-          <h3>Shipping</h3>
-        </div>
         <!-- Shipping form -->
         <form action="">
           <!-- radio buttons - shipping type -->
+          <h3>Shipping</h3>
           <div class="shipping-type">
             <label for="type">Shipping type</label>
             <div>
@@ -367,7 +368,10 @@
       <p>FOOTER TEXT</p>
     </div>
  -->
-  <div class="page-buttons hide">
+ <div class="logo logo-foot hide">
+  <img src="./images/logo-dream-shoes.png" alt="" class="dream-logo">
+</div>
+<div class="page-buttons hide">
       <input class="page-input-button" type="reset" value="Clear Form" tabindex="-1">
       <input class="submitbutton page-input-button" type="submit" value="Next" tabindex="0">
     </div>
