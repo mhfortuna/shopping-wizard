@@ -93,8 +93,8 @@ export let myOrder = {
   price: undefined,
   photoAddress: undefined,
   shippingPrice: 0,
-  shipingDate: undefined
-  
+  shippingDate1: undefined,
+  shippingDate2: undefined  
 };
 
 function firstBuy() {
@@ -117,18 +117,23 @@ const yourOrderPageText = document.getElementsByClassName('product-finish-text')
 const yourPurchasePagePrices = document.getElementsByClassName('right-wrapper-finish')[0];
 const yourOrderPagePrices = document.getElementsByClassName('right-wrapper-finish')[1];
 function updatePurchasePage() {
+  /* Product details */
   yourPurchasePageText.childNodes[1].innerText = myOrder.product;
   yourPurchasePageText.childNodes[3].innerText += ' ' + myOrder.size;
   yourPurchasePageText.childNodes[5].innerText += ' ' + myOrder.color;
   yourOrderPageText.childNodes[1].innerText = myOrder.product;
   yourOrderPageText.childNodes[3].innerText += ' ' + myOrder.size;
   yourOrderPageText.childNodes[5].innerText += ' ' + myOrder.color;
+  /* Shipping dates */
+  yourPurchasePageText.childNodes[9].innerText += ' ' + myOrder.shippingDate1;
+  yourPurchasePageText.childNodes[11].innerText += ' ' + myOrder.shippingDate2;
+  yourOrderPageText.childNodes[9].innerText += ' ' + myOrder.shippingDate1;
+  yourOrderPageText.childNodes[11].innerText += ' ' + myOrder.shippingDate2;
+  /* Price */
   yourPurchasePagePrices.childNodes[5].innerText += ' ' + myOrder.price + '€';
   yourPurchasePagePrices.childNodes[7].innerText += ' ' + myOrder.shippingPrice + '€';
   yourPurchasePagePrices.childNodes[11].innerText += ' ' + (parseFloat(myOrder.shippingPrice) + parseFloat(myOrder.price)) + '€';
   yourOrderPagePrices.childNodes[5].innerText += ' ' + myOrder.price + '€';
   yourOrderPagePrices.childNodes[7].innerText += ' ' + myOrder.shippingPrice + '€';
   yourOrderPagePrices.childNodes[11].innerText += ' ' + (parseFloat(myOrder.shippingPrice) + parseFloat(myOrder.price)) + '€';
-
-  /* TODO: agregar precio de envío y sumar */
 }
