@@ -186,3 +186,8 @@ function updatePurchasePage() {
 
   /* TODO: agregar precio de envío y sumar */
 }
+
+
+function removeValidation(){
+  pBuyNowValidation.classList.add('hide');
+}

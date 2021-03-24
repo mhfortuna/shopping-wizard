@@ -19,7 +19,6 @@ document.getElementById("btnNext").addEventListener("click", function () {
   // get data and store it in object
   if (getCurrentPage() === 2) {
     const gg = document.getElementById("Uname");
-    console.log(validFirstName(gg));
     adressPageValidity = validFirstName(gg);
   }
 });
@@ -88,6 +87,8 @@ export function formAdressValidity() {
   );
 }
 
-document.querySelector(".page-input-button").addEventListener("click", function(){
-  document.querySelector("section.profile form").reset();
-})
+document
+  .querySelector(".page-input-button")
+  .addEventListener("click", function () {
+    document.querySelector("section.profile form").reset();
+  });

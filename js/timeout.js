@@ -8,7 +8,7 @@ let timerResult;
  * @ author:
  */
 // button buy from html //
-let btn = document.getElementById("btn");
+let btn = document.getElementById("buy-btn");
 // start timer listener
 btn.addEventListener("click", function (e) {
   e.preventDefault;
