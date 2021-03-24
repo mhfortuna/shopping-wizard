@@ -7,8 +7,8 @@ const bullets = document.querySelectorAll(".bullet-pbar");
 const bars = document.querySelectorAll(".bar-pbar");
 
 /*Animation variables*/
-let buttonpage = document.querySelectorAll(".submitbutton");
-let page = document.querySelector(".maindiv");
+const buttonpage = document.getElementById('btnNext');
+const page = document.querySelector(".maindiv");
 let indexpage = 1;
 
 /* Show hide elements */
@@ -18,9 +18,10 @@ const containerPbar = document.querySelector(".container-pbar");
 const footerButtons = document.querySelector(".page-buttons");
 const footerSm = document.querySelector(".foot-sm");
 /* Event Listeners */
-for (let i = 0; i < buttonpage.length; i++) {
-  buttonpage[i].addEventListener("click", changePage);
-}
+buttonpage.addEventListener("click", changePage);
+/* First buy button */
+const firstBuyButton = document.getElementById('buy-btn');
+firstBuyButton.addEventListener('click', firstBuy);
 /* Last buy now button */
 const lastBuyNowBtn = document.getElementById('btn-buy-now-finished');
 const buyNowConditions = document.getElementById('conditions');
@@ -85,4 +86,28 @@ function validationChangePage() { /* Verify if checkbox is checked */
   {
     window.alert('Please accept our terms and conditions to buy');
   }
+}
+/* order object for last pages */
+
+var myOrder = {
+  product: undefined,
+  color: undefined,
+  size: undefined,
+  price: undefined,
+  photoAddress: undefined
+};
+
+function firstBuy() {
+  loadToOrder();
+  changePage();
+}
+/* Constants to retrieve product */
+
+function loadToOrder () {
+  /* ! constants already in update-product-info.js */
+  myOrder.product = document.querySelector('.product-page .right-wrapper h2').innerText;
+  myOrder.color = document.getElementById('prod-color').innerText; 
+  myOrder.size = document.getElementById("idSize").value;
+  myOrder.price = document.querySelector(".price-wrapper h3");
+  myOrder.photoAddress = document.getElementsByClassName('big-picture')[0].lastElementChild.src;
 }
