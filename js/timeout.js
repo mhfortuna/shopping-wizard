@@ -16,14 +16,16 @@ btn.addEventListener("click", function (e) {
   timerResult = setInterval(() => {
     counterTime++;
     totalTime++;
-    if (counterTime >= 60 && counterTime < 299) {
+    if (counterTime >= 60 && totalTime < 299) {
       const header = document.querySelector("header");
       insertTimer(totalTime, header);
       counterTime = 0;
     }
     // time up
-    if (totalTime === 300) {
+    if (totalTime >= 300) {
       insertTimeUp();
+      totalTime = 0;
+      counterTime = 0;
     }
   }, 1000);
 });
