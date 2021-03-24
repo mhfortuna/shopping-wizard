@@ -25,16 +25,16 @@ function removeClasses(input, label, p) {
  * from profile page
  * @ author:
  */
-export function validaUsername(element = this) {
+export function validaUsername() {
   // get DOM elements
-  // const x = document.getElementById("Uname");
-  const xLabel = document.querySelector('label[for="Uname"]');
-  const xp = document.querySelector(".p-Uname");
+  const user = document.getElementById("Uname");
+  const userLabel = document.querySelector('label[for="Uname"]');
+  const userp = document.querySelector(".p-Uname");
   // toggle classes
-  if (element.value == "") {
-    addClasses(element, xLabel, xp);
+  if (user.value == "") {
+    addClasses(user, userLabel, userp);
   } else {
-    removeClasses(element, xLabel, xp);
+    removeClasses(user, userLabel, userp);
   }
 }
 
@@ -128,11 +128,13 @@ export function validatePass() {
   const pass = document.getElementById("pass");
   const passlabel = document.querySelector('label[for="pass"]');
   const passp = document.querySelector(".p-Pass");
+  //validate expresion
+  const pwd = /^(?=.*[\d])(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*])[\w!@#$%^&*]{8,}$/;
 
-  if (pass.value == "") {
-    addClasses(pass, passlabel, passp);
-  } else {
+  if (pass.value != "" && pwd.test(pass.value.trim())) {
     removeClasses(pass, passlabel, passp);
+  } else {
+    addClasses(pass, passlabel, passp);
   }
 }
 
@@ -150,8 +152,7 @@ export function confirmPass() {
 
   if (
     document.getElementById("pass").value !=
-    document.getElementById("pwd2").value
-  ) {
+    document.getElementById("pwd2").value || document.getElementById("pwd2").value === "") {
     addClasses(pass2, pass2label, pass2p);
   } else {
     removeClasses(pass2, pass2label, pass2p);
