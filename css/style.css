@@ -629,6 +629,17 @@ span.minutes {
   color: white;
   font-weight: bold;
 }
+
+div.timeout-error {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  right: 0%;
+  top: 0;
+  background-color: var(--teamLightblue);
+  z-index: 98;
+  opacity: 0.6;
+}
 /*
 ===========================
 ! Foot styles
