@@ -90,12 +90,14 @@ function validationChangePage() { /* Verify if checkbox is checked */
 }
 /* order object for last pages */
 
-var myOrder = {
+export let myOrder = {
   product: undefined,
   color: undefined,
   size: undefined,
   price: undefined,
-  photoAddress: undefined
+  photoAddress: undefined,
+  shippingPrice: 0
+
 };
 
 function firstBuy() {
@@ -112,6 +114,7 @@ function loadToOrder () { /* Loads product specs to order object  */
   myOrder.price = document.querySelector(".price-wrapper h3").innerText.slice(0,-1);
   myOrder.photoAddress = document.getElementsByClassName('big-picture')[0].lastElementChild.src;
 }
+/* Last pages constants */
 const yourPurchasePageText = document.getElementsByClassName('product-finish-text')[0];
 const yourOrderPageText = document.getElementsByClassName('product-finish-text')[1];
 const yourPurchasePagePrices = document.getElementsByClassName('right-wrapper-finish')[0];
@@ -124,6 +127,11 @@ function updatePurchasePage() {
   yourOrderPageText.childNodes[3].innerText += ' ' + myOrder.size;
   yourOrderPageText.childNodes[5].innerText += ' ' + myOrder.color;
   yourPurchasePagePrices.childNodes[5].innerText += ' ' + myOrder.price + '€';
+  yourPurchasePagePrices.childNodes[7].innerText += ' ' + myOrder.shippingPrice + '€';
+  yourPurchasePagePrices.childNodes[11].innerText += ' ' + (parseFloat(myOrder.shippingPrice) + parseFloat(myOrder.price)) + '€';
   yourOrderPagePrices.childNodes[5].innerText += ' ' + myOrder.price + '€';
+  yourOrderPagePrices.childNodes[7].innerText += ' ' + myOrder.shippingPrice + '€';
+  yourOrderPagePrices.childNodes[11].innerText += ' ' + (parseFloat(myOrder.shippingPrice) + parseFloat(myOrder.price)) + '€';
+
   /* TODO: agregar precio de envío y sumar */
 }
