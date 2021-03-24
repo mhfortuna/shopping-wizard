@@ -25,6 +25,8 @@ for (let i = 0; i < buttonpage.length; i++) {
 const lastBuyNowBtn = document.getElementById('btn-buy-now-finished');
 const buyNowConditions = document.getElementById('conditions');
 lastBuyNowBtn.addEventListener('click', validationChangePage);
+buyNowConditions.addEventListener('change', removeValidation);
+const pBuyNowValidation = document.querySelector('.p-buy-now-validation');
 
 /* buttonpage.addEventListener('click', changePage); */
 
@@ -83,6 +85,10 @@ function validationChangePage() { /* Verify if checkbox is checked */
     changePage()
   } else
   {
-    window.alert('Please accept our terms and conditions to buy');
+    pBuyNowValidation.classList.toggle('hide');
   }
+}
+
+function removeValidation(){
+  pBuyNowValidation.classList.add('hide');
 }

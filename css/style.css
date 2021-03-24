@@ -770,6 +770,12 @@ div.finished-checkbox {
   padding-top: 10px;
 }
 
+div.finished-checkbox p.p-buy-now-validation{
+  display: inline-flex;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
 div.product-finish-text {
   line-height: 1.2;
 }
@@ -825,6 +831,7 @@ label.timerFinal {
   font-size: 1.5em;
   font-style: italic;
 }
+
 #btn-buy-now-finished {
   background-color: var(--teamLightblue);
   color: var(--teamYellow);
@@ -836,7 +843,6 @@ label.timerFinal {
   border: solid 2px transparent;
   box-sizing: border-box;
   transition-duration: 0.5s;
-  margin-top: 10px;
 }
 #btn-buy-now-finished:hover {
   border: solid 2px var(--teamYellow);
