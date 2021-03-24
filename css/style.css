@@ -78,7 +78,6 @@ h4 {
   font-size: 1.2rem;
 }
 
-
 /* Loaded page */
 body.fadein {
   opacity: 0;
@@ -88,7 +87,7 @@ body.fadein {
   transition: opacity 1.5s;
 }
 
-body.loaded{
+body.loaded {
   opacity: 1;
 }
 /*
@@ -119,13 +118,13 @@ img.dream-logo {
   height: 90%;
   width: auto;
 }
-div.quote{
+div.quote {
   max-width: 400px;
   margin-right: 15%;
   display: flex;
   text-align: center;
 }
-blockquote.header-quote{
+blockquote.header-quote {
   color: var(--teamYellow);
   font-weight: 900;
   font-size: 15px;
@@ -223,7 +222,7 @@ div.left-wrapper {
   width: 50vw;
   overflow: hidden;
   display: flex;
-  justify-content:flex-end;
+  justify-content: flex-end;
   padding-right: 25px;
   max-height: 100%;
 }
@@ -253,10 +252,9 @@ div.big-picture {
   padding-left: 5%;
   margin: 5px; /* for alignment */
 }
-.big-picture>img {
+.big-picture > img {
   width: 100%;
   max-height: 100%;
-
 }
 
 /* ! ----------right---------- */
@@ -266,7 +264,7 @@ div.right-wrapper {
   padding-left: 2%;
   display: flex;
   flex-direction: column;
-  justify-content:space-between;
+  justify-content: space-between;
   height: 70%;
   max-height: 450px;
 }
@@ -330,11 +328,11 @@ div.btn-buy input {
   font-size: 28px;
   font-weight: 900;
   border: 2px;
-  border:solid 2px transparent;
+  border: solid 2px transparent;
   box-sizing: border-box;
   transition-duration: 0.5s;
 }
-div.btn-buy input:hover{
+div.btn-buy input:hover {
   border: solid 2px var(--teamYellow);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -362,7 +360,7 @@ input.input-form {
   border: 1.75px solid black;
   border-radius: 5px;
   margin: 5px 0 15px 0;
-  width:340px;
+  width: 340px;
   max-width: 500px;
 }
 
@@ -403,7 +401,6 @@ select.select-form {
 section form h3 {
   padding-bottom: 20px;
 }
-
 
 /*
 ===========================
@@ -450,8 +447,6 @@ section form h3 {
 ===========================
 */
 
-
-
 label.label-form {
   display: block;
 }
@@ -462,11 +457,11 @@ label.label-form {
 ===========================
 */
 
-section.address h3{
+section.address h3 {
   /* align-self: baseline; */
   width: 100%;
 }
-.address-flex{
+.address-flex {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -474,6 +469,7 @@ section.address h3{
   gap: 20px;
   align-content: center;
   max-width: 700px;
+  justify-content: center;
 }
 
 select.select-country {
@@ -509,7 +505,7 @@ div.div-phone {
 ! Shipping page styles
 ===========================
 */
-.shipping-page form{
+.shipping-page form {
   width: 340px;
 }
 
@@ -646,26 +642,25 @@ div.foot {
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
 
-div.logo-foot{
-  margin:0 100px 0 0;
+div.logo-foot {
+  margin: 0 100px 0 0;
 }
 
-div.foot-sm{
+div.foot-sm {
   display: flex;
   align-items: center;
 }
-div.foot-sm a i{
+div.foot-sm a i {
   color: var(--teamYellow);
   font-size: 25px;
   padding: 0px 5px;
 }
 
-div.foot-sm p{
+div.foot-sm p {
   padding-left: 50px;
-  font-weight: bold;  
+  font-weight: bold;
 }
 
 div.foot-text {
@@ -676,13 +671,12 @@ div.foot-text {
   justify-content: center;
 }
 
-
 /*
 ===========================
 ! Page Buttons
 ===========================
 */
-input.page-input-button{
+input.page-input-button {
   color: var(--teamLightblue);
   background-color: var(--teamYellow);
   padding: 6px;
@@ -691,21 +685,19 @@ input.page-input-button{
   font-size: 22px;
   font-weight: 900;
   border: 2px;
-  border:solid 2px transparent;
+  border: solid 2px transparent;
   box-sizing: border-box;
   transition-duration: 0.5s;
 }
-input.page-input-button:hover{
+input.page-input-button:hover {
   border: solid 2px var(--teamYellow);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-input.page-input-button:active{
+input.page-input-button:active {
   border: solid 2px var(--teamYellow);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
-
 
 /* ===========================================
     ! Testing Buttons style
@@ -760,7 +752,6 @@ div.central-wrapper-finish {
   /* background-color: #2e405744; */
   border-left: var(--teamYellow) solid 2px;
   padding: 10px;
-  
 }
 
 div.right-wrapper-finish {
@@ -774,7 +765,7 @@ div.right-wrapper-finish {
   line-height: 1.8;
   padding: 10px;
 }
-div.finished-checkbox{
+div.finished-checkbox {
   width: 90vw;
   text-align: center;
   padding-top: 10px;
@@ -784,22 +775,23 @@ div.product-finish-text {
   line-height: 1.2;
 }
 
-div.product-finish-text h3{
+div.product-finish-text h3 {
   font-size: 20px;
   font-weight: bold;
   padding-bottom: 15px;
 }
 
-div.product-finish-text p{
+div.product-finish-text p {
   padding: 5px 0px;
 }
 
-div.product-finish-text p.delivery-estimation{
+div.product-finish-text p.delivery-estimation {
   font-weight: bold;
-  color:var(--teamGreen);
+  color: var(--teamGreen);
 }
 
-#img-purchase1, #img-purchase2 {
+#img-purchase1,
+#img-purchase2 {
   width: 250px;
 }
 div.container-finished {
@@ -842,20 +834,19 @@ label.timerFinal {
   /* opacity: 0.8; */
   font-size: 20px;
   border: 2px;
-  border:solid 2px transparent;
+  border: solid 2px transparent;
   box-sizing: border-box;
   transition-duration: 0.5s;
   margin-top: 10px;
 }
-#btn-buy-now-finished:hover{
+#btn-buy-now-finished:hover {
   border: solid 2px var(--teamYellow);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.thankyou-box{
+.thankyou-box {
   border: 2px solid var(--teamLightblue);
   padding: 10px;
   border-radius: 8px;
   background-color: var(--teamGreen);
   color: rgba(255, 255, 255, 0.801);
 }
-
