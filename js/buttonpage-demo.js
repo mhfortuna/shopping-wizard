@@ -28,13 +28,11 @@ const buyNowConditions = document.getElementById('conditions');
 lastBuyNowBtn.addEventListener('click', validationChangePage);
 
 /* buttonpage.addEventListener('click', changePage); */
-
-function changePage() {
-  if (indexpage != 6) {
-    page.style.transform = positionTranslate(indexpage);
-    page.classList.add("horizTranslate");
-
-    if (indexpage == 1) {
+function changePage () {
+  page.style.transform = positionTranslate(indexpage);
+  page.classList.add("horizTranslate");
+  switch (indexpage) {
+    case 1:
       /* Make footer buttons appear after page 1 */
       for (let i = 0; i < logo.length; i++) {
         logo[i].classList.toggle("hide");
@@ -43,36 +41,28 @@ function changePage() {
       footerSm.classList.add("hide");
       containerPbar.classList.toggle("hide");
       footerButtons.classList.toggle("hide");
-    } else /* Page > 1 */
-    {
-      if (indexpage != 4) {
-        if (indexpage != 5) {
-          bullets[indexpage - 1].classList.add("completed-pbar");
-          bars[indexpage - 2].classList.add("bar-pbar-completed");
-        } else { /* After Page 5 */
-          bullets[indexpage - 2].classList.add("completed-pbar");
-          bars[indexpage - 3].classList.add("bar-pbar-completed");
-        }
-      } else {
-        footerButtons.classList.toggle("hide");
+      break;
+    case 2:
+      bullets[indexpage - 1].classList.add("completed-pbar");
+      bars[indexpage - 2].classList.add("bar-pbar-completed");
+      break;
+    case 3:
+      bullets[indexpage - 1].classList.add("completed-pbar");
+      bars[indexpage - 2].classList.add("bar-pbar-completed");
+      break;
+    case 4:
+      footerButtons.classList.toggle("hide");
         updatePurchasePage();
-      }
-    }
-    indexpage += 1;
-  } else 
-  { /* Return to start */
-    page.style.transform = "translateX(0vw)";
-    page.classList.add("horizTranslate");
-
-    for (let i = 1; i < bullets.length; i++) {
-      bullets[i].classList.remove("completed-pbar");
-    }
-    for (let i = 0; i < bullets.length; i++) {
-      bars[i].classList.remove("completed-pbar");
-    }
-
-    indexpage = 1;
+      break;
+    case 5:
+      bullets[indexpage - 2].classList.add("completed-pbar");
+      bars[indexpage - 3].classList.add("bar-pbar-completed");
+      break;
+  
+    default:
+      break;
   }
+  indexpage += 1;
 }
 
 function positionTranslate(index) {
