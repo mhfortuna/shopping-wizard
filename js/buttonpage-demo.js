@@ -23,7 +23,8 @@ for (let i = 0; i < buttonpage.length; i++) {
 }
 /* Last buy now button */
 const lastBuyNowBtn = document.getElementById('btn-buy-now-finished');
-lastBuyNowBtn.addEventListener('click', changePage);
+const buyNowConditions = document.getElementById('conditions');
+lastBuyNowBtn.addEventListener('click', validationChangePage);
 
 /* buttonpage.addEventListener('click', changePage); */
 
@@ -57,7 +58,7 @@ function changePage() {
     }
     indexpage += 1;
   } else 
-  { /* Page 6 */
+  { /* Return to start */
     page.style.transform = "translateX(0vw)";
     page.classList.add("horizTranslate");
 
@@ -74,4 +75,11 @@ function changePage() {
 
 function positionTranslate(index) {
   return "translateX(" + index * -100 + "vw)";
+}
+
+function validationChangePage() { /* Verify if checkbox is checked */
+  if (buyNowConditions.checked == true) 
+  {
+    changePage()
+  }
 }
