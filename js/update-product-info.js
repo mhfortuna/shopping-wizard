@@ -2,7 +2,7 @@ const bigPict = document.getElementsByClassName('big-picture')[0].lastElementChi
 /*Get thumbnails*/
 const thumbs = document.querySelector('.thumbnail-wrapper').getElementsByClassName('img-thumbnail');
 const colorThumbails = document.querySelectorAll(".color-thumbnails-wrapper img");
-
+const selectedColor = document.getElementById('prod-color');
 /* Add event listeners to thumbnails */
 for (let thumb of thumbs) {
     thumb.addEventListener('click', changeProductPicture);
@@ -13,40 +13,41 @@ for (let thumb of thumbs) {
 
 /* Changing product picture */
 function changeProductPicture (event) {
-    bigPict.src = event.target.src;
-    switch (event.target.dataset.color) {
-      case "Black":
-        thumbs[0].src="./images/black-01.png";
-        thumbs[1].src="./images/black-02.png";
-        thumbs[2].src="./images/black-03.png";
-        thumbs[3].src="./images/black-04.png";
-        break;
-      case "Red":
-        thumbs[0].src="./images/red-01.png";
-        thumbs[1].src="./images/red-02.png";
-        thumbs[2].src="./images/red-03.png";
-        thumbs[3].src="./images/red-04.png";
-        break;
-      case "Green":
-        thumbs[0].src="./images/green-01.png";
-        thumbs[1].src="./images/green-02.png";
-        thumbs[2].src="./images/green-03.png";
-        thumbs[3].src="./images/green-04.png";
-        break;
-      case "Yellow":
-        thumbs[0].src="./images/yellow-01.png";
-        thumbs[1].src="./images/yellow-02.png";
-        thumbs[2].src="./images/yellow-03.png";
-        thumbs[3].src="./images/yellow-04.png";
-        break;
-      case "Blue":
-        thumbs[0].src="./images/Blue-01.png";
-        thumbs[1].src="./images/Blue-02.png";
-        thumbs[2].src="./images/Blue-03.png";
-        thumbs[3].src="./images/Blue-04.png";
-        break;
-          }
+  bigPict.src = event.target.src;
+  switch (event.target.dataset.color) {
+    case "Black":
+      thumbs[0].src="./images/black-01.png";
+      thumbs[1].src="./images/black-02.png";
+      thumbs[2].src="./images/black-03.png";
+      thumbs[3].src="./images/black-04.png";
+      break;
+    case "Red":
+      thumbs[0].src="./images/red-01.png";
+      thumbs[1].src="./images/red-02.png";
+      thumbs[2].src="./images/red-03.png";
+      thumbs[3].src="./images/red-04.png";
+      break;
+    case "Green":
+      thumbs[0].src="./images/green-01.png";
+      thumbs[1].src="./images/green-02.png";
+      thumbs[2].src="./images/green-03.png";
+      thumbs[3].src="./images/green-04.png";
+      break;
+    case "Yellow":
+      thumbs[0].src="./images/yellow-01.png";
+      thumbs[1].src="./images/yellow-02.png";
+      thumbs[2].src="./images/yellow-03.png";
+      thumbs[3].src="./images/yellow-04.png";
+      break;
+    case "Blue":
+      thumbs[0].src="./images/Blue-01.png";
+      thumbs[1].src="./images/Blue-02.png";
+      thumbs[2].src="./images/Blue-03.png";
+      thumbs[3].src="./images/Blue-04.png";
+      break;
   }
+  selectedColor.innerText = event.target.dataset.color;
+}
 
 /*
  * This adds event listeners to DOM elements

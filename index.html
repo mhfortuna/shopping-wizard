@@ -95,7 +95,7 @@
             </select>
           </div>
           <div class="color-wrapper">
-            <h4>Color</h4>
+            <h4>Color: <b id='prod-color'>Black</b></h4>
             <div class="color-thumbnails-wrapper">
               <img src="./images/black-01.png" alt="Black" data-color="Black">
               <img src="./images/red-01.png" alt="Red" data-color="Red">
@@ -105,7 +105,7 @@
             </div>
           </div>
           <div class="btn-buy">
-            <input type="submit" value="Buy" id="btn" class="submitbutton">
+            <input type="submit" value="Buy" id="buy-btn" class="submitbutton">
           </div>
       </section>
       <!--
@@ -243,7 +243,7 @@
           <div class="shipping-type">
             <label for="type">Shipping type</label>
             <div>
-              <input type="radio" id="free" name="type" value="free">
+              <input type="radio" id="free" name="type" value="free" checked>
               <label for="free">Free shipment (72H)</label>
             </div>
             <div>
@@ -380,8 +380,8 @@
               <img src="./images/black-01.png" alt="" id="img-purchase">
               <div class="product-finish-text">
                 <h3>Modelo de producto</h3>
-                <p>size :</p>
-                <p>color:</p>
+                <p>Size: </p>
+                <p>color: </p>
                 <p>ESTIMATE DELIVERY DATE:</p>
                 <P>Beetween:</P>
                 <p>and:</p>
@@ -428,11 +428,10 @@
   <script src="./js/form-validation-test.js" defer></script> <!-- Progress bar script -->
   <script src="./js/timeout.js" defer></script>
   <!--time out-->
-  <script src="./js/update-product-info.js" defer></script>
-  <!--Update product info-->
+  <script src="./js/update-product-info.js" defer></script> <!--Update product info-->
   <script src="./js/buttonpage-demo.js" type="module" defer></script>
   <!--Submit button demo-->
-  <script src="./js/shipping.js" defer></script>
+  <script src="./js/shipping.js" type="module" defer></script>
   <script src="./js/form/form-validation.js" type="module"></script>
   <script src="./js/form/form-data.js" type="module"></script>
 </body>

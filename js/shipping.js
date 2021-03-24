@@ -1,3 +1,5 @@
+import { myOrder } from "./buttonpage-demo.js";
+
 /*
  * This functions shows and hides gift section
  * @ author:
@@ -42,8 +44,8 @@ function shippingDates() {
 
 /*
  * Here we update the div template
- * to displsay the shipping date
- * based on the shippement type
+ * to display the shipping date
+ * based on the shipment type
  * Premium: today + 24H
  * Extra: Premium + 24H
  * @ author:
@@ -56,12 +58,17 @@ radios.forEach((radio) =>
     console.log(event.target.id);
     if (event.target.id === "extra") {
       bDate.textContent = shippingDates().secondDate;
+      myOrder.shippingPrice = 4.99;
     } else if (event.target.id === "premium") {
       bDate.textContent = shippingDates().firstDate;
+      myOrder.shippingPrice = 9.99;
     } else {
+      // Free
       bDate.textContent = shippingDates().thirdDate;
+      myOrder.shippingPrice = 0;
     }
     // show
     temp.classList.add("shipping-show");
+    myOrder.shipingDate = bDate.textContent;
   })
 );
