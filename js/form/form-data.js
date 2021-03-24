@@ -7,6 +7,8 @@ import {
   validPhoneNumber,
 } from "./addressPage.js";
 
+export let adressPageValidity;
+
 /*
  * This section read all form inputs
  * and prevent user to go to next page
@@ -15,8 +17,10 @@ import {
  */
 document.getElementById("btnNext").addEventListener("click", function () {
   // get data and store it in object
-  const gg = document.getElementById("Uname");
-  console.log(validFirstName(gg));
+  if (getCurrentPage() === 2) {
+    const gg = document.getElementById("Uname");
+    adressPageValidity = validFirstName(gg);
+  }
 });
 
 /*
@@ -66,3 +70,25 @@ function formValidity(page) {
       break;
   }
 }
+
+/*
+ * This function validates all inputs
+ * in adress page
+ * @ author:
+ */
+export function formAdressValidity() {
+  return (
+    validFirstName() &&
+    validLastName() &&
+    validBirthday() &&
+    validAdress() &&
+    validPostalCode() &&
+    validPhoneNumber()
+  );
+}
+
+document
+  .querySelector(".page-input-button")
+  .addEventListener("click", function () {
+    document.querySelector("section.profile form").reset();
+  });

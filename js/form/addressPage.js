@@ -5,7 +5,10 @@
 function addClasses(input, label, p) {
   input.classList.add("input-form-error");
   label.classList.add("label-form-error");
-  p.classList.remove("hide");
+
+  if (p.classList.contains("hide")) {
+    p.classList.remove("hide");
+  }
   return false;
 }
 
@@ -25,16 +28,17 @@ function removeClasses(input, label, p) {
  * from adress page
  * @ author:
  */
-export function validFirstName(element = this) {
+export function validFirstName() {
   // get DOM elements
+  const xInput = document.getElementById("fname");
   const xLabel = document.querySelector('label[for="Fname"]');
   const xp = document.querySelector(".p-fname");
   // toggle classes
-  if (element.value == "") {
-    addClasses(element, xLabel, xp);
+  if (xInput.value == "") {
+    addClasses(xInput, xLabel, xp);
     return false;
   } else {
-    removeClasses(element, xLabel, xp);
+    removeClasses(xInput, xLabel, xp);
     return true;
   }
 }
@@ -44,15 +48,18 @@ export function validFirstName(element = this) {
  * from adress page
  * @ author:
  */
-export function validLastName(element = this) {
+export function validLastName() {
   // get DOM elements
+  const xInput = document.getElementById("lname");
   const xLabel = document.querySelector('label[for="Lname"]');
   const xp = document.querySelector(".p-lname");
   // toggle classes
-  if (element.value == "") {
-    addClasses(element, xLabel, xp);
+  if (xInput.value == "") {
+    addClasses(xInput, xLabel, xp);
+    return false;
   } else {
-    removeClasses(element, xLabel, xp);
+    removeClasses(xInput, xLabel, xp);
+    return true;
   }
 }
 
@@ -61,15 +68,18 @@ export function validLastName(element = this) {
  * from adress page
  * @ author:
  */
-export function validBirthday(element = this) {
+export function validBirthday() {
   // get DOM elements
+  const xInput = document.getElementById("Birthday");
   const xLabel = document.querySelector('label[for="Birthday"]');
   const xp = document.querySelector(".p-birthday");
   // toggle classes
-  if (!element.validity.valid) {
-    addClasses(element, xLabel, xp);
+  if (!xInput.validity.valid) {
+    addClasses(xInput, xLabel, xp);
+    return false;
   } else {
-    removeClasses(element, xLabel, xp);
+    removeClasses(xInput, xLabel, xp);
+    return true;
   }
 }
 
@@ -78,15 +88,18 @@ export function validBirthday(element = this) {
  * from adress page
  * @ author:
  */
-export function validAdress(element = this) {
+export function validAdress() {
   // get DOM elements
+  const xInput = document.getElementById("address1");
   const xLabel = document.querySelector('label[for="address1"]');
   const xp = document.querySelector(".p-address1");
   // toggle classes
-  if (!element.validity.valid) {
-    addClasses(element, xLabel, xp);
+  if (!xInput.validity.valid) {
+    addClasses(xInput, xLabel, xp);
+    return false;
   } else {
-    removeClasses(element, xLabel, xp);
+    removeClasses(xInput, xLabel, xp);
+    return true;
   }
 }
 
@@ -95,15 +108,18 @@ export function validAdress(element = this) {
  * from adress page
  * @ author:
  */
-export function validPostalCode(element = this) {
+export function validPostalCode() {
   // get DOM elements
+  const xInput = document.getElementById("pcode");
   const xLabel = document.querySelector('label[for="pcode"]');
   const xp = document.querySelector(".p-pcode");
   // toggle classes
-  if (!element.validity.valid) {
-    addClasses(element, xLabel, xp);
+  if (!xInput.validity.valid) {
+    addClasses(xInput, xLabel, xp);
+    return false;
   } else {
-    removeClasses(element, xLabel, xp);
+    removeClasses(xInput, xLabel, xp);
+    return true;
   }
 }
 
@@ -112,14 +128,17 @@ export function validPostalCode(element = this) {
  * from adress page
  * @ author:
  */
-export function validPhoneNumber(element = this) {
+export function validPhoneNumber() {
   // get DOM elements
+  const xInput = document.getElementById("tel");
   const xLabel = document.querySelector('label[for="Phone"]');
   const xp = document.querySelector(".p-tel");
   // toggle classes
-  if (!element.validity.valid) {
-    addClasses(element, xLabel, xp);
+  if (!xInput.validity.valid) {
+    addClasses(xInput, xLabel, xp);
+    return false;
   } else {
-    removeClasses(element, xLabel, xp);
+    removeClasses(xInput, xLabel, xp);
+    return true;
   }
 }
