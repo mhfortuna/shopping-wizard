@@ -7,6 +7,8 @@ import {
   validPhoneNumber,
 } from "./addressPage.js";
 
+export let adressPageValidity;
+
 /*
  * This section read all form inputs
  * and prevent user to go to next page
@@ -18,6 +20,7 @@ document.getElementById("btnNext").addEventListener("click", function () {
   if (getCurrentPage() === 2) {
     const gg = document.getElementById("Uname");
     console.log(validFirstName(gg));
+    adressPageValidity = validFirstName(gg);
   }
 });
 
@@ -67,4 +70,20 @@ function formValidity(page) {
     default:
       break;
   }
+}
+
+/*
+ * This function validates all inputs
+ * in adress page
+ * @ author:
+ */
+export function formAdressValidity() {
+  return (
+    validFirstName() &&
+    validLastName() &&
+    validBirthday() &&
+    validAdress() &&
+    validPostalCode() &&
+    validPhoneNumber()
+  );
 }
