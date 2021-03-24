@@ -1,4 +1,13 @@
-import { formAdressValidity } from "./form/form-data.js";
+import {
+  formAdressValidity,
+  getFormAddressData,
+  clearFormAddressData,
+} from "./form/addressPage.js";
+import {
+  formProfileValidity,
+  getFormProfileData,
+  clearFormProfileData,
+} from "./form/profiePage.js";
 
 /*Progress bar */
 const previousBtn = document.getElementById("previousBtn");
@@ -25,22 +34,19 @@ buttonpage.addEventListener("click", changePage);
 const firstBuyButton = document.getElementById("buy-btn");
 firstBuyButton.addEventListener("click", firstBuy);
 /* Last buy now button */
-const lastBuyNowBtn = document.getElementById('btn-buy-now-finished');
-const buyNowConditions = document.getElementById('conditions');
-lastBuyNowBtn.addEventListener('click', validationChangePage);
-buyNowConditions.addEventListener('change', removeValidation);
-const pBuyNowValidation = document.querySelector('.p-buy-now-validation');
+const lastBuyNowBtn = document.getElementById("btn-buy-now-finished");
+const buyNowConditions = document.getElementById("conditions");
+lastBuyNowBtn.addEventListener("click", validationChangePage);
+buyNowConditions.addEventListener("change", removeValidation);
+const pBuyNowValidation = document.querySelector(".p-buy-now-validation");
 
 /* buttonpage.addEventListener('click', changePage); */
 function changePage() {
-  // animate transition CSS classes
-  // translateAnimation()
   // switch based on page
   switch (indexpage) {
     case 1:
       page.style.transform = positionTranslate(indexpage);
       page.classList.add("horizTranslate");
-
       /* Make footer buttons appear after page 1 */
       for (let i = 0; i < logo.length; i++) {
         logo[i].classList.toggle("hide");
@@ -52,21 +58,29 @@ function changePage() {
       indexpage += 1;
       break;
     case 2:
-      page.style.transform = positionTranslate(indexpage);
-      page.classList.add("horizTranslate");
-
-      bullets[indexpage - 1].classList.add("completed-pbar");
-      bars[indexpage - 2].classList.add("bar-pbar-completed");
-      indexpage += 1;
+      if (formProfileValidity() || true) {
+        page.style.transform = positionTranslate(indexpage);
+        page.classList.add("horizTranslate");
+        //  ...
+        bullets[indexpage - 1].classList.add("completed-pbar");
+        bars[indexpage - 2].classList.add("bar-pbar-completed");
+        // store data in an abject and clear form
+        const profileData = getFormProfileData();
+        clearFormProfileData();
+        indexpage += 1;
+      }
       break;
     case 3:
       // console.log(formAdressValidity());
-      if (formAdressValidity()) {
+      if (formAdressValidity() || true) {
         page.style.transform = positionTranslate(indexpage);
         page.classList.add("horizTranslate");
-
+        // ...
         bullets[indexpage - 1].classList.add("completed-pbar");
         bars[indexpage - 2].classList.add("bar-pbar-completed");
+        // store data in an abject and clear form
+        const adressData = getFormAddressData();
+        clearFormAddressData();
         indexpage += 1;
       }
       break;
@@ -130,7 +144,7 @@ export let myOrder = {
   photoAddress: undefined,
   shippingPrice: 0,
   shippingDate1: undefined,
-  shippingDate2: undefined  
+  shippingDate2: undefined,
 };
 
 function firstBuy() {
@@ -167,32 +181,36 @@ const yourPurchasePagePrices = document.getElementsByClassName(
 const yourOrderPagePrices = document.getElementsByClassName(
   "right-wrapper-finish"
 )[1];
-const purchasePic = document.getElementById('img-purchase-1');
-const orderPic = document.getElementById('img-purchase-2');
+const purchasePic = document.getElementById("img-purchase-1");
+const orderPic = document.getElementById("img-purchase-2");
 function updatePurchasePage() {
   /* Product details */
   yourPurchasePageText.childNodes[1].innerText = myOrder.product;
   yourPurchasePageText.childNodes[3].innerText += " " + myOrder.size;
   yourPurchasePageText.childNodes[5].innerText += " " + myOrder.color;
   yourOrderPageText.childNodes[1].innerText = myOrder.product;
-  yourOrderPageText.childNodes[3].innerText += ' ' + myOrder.size;
-  yourOrderPageText.childNodes[5].innerText += ' ' + myOrder.color;
+  yourOrderPageText.childNodes[3].innerText += " " + myOrder.size;
+  yourOrderPageText.childNodes[5].innerText += " " + myOrder.color;
   /* Shipping dates */
-  yourPurchasePageText.childNodes[9].innerText += ' ' + myOrder.shippingDate1;
-  yourPurchasePageText.childNodes[11].innerText += ' ' + myOrder.shippingDate2;
-  yourOrderPageText.childNodes[9].innerText += ' ' + myOrder.shippingDate1;
-  yourOrderPageText.childNodes[11].innerText += ' ' + myOrder.shippingDate2;
+  yourPurchasePageText.childNodes[9].innerText += " " + myOrder.shippingDate1;
+  yourPurchasePageText.childNodes[11].innerText += " " + myOrder.shippingDate2;
+  yourOrderPageText.childNodes[9].innerText += " " + myOrder.shippingDate1;
+  yourOrderPageText.childNodes[11].innerText += " " + myOrder.shippingDate2;
   /* Price */
-  yourPurchasePagePrices.childNodes[5].innerText += ' ' + myOrder.price + '€';
-  yourPurchasePagePrices.childNodes[7].innerText += ' ' + myOrder.shippingPrice + '€';
-  yourPurchasePagePrices.childNodes[11].innerText += ' ' + (parseFloat(myOrder.shippingPrice) + parseFloat(myOrder.price)) + '€';
-  yourOrderPagePrices.childNodes[5].innerText += ' ' + myOrder.price + '€';
-  yourOrderPagePrices.childNodes[7].innerText += ' ' + myOrder.shippingPrice + '€';
-  yourOrderPagePrices.childNodes[11].innerText += ' ' + (parseFloat(myOrder.shippingPrice) + parseFloat(myOrder.price)) + '€';
+  yourPurchasePagePrices.childNodes[5].innerText += " " + myOrder.price + "€";
+  yourPurchasePagePrices.childNodes[7].innerText +=
+    " " + myOrder.shippingPrice + "€";
+  yourPurchasePagePrices.childNodes[11].innerText +=
+    " " + (parseFloat(myOrder.shippingPrice) + parseFloat(myOrder.price)) + "€";
+  yourOrderPagePrices.childNodes[5].innerText += " " + myOrder.price + "€";
+  yourOrderPagePrices.childNodes[7].innerText +=
+    " " + myOrder.shippingPrice + "€";
+  yourOrderPagePrices.childNodes[11].innerText +=
+    " " + (parseFloat(myOrder.shippingPrice) + parseFloat(myOrder.price)) + "€";
   /* Picture */
   purchasePic.src = myOrder.photoAddress;
   orderPic.src = myOrder.photoAddress;
 }
-function removeValidation(){
-  pBuyNowValidation.classList.add('hide');
+function removeValidation() {
+  pBuyNowValidation.classList.add("hide");
 }

@@ -142,3 +142,19 @@ export function validPhoneNumber() {
     return true;
   }
 }
+
+/*
+ * This function validates all inputs
+ * in adress page
+ * @ author:
+ */
+export function formAdressValidity() {
+  return (
+    validFirstName() &&
+    validLastName() &&
+    validBirthday() &&
+    validAdress() &&
+    validPostalCode() &&
+    validPhoneNumber()
+  );
+}
