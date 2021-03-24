@@ -21,6 +21,11 @@ const footerSm = document.querySelector(".foot-sm");
 for (let i = 0; i < buttonpage.length; i++) {
   buttonpage[i].addEventListener("click", changePage);
 }
+/* Last buy now button */
+const lastBuyNowBtn = document.getElementById('btn-buy-now-finished');
+const buyNowConditions = document.getElementById('conditions');
+lastBuyNowBtn.addEventListener('click', validationChangePage);
+
 /* buttonpage.addEventListener('click', changePage); */
 
 function changePage() {
@@ -29,6 +34,7 @@ function changePage() {
     page.classList.add("horizTranslate");
 
     if (indexpage == 1) {
+      /* Make footer buttons appear after page 1 */
       for (let i = 0; i < logo.length; i++) {
         logo[i].classList.toggle("hide");
       }
@@ -36,19 +42,23 @@ function changePage() {
       footerSm.classList.add("hide");
       containerPbar.classList.toggle("hide");
       footerButtons.classList.toggle("hide");
-    } else {
+    } else /* Page > 1 */
+    {
       if (indexpage != 4) {
         if (indexpage != 5) {
           bullets[indexpage - 1].classList.add("completed-pbar");
           bars[indexpage - 2].classList.add("bar-pbar-completed");
-        } else {
+        } else { /* After Page 5 */
           bullets[indexpage - 2].classList.add("completed-pbar");
           bars[indexpage - 3].classList.add("bar-pbar-completed");
         }
+      } else {
+        footerButtons.classList.toggle("hide");
       }
     }
     indexpage += 1;
-  } else {
+  } else 
+  { /* Return to start */
     page.style.transform = "translateX(0vw)";
     page.classList.add("horizTranslate");
 
@@ -65,4 +75,14 @@ function changePage() {
 
 function positionTranslate(index) {
   return "translateX(" + index * -100 + "vw)";
+}
+
+function validationChangePage() { /* Verify if checkbox is checked */
+  if (buyNowConditions.checked == true) 
+  {
+    changePage()
+  } else
+  {
+    window.alert('Please accept our terms and conditions to buy');
+  }
 }
