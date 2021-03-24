@@ -25,17 +25,11 @@ buttonpage.addEventListener("click", changePage);
 const firstBuyButton = document.getElementById("buy-btn");
 firstBuyButton.addEventListener("click", firstBuy);
 /* Last buy now button */
-<<<<<<< HEAD
-const lastBuyNowBtn = document.getElementById("btn-buy-now-finished");
-const buyNowConditions = document.getElementById("conditions");
-lastBuyNowBtn.addEventListener("click", validationChangePage);
-=======
 const lastBuyNowBtn = document.getElementById('btn-buy-now-finished');
 const buyNowConditions = document.getElementById('conditions');
 lastBuyNowBtn.addEventListener('click', validationChangePage);
 buyNowConditions.addEventListener('change', removeValidation);
 const pBuyNowValidation = document.querySelector('.p-buy-now-validation');
->>>>>>> master
 
 /* buttonpage.addEventListener('click', changePage); */
 function changePage() {
@@ -102,7 +96,6 @@ function positionTranslate(index) {
   return "translateX(" + index * -100 + "vw)";
 }
 
-<<<<<<< HEAD
 /*
  * Here we add CSS classes to animate transition
  * to scroll between sections
@@ -192,18 +185,4 @@ function updatePurchasePage() {
     " " + (parseFloat(myOrder.shippingPrice) + parseFloat(myOrder.price)) + "€";
 
   /* TODO: agregar precio de envío y sumar */
-=======
-function validationChangePage() { /* Verify if checkbox is checked */
-  if (buyNowConditions.checked == true) 
-  {
-    changePage()
-  } else
-  {
-    pBuyNowValidation.classList.remove('hide');
-  }
-}
-
-function removeValidation(){
-  pBuyNowValidation.classList.add('hide');
->>>>>>> master
 }
