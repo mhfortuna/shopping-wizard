@@ -21,6 +21,10 @@ const footerSm = document.querySelector(".foot-sm");
 for (let i = 0; i < buttonpage.length; i++) {
   buttonpage[i].addEventListener("click", changePage);
 }
+/* Last buy now button */
+const lastBuyNowBtn = document.getElementById('btn-buy-now-finished');
+lastBuyNowBtn.addEventListener('click', changePage);
+
 /* buttonpage.addEventListener('click', changePage); */
 
 function changePage() {
