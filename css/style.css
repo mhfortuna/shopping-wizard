@@ -410,24 +410,32 @@ section form h3 {
 #checksField {
   display: none;
   background: #f1f1f1;
+  border-radius: 5px;
   color: #000;
   position: relative;
-  padding: 20px;
-  margin-top: 10px;
+  padding: 5px;
+  margin-top: 2px;
+  margin-bottom: 10px;
+}
+
+#checksField h6{
+  font-size: 12px;
+  color: red;
+  margin-bottom: 5px;
 }
 
 #checksField p {
-  padding: 10px 35px;
-  font-size: 18px;
+  padding: 2px 30px;
+  font-size: 12px;
 }
 
 .correct {
-  color: rgb(28, 0, 128);
+  color: green;
 }
 
 .correct:before {
   position: relative;
-  left: -35px;
+  left: -20px;
   content: "✔";
 }
 
@@ -437,7 +445,7 @@ section form h3 {
 
 .wrong:before {
   position: relative;
-  left: -35px;
+  left: -20px;
   content: "✖";
 }
 
@@ -781,6 +789,12 @@ div.finished-checkbox {
   padding-top: 10px;
 }
 
+div.finished-checkbox p.p-buy-now-validation{
+  display: inline-flex;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
 div.product-finish-text {
   line-height: 1.2;
 }
@@ -836,6 +850,7 @@ label.timerFinal {
   font-size: 1.5em;
   font-style: italic;
 }
+
 #btn-buy-now-finished {
   background-color: var(--teamLightblue);
   color: var(--teamYellow);
@@ -847,7 +862,6 @@ label.timerFinal {
   border: solid 2px transparent;
   box-sizing: border-box;
   transition-duration: 0.5s;
-  margin-top: 10px;
 }
 #btn-buy-now-finished:hover {
   border: solid 2px var(--teamYellow);
