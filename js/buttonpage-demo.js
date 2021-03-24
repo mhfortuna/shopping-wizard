@@ -29,6 +29,7 @@ function changePage() {
     page.classList.add("horizTranslate");
 
     if (indexpage == 1) {
+      /* Make footer buttons appear after page 1 */
       for (let i = 0; i < logo.length; i++) {
         logo[i].classList.toggle("hide");
       }
@@ -36,19 +37,23 @@ function changePage() {
       footerSm.classList.add("hide");
       containerPbar.classList.toggle("hide");
       footerButtons.classList.toggle("hide");
-    } else {
+    } else /* Page > 1 */
+    {
       if (indexpage != 4) {
         if (indexpage != 5) {
           bullets[indexpage - 1].classList.add("completed-pbar");
           bars[indexpage - 2].classList.add("bar-pbar-completed");
-        } else {
+        } else { /* After Page 5 */
           bullets[indexpage - 2].classList.add("completed-pbar");
           bars[indexpage - 3].classList.add("bar-pbar-completed");
         }
+      } else {
+        footerButtons.classList.toggle("hide");
       }
     }
     indexpage += 1;
-  } else {
+  } else 
+  { /* Page 6 */
     page.style.transform = "translateX(0vw)";
     page.classList.add("horizTranslate");
 
