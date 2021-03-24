@@ -55,6 +55,7 @@ function changePage() {
         }
       } else {
         footerButtons.classList.toggle("hide");
+        updatePurchasePage();
       }
     }
     indexpage += 1;
@@ -81,7 +82,7 @@ function positionTranslate(index) {
 function validationChangePage() { /* Verify if checkbox is checked */
   if (buyNowConditions.checked == true) 
   {
-    changePage()
+    changePage();
   } else
   {
     window.alert('Please accept our terms and conditions to buy');
@@ -103,11 +104,26 @@ function firstBuy() {
 }
 /* Constants to retrieve product */
 
-function loadToOrder () {
+function loadToOrder () { /* Loads product specs to order object  */
   /* ! constants already in update-product-info.js */
   myOrder.product = document.querySelector('.product-page .right-wrapper h2').innerText;
   myOrder.color = document.getElementById('prod-color').innerText; 
   myOrder.size = document.getElementById("idSize").value;
-  myOrder.price = document.querySelector(".price-wrapper h3");
+  myOrder.price = document.querySelector(".price-wrapper h3").innerText.slice(0,-1);
   myOrder.photoAddress = document.getElementsByClassName('big-picture')[0].lastElementChild.src;
+}
+const yourPurchasePageText = document.getElementsByClassName('product-finish-text')[0];
+const yourOrderPageText = document.getElementsByClassName('product-finish-text')[1];
+const yourPurchasePagePrices = document.getElementsByClassName('right-wrapper-finish')[0];
+const yourOrderPagePrices = document.getElementsByClassName('right-wrapper-finish')[1];
+function updatePurchasePage() {
+  yourPurchasePageText.childNodes[1].innerText = myOrder.product;
+  yourPurchasePageText.childNodes[3].innerText += ' ' + myOrder.size;
+  yourPurchasePageText.childNodes[5].innerText += ' ' + myOrder.color;
+  yourOrderPageText.childNodes[1].innerText = myOrder.product;
+  yourOrderPageText.childNodes[3].innerText += ' ' + myOrder.size;
+  yourOrderPageText.childNodes[5].innerText += ' ' + myOrder.color;
+  yourPurchasePagePrices.childNodes[5].innerText += ' ' + myOrder.price + '€';
+  yourOrderPagePrices.childNodes[5].innerText += ' ' + myOrder.price + '€';
+  /* TODO: agregar precio de envío y sumar */
 }
