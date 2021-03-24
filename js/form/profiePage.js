@@ -33,8 +33,10 @@ export function validaUsername() {
   // toggle classes
   if (user.value == "") {
     addClasses(user, userLabel, userp);
+    return false;
   } else {
     removeClasses(user, userLabel, userp);
+    return true;
   }
 }
 
@@ -54,8 +56,10 @@ export function validateEmail() {
 
   if (re.test(email.value.trim())) {
     removeClasses(email, elabel, ep);
+    return true;
   } else {
     addClasses(email, elabel, ep);
+    return false;
   }
 }
 /*
@@ -133,8 +137,10 @@ export function validatePass() {
 
   if (pass.value != "" && pwd.test(pass.value.trim())) {
     removeClasses(pass, passlabel, passp);
+    return true;
   } else {
     addClasses(pass, passlabel, passp);
+    return false;
   }
 }
 
@@ -154,7 +160,9 @@ export function confirmPass() {
     document.getElementById("pass").value !=
     document.getElementById("pwd2").value || document.getElementById("pwd2").value === "") {
     addClasses(pass2, pass2label, pass2p);
+    return false;
   } else {
     removeClasses(pass2, pass2label, pass2p);
+    return true;
   }
 }

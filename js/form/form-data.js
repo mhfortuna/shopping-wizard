@@ -87,3 +87,7 @@ export function formAdressValidity() {
     validPhoneNumber()
   );
 }
+
+document.querySelector(".page-input-button").addEventListener("click", function(){
+  document.querySelector("section.profile form").reset();
+})
