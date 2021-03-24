@@ -134,13 +134,14 @@
               title="Password must contain at least 8 characters, including UPPER/lowercase and numbers" name="pwd"
               required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}">
             <p class="text-form-error hide p-Pass">Insert valid Password</p>
-            <div id="checksField">
-              <h3>Password must contain the following:</h3>
-              <p id="letter" class="wrong">A <b>lowercase</b> letter</p>
-              <p id="capital" class="wrong">A <b>capital (uppercase)</b>letter</p>
-              <p id="number" class="wrong">A <b>number</b></p>
-              <p id="special" class="wrong"> a <b>special</b></p>
-              <p id="lenght" class="wrong"> <b>Min Length 8 characters</b></p>
+            <!--<div class="password-validation" id="checksField">-->
+            <div class="password-validation" id="checksField">
+              <h6>Password must contain the following:</h6>
+              <p id="letter" class="wrong">A lowercase letter</p>
+              <p id="capital" class="wrong">A capital (uppercase) letter</p>
+              <p id="number" class="wrong">A number</p>
+              <!--<p id="special" class="wrong"> a special</p>-->
+              <p id="lenght" class="wrong">Min length 8 characters</p>
             </div>
           </div>
           <div>
@@ -358,7 +359,7 @@
             <p>Total:</p>
           </div>
           <div class="finished-checkbox">
-            <p id="total-time">Your registration took: <b></b></p>
+            <p>Your registration took: </p>
           </div>
         </div>
       </section>
@@ -402,8 +403,6 @@
       </section>
   </main>
 
-  <div class="timeout-error hide">
-  </div>
   <!-- 
     =================================
     FOOTER
