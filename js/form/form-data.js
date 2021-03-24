@@ -15,8 +15,10 @@ import {
  */
 document.getElementById("btnNext").addEventListener("click", function () {
   // get data and store it in object
-  const gg = document.getElementById("Uname");
-  console.log(validFirstName(gg));
+  if (getCurrentPage() === 2) {
+    const gg = document.getElementById("Uname");
+    console.log(validFirstName(gg));
+  }
 });
 
 /*

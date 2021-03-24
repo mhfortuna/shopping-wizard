@@ -5,7 +5,10 @@
 function addClasses(input, label, p) {
   input.classList.add("input-form-error");
   label.classList.add("label-form-error");
-  p.classList.remove("hide");
+
+  if (p.classList.contains("hide")) {
+    p.classList.remove("hide");
+  }
   return false;
 }
 
