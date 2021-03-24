@@ -167,6 +167,8 @@ const yourPurchasePagePrices = document.getElementsByClassName(
 const yourOrderPagePrices = document.getElementsByClassName(
   "right-wrapper-finish"
 )[1];
+const purchasePic = document.getElementById('img-purchase-1');
+const orderPic = document.getElementById('img-purchase-2');
 function updatePurchasePage() {
   /* Product details */
   yourPurchasePageText.childNodes[1].innerText = myOrder.product;
@@ -187,6 +189,9 @@ function updatePurchasePage() {
   yourOrderPagePrices.childNodes[5].innerText += ' ' + myOrder.price + '€';
   yourOrderPagePrices.childNodes[7].innerText += ' ' + myOrder.shippingPrice + '€';
   yourOrderPagePrices.childNodes[11].innerText += ' ' + (parseFloat(myOrder.shippingPrice) + parseFloat(myOrder.price)) + '€';
+  /* Picture */
+  purchasePic.src = myOrder.photoAddress;
+  orderPic.src = myOrder.photoAddress;
 }
 function removeValidation(){
   pBuyNowValidation.classList.add('hide');
