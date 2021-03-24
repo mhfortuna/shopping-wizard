@@ -67,7 +67,6 @@ function changePage() {
         // store data in an abject and clear form
         const profileData = getFormProfileData();
         clearFormProfileData();
-        console.log(profileData);
         indexpage += 1;
       }
       break;
@@ -82,7 +81,6 @@ function changePage() {
         // store data in an abject and clear form
         const adressData = getFormAddressData();
         clearFormAddressData();
-        console.log(adressData);
         indexpage += 1;
       }
       break;
