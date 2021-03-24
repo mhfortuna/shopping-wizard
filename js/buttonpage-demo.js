@@ -81,5 +81,8 @@ function validationChangePage() { /* Verify if checkbox is checked */
   if (buyNowConditions.checked == true) 
   {
     changePage()
+  } else
+  {
+    window.alert('Please accept our terms and conditions to buy');
   }
 }
