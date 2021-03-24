@@ -186,11 +186,9 @@ export function formProfileValidity() {
 export function getFormProfileData() {
   const obj = {};
   const d = document;
-  // username
+  // data required
   obj.userName = d.getElementById("Uname").value;
-  // Email
   obj.email = d.getElementById("email").value;
-  // Password
   obj.password = d.getElementById("pass").value;
   // return object
   return obj;
