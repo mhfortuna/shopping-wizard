@@ -85,7 +85,7 @@ function validationChangePage() { /* Verify if checkbox is checked */
     changePage()
   } else
   {
-    pBuyNowValidation.classList.toggle('hide');
+    pBuyNowValidation.classList.remove('hide');
   }
 }
 
