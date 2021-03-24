@@ -69,6 +69,11 @@ function positionTranslate(index) {
   return "translateX(" + index * -100 + "vw)";
 }
 
+/*
+ * Here we lkjenfljsdnfñeds
+ * hoewudheiufhefew
+ * @ author:
+ */
 function validationChangePage() { /* Verify if checkbox is checked */
   if (buyNowConditions.checked == true) 
   {
@@ -80,14 +85,16 @@ function validationChangePage() { /* Verify if checkbox is checked */
 }
 /* order object for last pages */
 
+
 export let myOrder = {
   product: undefined,
   color: undefined,
   size: undefined,
   price: undefined,
   photoAddress: undefined,
-  shippingPrice: 0
-
+  shippingPrice: 0,
+  shipingDate: undefined
+  
 };
 
 function firstBuy() {

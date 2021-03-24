@@ -69,5 +69,6 @@ radios.forEach((radio) =>
     }
     // show
     temp.classList.add("shipping-show");
+    myOrder.shipingDate = bDate.textContent;
   })
 );
