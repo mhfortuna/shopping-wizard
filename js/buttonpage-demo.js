@@ -12,7 +12,7 @@ let page = document.querySelector(".maindiv");
 let indexpage = 1;
 
 /* Show hide elements */
-const logo = document.querySelector(".logo");
+const logo = document.querySelectorAll(".logo");
 const quote = document.querySelector(".quote");
 const containerPbar = document.querySelector(".container-pbar");
 const footerButtons = document.querySelector(".page-buttons");
@@ -24,19 +24,28 @@ for (let i = 0; i < buttonpage.length; i++) {
 /* buttonpage.addEventListener('click', changePage); */
 
 function changePage() {
-  if (indexpage != 5) {
+  if (indexpage != 6) {
     page.style.transform = positionTranslate(indexpage);
     page.classList.add("horizTranslate");
 
     if (indexpage == 1) {
-      logo.classList.add("hide");
+      for (let i = 0; i < logo.length; i++) {
+        logo[i].classList.toggle("hide");
+      }
       quote.classList.add("hide");
       footerSm.classList.add("hide");
       containerPbar.classList.toggle("hide");
       footerButtons.classList.toggle("hide");
     } else {
-      bullets[indexpage - 1].classList.add("completed-pbar");
-      bars[indexpage - 2].classList.add("bar-pbar-completed");
+      if (indexpage != 4) {
+        if (indexpage != 5) {
+          bullets[indexpage - 1].classList.add("completed-pbar");
+          bars[indexpage - 2].classList.add("bar-pbar-completed");
+        } else {
+          bullets[indexpage - 2].classList.add("completed-pbar");
+          bars[indexpage - 3].classList.add("bar-pbar-completed");
+        }
+      }
     }
     indexpage += 1;
   } else {
@@ -52,7 +61,6 @@ function changePage() {
 
     indexpage = 1;
   }
-  console.log(indexpage);
 }
 
 function positionTranslate(index) {
