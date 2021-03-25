@@ -27,6 +27,7 @@ btn.addEventListener("click", function (e) {
       totalTime = 0;
       counterTime = 0;
     }
+    console.log(totalTime);
   }, 1000);
 });
 
@@ -54,6 +55,8 @@ function insertTimer(counter, element, timeRemove = 5000) {
  */
 function stoptimer() {
   clearInterval(timerResult);
+  counterTime = 0;
+  totalTime = 0;
 }
 
 /*
@@ -93,6 +96,18 @@ document
     const btotalTime = document.querySelector("p#total-time b");
     btotalTime.textContent = ` ${format(totalTime)}`;
     btotalTime.style.fontWeight = "Bold";
+  });
+
+/*
+ * This event stops timer in
+ * start again button
+ * @ author:
+ */
+document
+  .getElementById("btn-start-again")
+  .addEventListener("click", function () {
+    // stop interval
+    stoptimer();
   });
 
 /*

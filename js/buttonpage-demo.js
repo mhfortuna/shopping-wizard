@@ -35,6 +35,7 @@ const firstBuyButton = document.getElementById("buy-btn");
 firstBuyButton.addEventListener("click", firstBuy);
 /* Last buy now button */
 const lastBuyNowBtn = document.getElementById("btn-buy-now-finished");
+const btnStartAgain = document.getElementById("btn-start-again");
 const buyNowConditions = document.getElementById("conditions");
 lastBuyNowBtn.addEventListener("click", validationChangePage);
 buyNowConditions.addEventListener("change", removeValidation);
@@ -49,6 +50,18 @@ const giftFileWrapper = document.querySelector(".file-input");
 function changePage() {
   // switch based on page
   switch (indexpage) {
+    case 0:
+      page.style.transform = positionTranslate(indexpage);
+      page.classList.add("horizTranslate");
+      /* Make footer buttons appear after page 1 */
+      for (let i = 0; i < logo.length; i++) {
+        logo[i].classList.toggle("hide");
+      }
+      quote.classList.toggle("hide");
+      footerSm.classList.toggle("hide");
+      containerPbar.classList.toggle("hide");
+      footerButtons.classList.toggle("hide");
+
     case 1:
       page.style.transform = positionTranslate(indexpage);
       page.classList.add("horizTranslate");
@@ -131,29 +144,27 @@ function translateAnimation() {
  * Here we ...
  * @ author:
  */
-buyNowConditions.addEventListener('change', function changeBuyButton() {
+buyNowConditions.addEventListener("change", function changeBuyButton() {
   if (buyNowConditions.checked == true) {
     lastBuyNowBtn.style.opacity = "1";
-  } else{
+  } else {
     lastBuyNowBtn.style.opacity = "0.5";
-    pBuyNowValidation.classList.remove('hide');
+    pBuyNowValidation.classList.remove("hide");
   }
-})
+});
 
-
-function validationChangePage() { 
+function validationChangePage() {
   /* Verify if checkbox is checked */
-  if (buyNowConditions.checked == true) 
-  {
-    changePage()
-  } else{
-    pBuyNowValidation.classList.remove('hide');
+  if (buyNowConditions.checked == true) {
+    changePage();
+  } else {
+    pBuyNowValidation.classList.remove("hide");
   }
 }
 
-function removeValidation(){
-  pBuyNowValidation.classList.add('hide');
-}/* order object for last pages */
+function removeValidation() {
+  pBuyNowValidation.classList.add("hide");
+} /* order object for last pages */
 
 export let myOrder = {
   product: undefined,
@@ -183,9 +194,7 @@ function loadToOrder() {
   myOrder.price = document
     .querySelector(".price-wrapper h3")
     .innerText.slice(0, -1);
-  myOrder.photoAddress = document.querySelector(
-    '.main-thumbnail'
-  ).src;
+  myOrder.photoAddress = document.querySelector(".main-thumbnail").src;
 }
 /* Last pages constants */
 const yourPurchasePageText = document.getElementsByClassName(
@@ -230,25 +239,35 @@ function updatePurchasePage() {
   purchasePic.src = myOrder.photoAddress;
   orderPic.src = myOrder.photoAddress;
 }
+
 /*
  * eventlistener for clear
  * clear button
  * @ author:
  */
-clear.addEventListener('click', function() {
-  if(indexpage === 2) {
+clear.addEventListener("click", function () {
+  if (indexpage === 2) {
     clearFormProfileData();
-  } if (indexpage === 3) {
+  }
+  if (indexpage === 3) {
     clearFormAddressData();
-  } if (indexpage === 4) {
+  }
+  if (indexpage === 4) {
     ClearFormShipping();
   }
 });
 
-
 function ClearFormShipping() {
-document.querySelector("section.shipping-page form").reset();
-giftMessageWrapper.style.display = "none";
-giftFileWrapper.style.display = "none";
+  document.querySelector("section.shipping-page form").reset();
+  giftMessageWrapper.style.display = "none";
+  giftFileWrapper.style.display = "none";
 }
 
+/*
+ * eventlistener for start again
+ * @ author:
+ */
+btnStartAgain.addEventListener("click", function () {
+  indexpage = 0;
+  changePage();
+});
