@@ -39,6 +39,11 @@ const buyNowConditions = document.getElementById("conditions");
 lastBuyNowBtn.addEventListener("click", validationChangePage);
 buyNowConditions.addEventListener("change", removeValidation);
 const pBuyNowValidation = document.querySelector(".p-buy-now-validation");
+/*clear button*/
+const clear = document.querySelector(".page-input-button");
+/*shipping gift msg */
+const giftMessageWrapper = document.querySelector(".wrp-gift-message");
+const giftFileWrapper = document.querySelector(".file-input");
 
 /* buttonpage.addEventListener('click', changePage); */
 function changePage() {
@@ -224,5 +229,26 @@ function updatePurchasePage() {
   /* Picture */
   purchasePic.src = myOrder.photoAddress;
   orderPic.src = myOrder.photoAddress;
+}
+/*
+ * eventlistener for clear
+ * clear button
+ * @ author:
+ */
+clear.addEventListener('click', function() {
+  if(indexpage === 2) {
+    clearFormProfileData();
+  } if (indexpage === 3) {
+    clearFormAddressData();
+  } if (indexpage === 4) {
+    ClearFormShipping();
+  }
+});
+
+
+function ClearFormShipping() {
+document.querySelector("section.shipping-page form").reset();
+giftMessageWrapper.style.display = "none";
+giftFileWrapper.style.display = "none";
 }
 
