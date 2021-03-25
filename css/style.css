@@ -593,7 +593,7 @@ textarea#gift-message {
 
 input.file {
   opacity: 0;
-  transition: opacity 1s;
+  transition: opacity 0.5s;
 }
 
 div.file-input .loadFile {
@@ -615,12 +615,12 @@ div.file-input .loadFile {
 div.file-input {
   padding-top: 12px;
   opacity: 0;
-  transition: opacity 1s;
+  transition: opacity 0.5s;
 }
 
 div.wrp-gift-message {
   opacity: 0;
-  transition: opacity 1s;
+  transition: opacity 0.5s;
 }
 
 div.file-input i {
