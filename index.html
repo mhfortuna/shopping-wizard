@@ -241,7 +241,7 @@
       -->
       <section class="shipping-page">
         <!-- Shipping form -->
-        <form action="">
+        <form name="formship" action="">
           <!-- radio buttons - shipping type -->
           <h3>Shipping</h3>
           <div class="shipping-type">
@@ -276,6 +276,8 @@
           </div>
           <!-- gift message -->
           <div class="wrp-gift-message">
+            <label for="gift-title">Gift title</label>
+            <input class="input-form" type="text" id="gift-title" name="gift-title" maxlength="20" required>
             <label for="gift-message"> Gift message</label>
             <textarea id="gift-message" name="gift-message" rows="7" cols="50"></textarea>
           </div>

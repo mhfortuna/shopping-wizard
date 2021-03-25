@@ -58,28 +58,35 @@ const bDate = temp.querySelector("b"); */
 const shipTemplate = document.querySelector(".shiptemplate");
 const bDate1 = document.getElementById("date1");
 const bDate2 = document.getElementById("date2");
-
 const radios = document.querySelectorAll('input[type=radio][name="type"]');
-radios.forEach((radio) =>
-  radio.addEventListener("change", (event) => {
-    console.log(event.target.id);
-    if (event.target.id === "extra") {
-      bDate1.textContent = shippingDates().secondDate;
-      bDate2.textContent = shippingDates().thirdDate;
-      myOrder.shippingPrice = 4.99;
-    } else if (event.target.id === "premium") {
-      bDate1.textContent = shippingDates().firstDate;
-      bDate2.textContent = shippingDates().secondDate;
-      myOrder.shippingPrice = 9.99;
-    } else {
-      // Free
-      bDate1.textContent = shippingDates().thirdDate;
-      bDate2.textContent = shippingDates().fourthDate;
-      myOrder.shippingPrice = 0;
-    }
-    // show
-    shipTemplate.classList.add("shipping-show");
-    myOrder.shippingDate1 = bDate1.textContent;
-    myOrder.shippingDate2 = bDate2.textContent;
-  })
-);
+radios.forEach((radio) => radio.addEventListener("change", displayShippment));
+function displayShippment() {
+  if (document.formship.type.value === "extra") {
+    bDate1.textContent = shippingDates().secondDate;
+    bDate2.textContent = shippingDates().thirdDate;
+    myOrder.shippingPrice = 4.99;
+  } else if (document.formship.type.value === "premium") {
+    bDate1.textContent = shippingDates().firstDate;
+    bDate2.textContent = shippingDates().secondDate;
+    myOrder.shippingPrice = 9.99;
+  } else {
+    // Free
+    bDate1.textContent = shippingDates().thirdDate;
+    bDate2.textContent = shippingDates().fourthDate;
+    myOrder.shippingPrice = 0;
+  }
+  // show
+  shipTemplate.classList.add("shipping-show");
+  myOrder.shippingDate1 = bDate1.textContent;
+  myOrder.shippingDate2 = bDate2.textContent;
+}
+
+/*
+ * Here we check default shippement
+ * waits for all elements loaded
+ * and call displayShippment()
+ * @ author:
+ */
+document.addEventListener("DOMContentLoaded", (event) => {
+  displayShippment();
+});
