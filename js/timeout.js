@@ -22,7 +22,6 @@ btn.addEventListener("click", function (e) {
   timerResult = setInterval(() => {
     counterTime++;
     totalTime++;
-    console.log(totalTime, counterTime);
     if (counterTime >= 60 && totalTime < 299) {
       const header = document.querySelector("header");
       insertTimer(totalTime, header);
@@ -31,8 +30,7 @@ btn.addEventListener("click", function (e) {
     // time up
     if (totalTime >= 300) {
       insertTimeUp();
-      totalTime = 0;
-      counterTime = 0;
+      reseTimer();
     }
   }, 1000);
 });
