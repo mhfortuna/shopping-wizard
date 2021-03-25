@@ -1,27 +1,4 @@
-import {
-  validFirstName,
-  validLastName,
-  validBirthday,
-  validAdress,
-  validPostalCode,
-  validPhoneNumber,
-} from "./addressPage.js";
-
-export let adressPageValidity;
-
-/*
- * This section read all form inputs
- * and prevent user to go to next page
- * if there is a missing parameter
- * @ author:
- */
-document.getElementById("btnNext").addEventListener("click", function () {
-  // get data and store it in object
-  if (getCurrentPage() === 2) {
-    const gg = document.getElementById("Uname");
-    adressPageValidity = validFirstName(gg);
-  }
-});
+import { formAdressValidity } from "./addressPage.js";
 
 /*
  * This function returns the current page
@@ -71,24 +48,8 @@ function formValidity(page) {
   }
 }
 
-/*
- * This function validates all inputs
- * in adress page
- * @ author:
- */
-export function formAdressValidity() {
-  return (
-    validFirstName() &&
-    validLastName() &&
-    validBirthday() &&
-    validAdress() &&
-    validPostalCode() &&
-    validPhoneNumber()
-  );
-}
-
-document
-  .querySelector(".page-input-button")
-  .addEventListener("click", function () {
-    document.querySelector("section.profile form").reset();
-  });
+// document
+//   .querySelector(".page-input-button")
+//   .addEventListener("click", function () {
+//     document.querySelector("section.profile form").reset();
+//   });

@@ -158,11 +158,48 @@ export function confirmPass() {
 
   if (
     document.getElementById("pass").value !=
-    document.getElementById("pwd2").value || document.getElementById("pwd2").value === "") {
+      document.getElementById("pwd2").value ||
+    document.getElementById("pwd2").value === ""
+  ) {
     addClasses(pass2, pass2label, pass2p);
     return false;
   } else {
     removeClasses(pass2, pass2label, pass2p);
     return true;
   }
+}
+
+/*
+ * This function validates all inputs
+ * in profile page
+ * @ author:
+ */
+export function formProfileValidity() {
+  return validaUsername() && validateEmail() && validatePass() && confirmPass();
+}
+
+/*
+ * This function gets data from all inputs
+ * in profile page
+ * @ author:
+ */
+export function getFormProfileData() {
+  const obj = {};
+  const d = document;
+  // data required
+  obj.userName = d.getElementById("Uname").value;
+  obj.email = d.getElementById("email").value;
+  obj.password = d.getElementById("pass").value;
+  // return object
+  return obj;
+}
+
+/*
+ * This function clears data from all inputs
+ * in profile page
+ * @ author:
+ */
+export function clearFormProfileData() {
+  const d = document;
+  d.querySelector("section.profile form").reset();
 }

@@ -16,14 +16,16 @@ btn.addEventListener("click", function (e) {
   timerResult = setInterval(() => {
     counterTime++;
     totalTime++;
-    if (counterTime >= 60) {
+    if (counterTime >= 60 && totalTime < 299) {
       const header = document.querySelector("header");
       insertTimer(totalTime, header);
       counterTime = 0;
     }
     // time up
-    if (totalTime === 300) {
+    if (totalTime >= 300) {
       insertTimeUp();
+      totalTime = 0;
+      counterTime = 0;
     }
   }, 1000);
 });
@@ -104,11 +106,8 @@ function insertTimeUp(timeRemove = 1000) {
   // innerhtml code
   const divTimeUp = document.querySelector(".timeout-error");
   // toggle hide class to hide time up div
-  if (divTimeUp.classList.contains("hide")) {
-    divTimeUp.classList.remove("hide");
-  }
+  divTimeUp.classList.toggle("hide");
   setInterval(() => {
-    console.log(regresiveTime);
     const timerUp = document.getElementById("timerUp");
     if (timerUp !== null) {
       timerUp.remove();

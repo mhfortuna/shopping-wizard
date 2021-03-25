@@ -142,3 +142,48 @@ export function validPhoneNumber() {
     return true;
   }
 }
+
+/*
+ * This function validates all inputs
+ * in adress page
+ * @ author:
+ */
+export function formAdressValidity() {
+  return (
+    validFirstName() &&
+    validLastName() &&
+    validBirthday() &&
+    validAdress() &&
+    validPostalCode() &&
+    validPhoneNumber()
+  );
+}
+
+/*
+ * This function gets data from all inputs
+ * in address page
+ * @ author:
+ */
+export function getFormAddressData() {
+  const obj = {};
+  const d = document;
+  // store data
+  obj.firstName = d.getElementById("fname").value;
+  obj.lastName = d.getElementById("lname").value;
+  obj.birthday = d.getElementById("Birthday").value;
+  obj.address = d.getElementById("address1").value;
+  obj.postalCode = d.getElementById("pcode").value;
+  obj.phoneNumber = d.getElementById("tel").value;
+  // return object
+  return obj;
+}
+
+/*
+ * This function clears data from all inputs
+ * in address page
+ * @ author:
+ */
+export function clearFormAddressData() {
+  const d = document;
+  d.querySelector("section.address form").reset();
+}
