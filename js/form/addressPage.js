@@ -144,6 +144,26 @@ export function validPhoneNumber() {
 }
 
 /*
+ * This function match country and prefix phone number
+ * from adress page
+ * @ author:
+ */
+const selCountry = document.querySelector('#country');
+const opCountry = document.querySelectorAll('.country-option');
+const opCode = document.querySelectorAll('.code-option');
+
+selCountry.addEventListener('change', matchCountryCode);
+
+function matchCountryCode(){
+  console.log('Entra aqui');
+  for (let i = 0; i < opCountry.length; i++) {
+    if (opCountry[i].selected == true){
+      opCode[i].selected = true;
+    }
+  }
+}
+
+/*
  * This function validates all inputs
  * in adress page
  * @ author:
