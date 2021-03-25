@@ -207,11 +207,11 @@
             <div>
               <label class="label-form label-adress" for="Country">Country</label>
               <select class="select-form select-country" name="Country" id="country" required tabindex="0">
-                <option value="Andorra">Andorra</option>
-                <option value="Spain" selected>Spain</option>
-                <option value="France">France</option>
-                <option value="Germany">Germany</option>
-                <option value="Greece">Greece</option>
+                <option class="country-option" value="Andorra">Andorra</option>
+                <option class="country-option" value="Spain" selected>Spain</option>
+                <option class="country-option" value="France">France</option>
+                <option class="country-option" value="Germany">Germany</option>
+                <option class="country-option" value="Greece">Greece</option>
               </select>
             </div>
 
@@ -219,11 +219,11 @@
               <label class="label-form label-adress" for="Phone">Phone</label>
               <div class="div-phone">
                 <select class="select-form select-phone" name="PhoneCountryCode" id="PhoneCountryCode" tabindex="0">
-                  <option value="376-AND">AND +376</option>
-                  <option value="34-ES" selected>ES +34</option>
-                  <option value="33-FR">FR +33</option>
-                  <option value="49-GER">GER +49</option>
-                  <option value="30-GRC">GRC +30</option>
+                  <option class="code-option" value="376-AND">AND +376</option>
+                  <option class="code-option" value="34-ES" selected>ES +34</option>
+                  <option class="code-option" value="33-FR">FR +33</option>
+                  <option class="code-option" value="49-GER">GER +49</option>
+                  <option class="code-option" value="30-GRC">GRC +30</option>
                 </select>
                 <input class="input-form input-adress input-phone" type="number" name="tel" id="tel" onKeyPress="if(this.value.length==9) return false;"
                   required tabindex="0">
