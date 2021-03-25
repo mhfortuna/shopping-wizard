@@ -131,15 +131,29 @@ function translateAnimation() {
  * Here we ...
  * @ author:
  */
-function validationChangePage() {
-  /* Verify if checkbox is checked */
+buyNowConditions.addEventListener('change', function changeBuyButton() {
   if (buyNowConditions.checked == true) {
-    changePage();
-  } else {
-    window.alert("Please accept our terms and conditions to buy");
+    lastBuyNowBtn.style.opacity = "1";
+  } else{
+    lastBuyNowBtn.style.opacity = "0.5";
+    pBuyNowValidation.classList.remove('hide');
+  }
+})
+
+
+function validationChangePage() { 
+  /* Verify if checkbox is checked */
+  if (buyNowConditions.checked == true) 
+  {
+    changePage()
+  } else{
+    pBuyNowValidation.classList.remove('hide');
   }
 }
-/* order object for last pages */
+
+function removeValidation(){
+  pBuyNowValidation.classList.add('hide');
+}/* order object for last pages */
 
 export let myOrder = {
   product: undefined,
@@ -169,9 +183,9 @@ function loadToOrder() {
   myOrder.price = document
     .querySelector(".price-wrapper h3")
     .innerText.slice(0, -1);
-  myOrder.photoAddress = document.getElementsByClassName(
-    "big-picture"
-  )[0].lastElementChild.src;
+  myOrder.photoAddress = document.querySelector(
+    '.main-thumbnail'
+  ).src;
 }
 /* Last pages constants */
 const yourPurchasePageText = document.getElementsByClassName(
@@ -240,3 +254,4 @@ document.querySelector("section.shipping-page form").reset();
 giftMessageWrapper.style.display = "none";
 giftFileWrapper.style.display = "none";
 }
+
