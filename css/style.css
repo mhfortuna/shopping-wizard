@@ -514,7 +514,19 @@ div.div-phone {
 ===========================
 */
 .shipping-page form {
-  width: 340px;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 100%;
+  gap: 20px;
+  align-content: center;
+  max-width: 700px;
+  justify-content: center;
+}
+section.shipping-page h3 {
+  /* align-self: baseline; */
+  width: 100%;
 }
 
 label[for="type"] {
@@ -541,12 +553,12 @@ textarea#gift-message {
   border-radius: 5px;
   margin-top: 1vh;
   outline: none;
-  width: 100%;
+  width: 320px;
   padding: 10px;
 }
 
 input.file {
-  display: none;
+  visibility: hidden;
 }
 
 div.file-input .loadFile {
@@ -567,11 +579,11 @@ div.file-input .loadFile {
 
 div.file-input {
   padding-top: 3vh;
-  display: none;
+  visibility: hidden;
 }
 
 div.wrp-gift-message {
-  display: none;
+  visibility: hidden;
 }
 
 div.file-input i {

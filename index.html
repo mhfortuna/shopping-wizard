@@ -244,48 +244,52 @@
         <form action="">
           <!-- radio buttons - shipping type -->
           <h3>Shipping</h3>
-          <div class="shipping-type">
-            <label for="type">Shipping type</label>
-            <div>
-              <input type="radio" id="free" name="type" value="free" checked>
-              <label for="free">Free shipment (72H)</label>
+          <div>
+            <div class="shipping-type">
+              <label for="type">Shipping type</label>
+              <div>
+                <input type="radio" id="free" name="type" value="free" checked>
+                <label for="free">Free shipment (72H)</label>
+              </div>
+              <div>
+                <input type="radio" id="extra" name="type" value="extra">
+                <label for="extra">Extra shipping (48H) <b>4,99€</b></label>
+              </div>
+              <div>
+                <input type="radio" id="premium" name="type" value="premium">
+                <label for="extra">Premium (24H) <b>9,99€</b></label>
+              </div>
             </div>
-            <div>
-              <input type="radio" id="extra" name="type" value="extra">
-              <label for="extra">Extra shipping (48H) <b>4,99€</b></label>
+            <div class="shiptemplate">
+              <label for="">Your order will arrive between: </label>
+              <p><b id="date1"> </b> and <b id="date2"></b></p>
             </div>
-            <div>
-              <input type="radio" id="premium" name="type" value="premium">
-              <label for="extra">Premium (24H) <b>9,99€</b></label>
+            <div class="gift">
+              <label class="form-checkbox">
+                <!-- Input oculto -->
+                <input class="form-checkbox__input" type="checkbox" id="check-gift" name="conditions" value="conditions">
+                <!-- Imagen en sustitucion -->
+                <span class="form-checkbox__show form-checkbox__show--checkbox"></span>
+                <!-- Texto -->
+                <span class="form-checkbox__text">It is a gift?</span>
+              </label>
             </div>
           </div>
-          <div class="shiptemplate">
-            <label for="">Your order will arrive between: </label>
-            <p><b id="date1"> </b> and <b id="date2"></b></p>
-          </div>
-          <!-- checkbox - gift -->
-          <div class="gift">
-            <label class="form-checkbox">
-              <!-- Input oculto -->
-              <input class="form-checkbox__input" type="checkbox" id="check-gift" name="conditions" value="conditions">
-              <!-- Imagen en sustitucion -->
-              <span class="form-checkbox__show form-checkbox__show--checkbox"></span>
-              <!-- Texto -->
-              <span class="form-checkbox__text">It is a gift?</span>
-            </label>
-          </div>
-          <!-- gift message -->
-          <div class="wrp-gift-message">
-            <label for="gift-message"> Gift message</label>
-            <textarea id="gift-message" name="gift-message" rows="7" cols="50"></textarea>
-          </div>
-          <!-- upload file -->
-          <div class="file-input">
-            <label for="file">Gift wrapper image</label>
-            <input type="file" id="file" class="file">
-            <label for="file" class="loadFile">Select image
-              <i class="far fa-file-image"></i>
-            </label>
+          <div>
+            <!-- checkbox - gift -->
+            <!-- gift message -->
+            <div class="wrp-gift-message">
+              <label for="gift-message"> Gift message</label>
+              <textarea id="gift-message" name="gift-message" rows="7" cols="50"></textarea>
+            </div>
+            <!-- upload file -->
+            <div class="file-input">
+              <label for="file">Gift wrapper image</label>
+              <input type="file" id="file" class="file">
+              <label for="file" class="loadFile">Select image
+                <i class="far fa-file-image"></i>
+              </label>
+            </div>
           </div>
         </form>
       </section>
