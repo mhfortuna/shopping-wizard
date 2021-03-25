@@ -133,8 +133,8 @@
           <div>
             <label class="label-form label-profile" for="pass">Password</label>
             <input class="input-form input-profile" type="password" id="pass"
-              title="Password must contain at least 8 characters, including UPPER/lowercase and numbers" maxlength="20" name="pwd"
-              required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}">
+              title="Password must contain at least 8 characters, including UPPER/lowercase and numbers" maxlength="20"
+              name="pwd" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}">
             <p class="text-form-error hide p-Pass">Insert valid Password</p>
             <!--<div class="password-validation" id="checksField">-->
             <div class="password-validation" id="checksField">
@@ -149,7 +149,8 @@
           <div>
             <label class="label-form label-profile" for="pwd2">Confirm Password</label>
             <input class="input-form input-profile" id="pwd2" type="password"
-              title="Please enter the same Password as above" maxlength="20" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}">
+              title="Please enter the same Password as above" maxlength="20" required
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}">
             <p class="text-form-error hide p-pass2">Password do not match</p>
           </div>
         </form>
@@ -185,13 +186,15 @@
 
             <div>
               <label class="label-form label-adress" for="address1">Address 1</label>
-              <input class="input-form input-adress" type="text" id="address1" name="address1" maxlength="50" required tabindex="0">
+              <input class="input-form input-adress" type="text" id="address1" name="address1" maxlength="50" required
+                tabindex="0">
               <p class="text-form-error hide p-address1">Please insert your address</p>
             </div>
 
             <div>
               <label class="label-form label-adress" for="address2">Address 2</label>
-              <input class="input-form input-adress" type="text" id="address2" name="address2" maxlength="50" tabindex="0">
+              <input class="input-form input-adress" type="text" id="address2" name="address2" maxlength="50"
+                tabindex="0">
               <!-- <p class="text-form-error hide">Check valid password</p> -->
             </div>
           </div>
@@ -199,7 +202,8 @@
 
             <div>
               <label class="label-form label-adress" for="pcode">Postal Code</label>
-              <input class="input-form input-adress" type="number" id="pcode" onKeyPress="if(this.value.length==5) return false;" max="99999" tabindex="0" required>
+              <input class="input-form input-adress" type="number" id="pcode"
+                onKeyPress="if(this.value.length==5) return false;" max="99999" tabindex="0" required>
               <p class="text-form-error hide p-pcode">Please insert a valid postal code</p>
             </div>
 
@@ -224,8 +228,8 @@
                   <option value="49-GER">GER +49</option>
                   <option value="30-GRC">GRC +30</option>
                 </select>
-                <input class="input-form input-adress input-phone" type="number" name="tel" id="tel" onKeyPress="if(this.value.length==9) return false;"
-                  required tabindex="0">
+                <input class="input-form input-adress input-phone" type="number" name="tel" id="tel"
+                  onKeyPress="if(this.value.length==9) return false;" required tabindex="0">
               </div>
               <p class="text-form-error hide p-tel">Please insert a valid phone number</p>
             </div>
@@ -441,7 +445,7 @@
 
   <!-- <script src="./js/progress-bar.js" defer></script> Progress bar script -->
   <!-- <script src="./js/form-validation-test.js" defer></script> Progress bar script -->
-  <script src="./js/timeout.js" defer></script>
+  <script src="./js/timeout.js" type="module" defer></script>
   <!--time out-->
   <script src="./js/update-product-info.js" defer></script>
   <!--Update product info-->

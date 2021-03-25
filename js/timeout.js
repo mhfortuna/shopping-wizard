@@ -1,4 +1,10 @@
+import { clearFormAddressData } from "./form/addressPage.js";
+import { clearFormProfileData } from "./form/profiePage.js";
+import { ClearFormShipping } from "./buttonpage-demo.js";
+
 //counter
+import { startAgain } from "./buttonpage-demo.js";
+
 let totalTime = 0;
 let counterTime = 0;
 let timerResult;
@@ -27,8 +33,7 @@ btn.addEventListener("click", function (e) {
       totalTime = 0;
       counterTime = 0;
     }
-    console.log(totalTime);
-  }, 1000);
+  }, 100);
 });
 
 /*
@@ -121,7 +126,8 @@ function insertTimeUp(timeRemove = 1000) {
   const divTimeUp = document.querySelector(".timeout-error");
   // toggle hide class to hide time up div
   divTimeUp.classList.toggle("hide");
-  setInterval(() => {
+
+  let xp = setInterval(() => {
     const timerUp = document.getElementById("timerUp");
     if (timerUp !== null) {
       timerUp.remove();
@@ -132,11 +138,23 @@ function insertTimeUp(timeRemove = 1000) {
     <span class="minutes">This purchase will end in: ${regresiveTime} s</span><br><br>
     </article>`;
     // insert time up message
-    divTimeUp.insertAdjacentHTML("afterend", htmlCode);
+    // divTimeUp.insertAdjacentHTML("afterend", htmlCode);
+
     // reload page
     if (regresiveTime === 0) {
-      location.reload();
+      // hide div high z-index
+      divTimeUp.classList.toggle("hide");
+      timerUp.remove();
+      stoptimer();
+      startAgain();
+      clearFormAddressData();
+      clearFormProfileData();
+      ClearFormShipping();
+      clearInterval(xp);
+    } else {
+      divTimeUp.insertAdjacentHTML("afterend", htmlCode);
     }
+
     regresiveTime--;
   }, timeRemove);
 }

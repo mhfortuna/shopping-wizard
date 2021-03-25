@@ -60,7 +60,9 @@ function changePage() {
       quote.classList.toggle("hide");
       footerSm.classList.toggle("hide");
       containerPbar.classList.toggle("hide");
-      footerButtons.classList.toggle("hide");
+      footerButtons.classList.add("hide");
+      indexpage += 1;
+      break;
 
     case 1:
       page.style.transform = positionTranslate(indexpage);
@@ -69,6 +71,7 @@ function changePage() {
       for (let i = 0; i < logo.length; i++) {
         logo[i].classList.toggle("hide");
       }
+      fixProgressBar();
       quote.classList.add("hide");
       footerSm.classList.add("hide");
       containerPbar.classList.toggle("hide");
@@ -257,7 +260,7 @@ clear.addEventListener("click", function () {
   }
 });
 
-function ClearFormShipping() {
+export function ClearFormShipping() {
   document.querySelector("section.shipping-page form").reset();
   giftMessageWrapper.style.display = "none";
   giftFileWrapper.style.display = "none";
@@ -267,7 +270,23 @@ function ClearFormShipping() {
  * eventlistener for start again
  * @ author:
  */
-btnStartAgain.addEventListener("click", function () {
+btnStartAgain.addEventListener("click", startAgain);
+export function startAgain() {
   indexpage = 0;
   changePage();
-});
+}
+
+/*
+ * Fix progress bar
+ * @ author:
+ */
+function fixProgressBar() {
+  if (bullets[1].classList.contains("completed-pbar")) {
+    bullets[1].classList.remove("completed-pbar");
+    bars[0].classList.remove("bar-pbar-completed");
+  }
+  if (bullets[2].classList.contains("completed-pbar")) {
+    bullets[2].classList.remove("completed-pbar");
+    bars[1].classList.remove("bar-pbar-completed");
+  }
+}
