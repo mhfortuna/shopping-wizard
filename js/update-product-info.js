@@ -5,7 +5,8 @@ const colorThumbails = document.querySelectorAll(".color-thumbnails-wrapper img"
 const selectedColor = document.getElementById('prod-color');
 /* Add event listeners to thumbnails */
 for (let thumb of thumbs) {
-    thumb.addEventListener('click', changeProductPicture);
+    /*thumb.addEventListener('click', changeProductPicture);*/
+    thumb.addEventListener('mouseover', changeProductPictureByHover);
     for (let i = 0; i < colorThumbails.length; i++) {
       colorThumbails[i].addEventListener('click', changeProductPicture);
     }
@@ -47,6 +48,10 @@ function changeProductPicture (event) {
       break;
   }
   selectedColor.innerText = event.target.dataset.color;
+}
+
+function changeProductPictureByHover(event){
+  bigPict.src = event.target.src;
 }
 
 /*

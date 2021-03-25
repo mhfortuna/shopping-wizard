@@ -866,7 +866,7 @@ label.timerFinal {
   color: var(--teamYellow);
   padding: 8px 25px;
   border-radius: 5px;
-  /* opacity: 0.8; */
+  opacity: 0.5; 
   font-size: 20px;
   border: 2px;
   border: solid 2px transparent;
