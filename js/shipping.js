@@ -11,11 +11,11 @@ checkbox.addEventListener("change", function () {
   var giftFileWrapper = document.querySelector(".file-input");
   // If the checkbox is checked, display the divs
   if (this.checked == true) {
-    giftMessageWrapper.style.display = "block";
-    giftFileWrapper.style.display = "block";
+    giftMessageWrapper.style.visibility = "visible";
+    giftFileWrapper.style.visibility = "visible";
   } else {
-    giftMessageWrapper.style.display = "none";
-    giftFileWrapper.style.display = "none";
+    giftMessageWrapper.style.visibility = "hidden";
+    giftFileWrapper.style.visibility = "hidden";
   }
 });
 

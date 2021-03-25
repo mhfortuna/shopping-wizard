@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./css/style.css" />
   <script src="https://kit.fontawesome.com/ecea200bd3.js" crossorigin="anonymous"></script>
+  <title>Dream Shoes</title>
   <link rel="icon" type="image/png" href="/favicon.png" /> <!-- favicon -->
 </head>
 
@@ -210,11 +211,11 @@
             <div>
               <label class="label-form label-adress" for="Country">Country</label>
               <select class="select-form select-country" name="Country" id="country" required tabindex="0">
-                <option value="Andorra">Andorra</option>
-                <option value="Spain" selected>Spain</option>
-                <option value="France">France</option>
-                <option value="Germany">Germany</option>
-                <option value="Greece">Greece</option>
+                <option class="country-option" value="Andorra">Andorra</option>
+                <option class="country-option" value="Spain" selected>Spain</option>
+                <option class="country-option" value="France">France</option>
+                <option class="country-option" value="Germany">Germany</option>
+                <option class="country-option" value="Greece">Greece</option>
               </select>
             </div>
 
@@ -222,11 +223,11 @@
               <label class="label-form label-adress" for="Phone">Phone</label>
               <div class="div-phone">
                 <select class="select-form select-phone" name="PhoneCountryCode" id="PhoneCountryCode" tabindex="0">
-                  <option value="376-AND">AND +376</option>
-                  <option value="34-ES" selected>ES +34</option>
-                  <option value="33-FR">FR +33</option>
-                  <option value="49-GER">GER +49</option>
-                  <option value="30-GRC">GRC +30</option>
+                  <option class="code-option" value="376-AND">AND +376</option>
+                  <option class="code-option" value="34-ES" selected>ES +34</option>
+                  <option class="code-option" value="33-FR">FR +33</option>
+                  <option class="code-option" value="49-GER">GER +49</option>
+                  <option class="code-option" value="30-GRC">GRC +30</option>
                 </select>
                 <input class="input-form input-adress input-phone" type="number" name="tel" id="tel"
                   onKeyPress="if(this.value.length==9) return false;" required tabindex="0">
@@ -247,44 +248,47 @@
         <form name="formship" action="">
           <!-- radio buttons - shipping type -->
           <h3>Shipping</h3>
-          <div class="shipping-type">
-            <label for="type">Shipping type</label>
-            <label class="form-radio">
-              <!-- hidden Input -->
-              <input class="form-radio__input" type="radio" id="free" name="type" value="free" checked>
-              <!-- Imagen en sustitucion -->
-              <span class="form-radio__show form-radio__show--radio"></span>
-              <span class="form-radio__text">Free shipment (72H)</span>
-            </label>
-            <label class="form-radio">
-              <!-- hidden Input -->
-              <input class="form-radio__input" type="radio" id="extra" name="type" value="extra">
-              <!-- Imagen en sustitucion -->
-              <span class="form-radio__show form-radio__show--radio"></span>
-              <span class="form-radio__text">Extra shipping (48H) <b>4,99€</b></span>
-            </label>
-            <label class="form-radio">
-              <!-- hidden Input -->
-              <input class="form-radio__input" type="radio" id="premium" name="type" value="premium">
-              <!-- Imagen en sustitucion -->
-              <span class="form-radio__show form-radio__show--radio"></span>
-              <span class="form-radio__text">Premium (24H) <b>9,99€</b></span>
-            </label>
+          <div>
+            <div class="shipping-type">
+              <label for="type">Shipping type</label>
+              <label class="form-radio">
+                <!-- hidden Input -->
+                <input class="form-radio__input" type="radio" id="free" name="type" value="free" checked>
+                <!-- Imagen en sustitucion -->
+                <span class="form-radio__show form-radio__show--radio"></span>
+                <span class="form-radio__text">Free shipment (72H)</span>
+              </label>
+              <label class="form-radio">
+                <!-- hidden Input -->
+                <input class="form-radio__input" type="radio" id="extra" name="type" value="extra">
+                <!-- Imagen en sustitucion -->
+                <span class="form-radio__show form-radio__show--radio"></span>
+                <span class="form-radio__text">Extra shipping (48H) <b>4,99€</b></span>
+              </label>
+              <label class="form-radio">
+                <!-- hidden Input -->
+                <input class="form-radio__input" type="radio" id="premium" name="type" value="premium">
+                <!-- Imagen en sustitucion -->
+                <span class="form-radio__show form-radio__show--radio"></span>
+                <span class="form-radio__text">Premium (24H) <b>9,99€</b></span>
+              </label>
+            </div>
+            <div class="shiptemplate">
+              <label for="">Your order will arrive between: </label>
+              <p><b id="date1"> </b> and <b id="date2"></b></p>
+            </div>
+            <!-- checkbox - gift -->
+            <div class="gift">
+              <label class="form-checkbox">
+                <!-- hidden Input -->
+                <input class="form-checkbox__input" type="checkbox" id="check-gift" name="conditions" value="conditions">
+                <!-- Imagen en sustitucion -->
+                <span class="form-checkbox__show form-checkbox__show--checkbox"></span>
+                <span class="form-checkbox__text">It is a gift?</span>
+              </label>
+            </div>
           </div>
-          <div class="shiptemplate">
-            <label for="">Your order will arrive between: </label>
-            <p><b id="date1"> </b> and <b id="date2"></b></p>
-          </div>
-          <!-- checkbox - gift -->
-          <div class="gift">
-            <label class="form-checkbox">
-              <!-- hidden Input -->
-              <input class="form-checkbox__input" type="checkbox" id="check-gift" name="conditions" value="conditions">
-              <!-- Imagen en sustitucion -->
-              <span class="form-checkbox__show form-checkbox__show--checkbox"></span>
-              <span class="form-checkbox__text">It is a gift?</span>
-            </label>
-          </div>
+          <div>
           <!-- gift message -->
           <div class="wrp-gift-message">
             <label for="gift-title">Gift title</label>
@@ -300,6 +304,7 @@
               <i class="far fa-file-image"></i>
             </label>
           </div>
+          </div>
         </form>
       </section>
 
@@ -314,33 +319,35 @@
           <div class="left-wrapper-finish">
             <img src="./images/black-01.png" alt="" id="img-purchase-1">
           </div>
-          <div class="central-wrapper-finish">
-            <div class="product-finish-text">
-              <h3>Modelo de producto</h3>
-              <p>Size: </p>
-              <p>Color: </p>
-              <p class="delivery-estimation">Estimate delivery date:</p>
-              <P>Between:</P>
-              <p>and:</p>
+          <div class="right-big-container">
+            <div class="central-wrapper-finish">
+              <div class="product-finish-text">
+                <h3>Modelo de producto</h3>
+                <p>Size: </p>
+                <p>Color: </p>
+                <p class="delivery-estimation">Estimate delivery date:</p>
+                <P>Between:</P>
+                <p>and:</p>
+              </div>
             </div>
-          </div>
-          <div class="right-wrapper-finish">
-            <h4>Your Order</h4>
-            <hr>
-            <p>Shoes:</p>
-            <p>Shipping:</p>
-            <hr>
-            <p>Total:</p>
-          </div>
-          <div class="finished-checkbox">
-            <label class="form-checkbox">
-              <input class="form-checkbox__input" id="conditions" type="checkbox" name="conditions" value="conditions">
-              <span class="form-checkbox__show form-checkbox__show--checkbox"></span>
-            </label>
-            <label for="conditions"> I have read and I accept the terms and conditions.</label> <br>
-            <p class="text-form-error hide p-buy-now-validation">Please accept the terms and conditions</p><br>
-            <button id='btn-buy-now-finished'>Buy now</button>
-            <button id='btn-start-again'>Start again</button>
+            <div class="right-wrapper-finish">
+              <h4>Your Order</h4>
+              <hr>
+              <p>Shoes:</p>
+              <p>Shipping:</p>
+              <hr>
+              <p>Total:</p>
+            </div>
+            <div class="finished-checkbox">
+              <label class="form-checkbox">
+                <input class="form-checkbox__input" id="conditions" type="checkbox" name="conditions" value="conditions">
+                <span class="form-checkbox__show form-checkbox__show--checkbox"></span>
+              </label>
+              <label for="conditions"> I have read and I accept the terms and conditions.</label> <br>
+              <p class="text-form-error hide p-buy-now-validation">Please accept the terms and conditions</p><br>
+              <button id='btn-buy-now-finished'>Buy now</button>
+              <button id='btn-start-again'>Start again</button>
+            </div>
           </div>
         </div>
       </section>
@@ -357,66 +364,30 @@
           <div class="left-wrapper-finish">
             <img src="./images/black-01.png" alt="" id="img-purchase-2">
           </div>
-          <div class="central-wrapper-finish">
-            <div class="product-finish-text">
-              <h3>Modelo de producto</h3>
-              <p>Size: </p>
-              <p>Color: </p>
-              <p class="delivery-estimation">ESTIMATE DELVERY DATE:</p>
-              <P>Between:</P>
-              <p>and:</p>
-            </div>
-          </div>
-          <div class="right-wrapper-finish">
-            <h4>Payment details</h4>
-            <hr>
-            <p>Shoes:</p>
-            <p>Shipping:</p>
-            <hr>
-            <p>Total:</p>
-          </div>
-          <div class="finished-checkbox">
-            <p id="total-time">Your registration took: <b></b></p>
-          </div>
-        </div>
-      </section>
-
-
-      <!--
-      =================================
-      Thank You page Para borrar
-      =================================
-      -->
-      <section class="thankyou hide">
-        <div class="text-thanks">
-          <h1 class="text-thanks">Your order is complete!</h1>
-          <h3 class="text-thanks">Thank you for your order!</h3>
-        </div>
-        <div class=finished>
-          <div class="left-wrapper-finish">
-            <h2>Your Purchase</h2>
-            <div class="left-finish">
-              <img src="./images/black-01.png" alt="">
+          <div class="right-big-container">
+            <div class="central-wrapper-finish">
               <div class="product-finish-text">
                 <h3>Modelo de producto</h3>
                 <p>Size: </p>
-                <p>color: </p>
-                <p>ESTIMATE DELIVERY DATE:</p>
-                <P>Beetween:</P>
+                <p>Color: </p>
+                <p class="delivery-estimation">ESTIMATE DELVERY DATE:</p>
+                <P>Between:</P>
                 <p>and:</p>
               </div>
             </div>
-          </div>
-          <div class="right-wrapper-finish">
-            <h4>Payment Details</h4>
-            <hr>
-            <p>Shoes:</p>
-            <p>Shipping:</p>
-            <hr>
-            <p>total:</p>
+            <div class="right-wrapper-finish">
+              <h4>Payment details</h4>
+              <hr>
+              <p>Shoes:</p>
+              <p>Shipping:</p>
+              <hr>
+              <p>Total:</p>
+            </div>
+            <div class="finished-checkbox">
+              <p id="total-time">Your registration took: <b></b></p>
+            </div>
           </div>
         </div>
-        <label for="timerfinal" class="timerFinal">You Registration Took:</label>
       </section>
   </main>
   <div class="timeout-error hide">
