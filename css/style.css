@@ -638,7 +638,6 @@ section p.text-form-error {
   margin-bottom: 18px;
   width: 340px;
   background-color: rgba(255, 0, 0, 0.178);
-  border: 1.75px solid rgba(255, 0, 0, 0.178);
   border-radius: 5px;
 }
 
