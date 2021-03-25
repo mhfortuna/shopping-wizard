@@ -10,10 +10,6 @@ import {
 } from "./form/profiePage.js";
 
 /*Progress bar */
-const previousBtn = document.getElementById("previousBtn");
-const nextBtn = document.getElementById("nextBtn");
-const finishBtn = document.getElementById("finishBtn");
-const content = document.getElementById("content-pbar");
 const bullets = document.querySelectorAll(".bullet-pbar");
 const bars = document.querySelectorAll(".bar-pbar");
 
