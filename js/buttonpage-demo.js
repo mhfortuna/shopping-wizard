@@ -164,9 +164,9 @@ function loadToOrder() {
   myOrder.price = document
     .querySelector(".price-wrapper h3")
     .innerText.slice(0, -1);
-  myOrder.photoAddress = document.getElementsByClassName(
-    "big-picture"
-  )[0].lastElementChild.src;
+  myOrder.photoAddress = document.querySelector(
+    '.main-thumbnail'
+  ).src;
 }
 /* Last pages constants */
 const yourPurchasePageText = document.getElementsByClassName(
