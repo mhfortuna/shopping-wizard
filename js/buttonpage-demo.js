@@ -87,7 +87,6 @@ function changePage() {
     case 4:
       page.style.transform = positionTranslate(indexpage);
       page.classList.add("horizTranslate");
-
       footerButtons.classList.toggle("hide");
       updatePurchasePage();
       indexpage += 1;
@@ -95,10 +94,10 @@ function changePage() {
     case 5:
       page.style.transform = positionTranslate(indexpage);
       page.classList.add("horizTranslate");
-
       bullets[indexpage - 2].classList.add("completed-pbar");
       bars[indexpage - 3].classList.add("bar-pbar-completed");
       indexpage += 1;
+      removeUserData();
       break;
 
     default:
@@ -123,8 +122,9 @@ function translateAnimation() {
   }
 }
 /*
- * Here we ...
- * @ author:
+ * The function of the 'Buy now' button
+ * On the last page
+ * @ author: 
  */
 function validationChangePage() {
   /* Verify if checkbox is checked */
@@ -132,6 +132,7 @@ function validationChangePage() {
     changePage();
   } else {
     window.alert("Please accept our terms and conditions to buy");
+    /* TODO: Remove this alert */
   }
 }
 /* order object for last pages */
@@ -169,20 +170,13 @@ function loadToOrder() {
   )[0].lastElementChild.src;
 }
 /* Last pages constants */
-const yourPurchasePageText = document.getElementsByClassName(
-  "product-finish-text"
-)[0];
-const yourOrderPageText = document.getElementsByClassName(
-  "product-finish-text"
-)[1];
-const yourPurchasePagePrices = document.getElementsByClassName(
-  "right-wrapper-finish"
-)[0];
-const yourOrderPagePrices = document.getElementsByClassName(
-  "right-wrapper-finish"
-)[1];
+const yourPurchasePageText = document.getElementsByClassName("product-finish-text")[0];
+const yourOrderPageText = document.getElementsByClassName("product-finish-text")[1];
+const yourPurchasePagePrices = document.getElementsByClassName("right-wrapper-finish")[0];
+const yourOrderPagePrices = document.getElementsByClassName("right-wrapper-finish")[1];
 const purchasePic = document.getElementById("img-purchase-1");
 const orderPic = document.getElementById("img-purchase-2");
+
 function updatePurchasePage() {
   /* Product details */
   yourPurchasePageText.childNodes[1].innerText = myOrder.product;
@@ -213,4 +207,11 @@ function updatePurchasePage() {
 }
 function removeValidation() {
   pBuyNowValidation.classList.add("hide");
+}
+
+function removeUserData() {
+  for (let i in myOrder) {
+    myOrder.i = undefined
+  }
+  shippingPrice: 0
 }
