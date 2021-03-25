@@ -514,19 +514,21 @@ div.div-phone {
 ===========================
 */
 .shipping-page form {
-  max-width: 700px;
+  max-width: 760px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   max-height: 100%;
   gap: 20px;
   align-content: center;
-  max-width: 700px;
   justify-content: center;
 }
 section.shipping-page h3 {
   /* align-self: baseline; */
   width: 100%;
+}
+.shipping-page form > div{
+  width: 320px;;
 }
 
 label[for="type"] {
@@ -592,12 +594,12 @@ div.file-input i {
 }
 
 div.shiptemplate {
-  display: none;
+  visibility: hidden;
   padding: 2vh 0px;
 }
 
 div.shipping-show {
-  display: block;
+  visibility: visible;
 }
 /* 
 ===========================
