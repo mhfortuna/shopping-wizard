@@ -33,7 +33,7 @@ btn.addEventListener("click", function (e) {
       totalTime = 0;
       counterTime = 0;
     }
-  }, 100);
+  }, 1000);
 });
 
 /*
