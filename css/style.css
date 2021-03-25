@@ -883,7 +883,7 @@ label.timerFinal {
   font-style: italic;
 }
 
-#btn-buy-now-finished {
+button#btn-buy-now-finished {
   background-color: var(--teamLightblue);
   color: var(--teamYellow);
   padding: 8px 25px;
@@ -895,10 +895,30 @@ label.timerFinal {
   box-sizing: border-box;
   transition-duration: 0.5s;
 }
-#btn-buy-now-finished:hover {
+
+button#btn-start-again {
+  background-color: var(--teamYellow);
+  color: var(--teamLightblue);
+  padding: 8px 25px;
+  border-radius: 5px;
+  opacity: 1;
+  font-size: 20px;
+  border: 2px;
+  border: solid 2px transparent;
+  box-sizing: border-box;
+  transition-duration: 0.5s;
+}
+
+button#btn-buy-now-finished:hover {
   border: solid 2px var(--teamYellow);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+button#btn-start-again:hover {
+  border: solid 2px var(--teamLightblue);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 .thankyou-box {
   border: 2px solid var(--teamLightblue);
   padding: 10px;
