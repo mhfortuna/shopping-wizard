@@ -2,12 +2,12 @@ import {
   formAdressValidity,
   getFormAddressData,
   clearFormAddressData,
-} from "./form/addressPage.js";
+} from "./form/address-validation.js";
 import {
   formProfileValidity,
   getFormProfileData,
   clearFormProfileData,
-} from "./form/profiePage.js";
+} from "./form/profile-validation.js";
 
 /*Progress bar */
 const bullets = document.querySelectorAll(".bullet-pbar");
@@ -46,7 +46,6 @@ const giftFileWrapper = document.querySelector(".file-input");
 var profileData;
 var adressData;
 
-/* buttonpage.addEventListener('click', changePage); */
 function changePage() {
   // switch based on page
   switch (indexpage) {
@@ -63,7 +62,6 @@ function changePage() {
       footerButtons.classList.add("hide");
       indexpage += 1;
       break;
-
     case 1:
       page.style.transform = positionTranslate(indexpage);
       page.classList.add("horizTranslate");
@@ -92,7 +90,6 @@ function changePage() {
       }
       break;
     case 3:
-      // console.log(formAdressValidity());
       if (formAdressValidity() || true) {
         page.style.transform = positionTranslate(indexpage);
         page.classList.add("horizTranslate");

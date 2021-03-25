@@ -3,7 +3,7 @@ import {
   validateEmail,
   validatePass,
   confirmPass,
-} from "./profiePage.js";
+} from "./profile-validation.js";
 import {
   validFirstName,
   validLastName,
@@ -11,7 +11,7 @@ import {
   validAdress,
   validPostalCode,
   validPhoneNumber,
-} from "./addressPage.js";
+} from "./address-validation.js";
 
 /*
  * This section validates form of:

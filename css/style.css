@@ -40,13 +40,12 @@ main {
   display: flex;
   width: 600vw;
   transform: translateX(0vw);
-  /* transition-delay: 1s ease-in-out; */
 }
 .horizTranslate {
-   /* -webkit-transition: 0.8s;
+  -webkit-transition: 0.8s transform;
   -moz-transition: 0.8s transform;
-  -ms-transition: 0.8s;
-  -o-transition: 0.8s; */
+  -ms-transition: 0.8s transform;
+  -o-transition: 0.8s transform;
   transition: 0.8s transform;
 }
 
@@ -104,7 +103,6 @@ header {
   align-items: center;
 }
 div.logo {
-  /* width: 30%; */
   height: 90%;
   display: flex;
   align-items: center;
@@ -142,14 +140,8 @@ blockquote.header-quote {
   height: 100%;
   display: flex;
   align-content: center;
-  /* 	padding:  0  auto; */
-  /* margin-top:  20px; */
-  /* 	padding:  40px; */
 }
 #stepProgressBar {
-  /* display:  flex;
-	justify-content:  space-between;
-	align-items:  flex-end; */
   display: grid;
   align-items: center;
   justify-items: center;
@@ -157,9 +149,6 @@ blockquote.header-quote {
   width: 90%;
   margin: 0 auto;
   margin-bottom: 0px;
-  /*     background-color: #F8D7E8;
-	border: 10px solid #F8D7E8;
-	border-radius: 10px; */
 }
 
 div.step-pbar {
@@ -192,8 +181,6 @@ div.bar-pbar {
   margin-bottom: 18px;
   height: 1.5px;
   transition: background-color 1000ms;
-  /*   position: absolute;
-  top: 5px; */
 }
 div.bar-pbar-completed {
   background-color: var(--teamYellow);
@@ -231,7 +218,6 @@ div.thumbnail-wrapper {
   width: 11%;
   margin: 5px;
   padding: 2px;
-  /* border: 2px solid var(--teamLightblue); */
   height: fit-content;
 }
 
@@ -323,7 +309,6 @@ div.btn-buy input {
   color: var(--teamYellow);
   padding: 8px 25px;
   border-radius: 5px;
-  /* opacity: 0.8; */
   font-size: 28px;
   font-weight: 900;
   border: 2px;
@@ -494,7 +479,6 @@ label.label-form {
 */
 
 section.address h3 {
-  /* align-self: baseline; */
   width: 100%;
 }
 .address-flex {
@@ -524,7 +508,6 @@ input[type="number"]::-webkit-outer-spin-button {
 div.div-phone {
   display: inline-flex;
   width: 100%;
-  /* max-width: 350px; */
 }
 
 .select-phone {
@@ -552,7 +535,6 @@ div.div-phone {
   justify-content: center;
 }
 section.shipping-page h3 {
-  /* align-self: baseline; */
   width: 100%;
 }
 .shipping-page form > div{
@@ -587,7 +569,7 @@ textarea#gift-message {
   border-radius: 5px;
   margin-top: 1vh;
   outline: none;
-  width: 320px;
+  width: 340px;
   padding: 10px;
 }
 
@@ -748,7 +730,6 @@ input.page-input-button {
   background-color: var(--teamYellow);
   padding: 6px;
   border-radius: 5px;
-  /* opacity: 0.8; */
   font-size: 22px;
   font-weight: 900;
   border: 2px;
@@ -797,7 +778,6 @@ div.finished-container {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  /* justify-content: space-between; */
   align-content: center;
   justify-items: flex-start;
   gap: 20px;
@@ -811,10 +791,6 @@ div.left-wrapper-finish {
   color: var(--teamBlue);
   height: fit-content;
   text-align: center;
-  /*
-  margin-left: 20px;
-  margin-top: 20px;
-  */
 }
 .right-big-container{
   display: flex;
@@ -827,7 +803,6 @@ div.left-wrapper-finish {
 }
 div.central-wrapper-finish {
   width: 300px;
-  /* background-color: #2e405744; */
   border-left: var(--teamYellow) solid 2px;
   padding: 10px;
 }

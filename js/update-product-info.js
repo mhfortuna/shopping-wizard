@@ -74,7 +74,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
  * @ author:
  */
 function fnColorThumbails(event) {
-  // debugger;
   // get DOM element price
   const $price = document.querySelector(".price-wrapper h3");
   // get custom proporty yellow color

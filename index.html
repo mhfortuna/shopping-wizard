@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -65,20 +66,17 @@
         =================================
         -->
       <section class="product-page">
-        <!--  -->
         <div class="left-wrapper">
           <div class="thumbnail-wrapper">
             <img src="./images/black-01.png" alt="Vans thumbnail" class="img-thumbnail main-thumbnail" />
             <img src="./images/black-02.png" alt="Vans thumbnail" class="img-thumbnail" />
             <img src="./images/black-03.png" alt="Vans thumbnail" class="img-thumbnail" />
             <img src="./images/black-04.png" alt="Vans thumbnail" class="img-thumbnail" />
-            <!-- <img src="./images/black-sport.jpg" alt="Black sport thumbnail" class="img-thumbnail" />-->
           </div>
           <div class="big-picture">
             <img src="./images/black-01.png" alt="" />
           </div>
         </div>
-        <!--  -->
         <div class="right-wrapper">
           <h2>Vans Old Skool</h2>
           <div class="price-wrapper">
@@ -111,6 +109,7 @@
           <div class="btn-buy">
             <input type="submit" value="Buy" id="buy-btn" class="submitbutton">
           </div>
+        </div>
       </section>
       <!--
       =================================
@@ -245,7 +244,7 @@
       -->
       <section class="shipping-page">
         <!-- Shipping form -->
-        <form name="formship" action="">
+        <form name="formship">
           <!-- radio buttons - shipping type -->
           <h3>Shipping</h3>
           <div>
@@ -274,7 +273,7 @@
               </label>
             </div>
             <div class="shiptemplate">
-              <label for="">Your order will arrive between: </label>
+              <label>Your order will arrive between: </label>
               <p><b id="date1"> </b> and <b id="date2"></b></p>
             </div>
             <!-- checkbox - gift -->
@@ -389,6 +388,7 @@
           </div>
         </div>
       </section>
+    </div>
   </main>
   <div class="timeout-error hide">
   </div>
@@ -400,9 +400,9 @@
  -->
   <div class='foot'>
     <div class="foot-sm">
-      <a class="socialmedia-link" href="#" class="nav-link"><i class="fab fa-youtube"></i></a>
-      <a class="socialmedia-link" href="#" class="nav-link"><i class="fab fa-instagram"></i></a>
-      <a class="socialmedia-link" href="#" class="nav-link"><i class="fab fa-facebook"></i></i></a>
+      <a class="socialmedia-link nav-link" href="#"><i class="fab fa-youtube"></i></a>
+      <a class="socialmedia-link nav-link" href="#"><i class="fab fa-instagram"></i></a>
+      <a class="socialmedia-link nav-link" href="#"><i class="fab fa-facebook"></i></a>
       <p>Copyright © 2021, Dream Team.</p>
     </div>
     <div class="logo logo-foot hide">
@@ -414,17 +414,14 @@
     </div>
   </div>
 
-  <!-- <script src="./js/progress-bar.js" defer></script> Progress bar script -->
-  <!-- <script src="./js/form-validation-test.js" defer></script> Progress bar script -->
-  <script src="./js/timeout.js" type="module" defer></script>
   <!--time out-->
-  <script src="./js/update-product-info.js" defer></script>
+  <script src="./js/timeout.js" type="module"></script>
   <!--Update product info-->
-  <script src="./js/buttonpage-demo.js" type="module" defer></script>
+  <script src="./js/update-product-info.js" defer></script>
   <!--Submit button demo-->
-  <script src="./js/shipping.js" type="module" defer></script>
+  <script src="./js/button-page-flow.js" type="module"></script>
+  <script src="./js/shipping.js" type="module"></script>
   <script src="./js/form/form-validation.js" type="module"></script>
-  <script src="./js/form/form-data.js" type="module"></script>
 </body>
 
 </html>

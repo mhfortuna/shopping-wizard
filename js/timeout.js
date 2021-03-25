@@ -1,9 +1,6 @@
-import { clearFormAddressData } from "./form/addressPage.js";
-import { clearFormProfileData } from "./form/profiePage.js";
-import { ClearFormShipping } from "./buttonpage-demo.js";
-
-//counter
-import { startAgain } from "./buttonpage-demo.js";
+import { clearFormAddressData } from "./form/address-validation.js";
+import { clearFormProfileData } from "./form/profile-validation.js";
+import { ClearFormShipping, startAgain  } from "./button-page-flow.js";
 
 let totalTime = 0;
 let counterTime = 0;
@@ -59,8 +56,7 @@ function insertTimer(counter, element, timeRemove = 5000) {
  */
 function stoptimer() {
   clearInterval(timerResult);
-  // counterTime = 0;
-  // totalTime = 0;
+
 }
 function reseTimer() {
   clearInterval(timerResult);
@@ -143,8 +139,6 @@ function insertTimeUp(timeRemove = 1000) {
     <span class="minutes">This purchase will end in: ${regresiveTime} s</span><br><br>
     </article>`;
     // insert time up message
-    // divTimeUp.insertAdjacentHTML("afterend", htmlCode);
-
     // reload page
     if (regresiveTime === 0) {
       // hide div high z-index

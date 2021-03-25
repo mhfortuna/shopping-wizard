@@ -1,4 +1,4 @@
-import { myOrder } from "./buttonpage-demo.js";
+import { myOrder } from "./button-page-flow.js";
 
 /*
  * This functions shows and hides gift section
@@ -52,8 +52,6 @@ function shippingDates() {
  * Extra: Premium + 24H
  * @ author:
  */
-/* 
-const bDate = temp.querySelector("b"); */
 const shipTemplate = document.querySelector(".shiptemplate");
 const bDate1 = document.getElementById("date1");
 const bDate2 = document.getElementById("date2");
