@@ -16,7 +16,7 @@ btn.addEventListener("click", function (e) {
   timerResult = setInterval(() => {
     counterTime++;
     totalTime++;
-    console.log(totalTime)
+    // console.log(totalTime)
     if (counterTime >= 60 && totalTime < 299) {
       const header = document.querySelector("header");
       insertTimer(totalTime, header);
