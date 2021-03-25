@@ -45,6 +45,10 @@ const clear = document.querySelector(".page-input-button");
 const giftMessageWrapper = document.querySelector(".wrp-gift-message");
 const giftFileWrapper = document.querySelector(".file-input");
 
+/* User Data */
+var profileData;
+var adressData;
+
 /* buttonpage.addEventListener('click', changePage); */
 function changePage() {
   // switch based on page
@@ -70,7 +74,7 @@ function changePage() {
         bullets[indexpage - 1].classList.add("completed-pbar");
         bars[indexpage - 2].classList.add("bar-pbar-completed");
         // store data in an abject and clear form
-        const profileData = getFormProfileData();
+        profileData = getFormProfileData();
         clearFormProfileData();
         indexpage += 1;
       }
@@ -84,7 +88,7 @@ function changePage() {
         bullets[indexpage - 1].classList.add("completed-pbar");
         bars[indexpage - 2].classList.add("bar-pbar-completed");
         // store data in an abject and clear form
-        const adressData = getFormAddressData();
+        adressData = getFormAddressData();
         clearFormAddressData();
         indexpage += 1;
       }
@@ -92,7 +96,6 @@ function changePage() {
     case 4:
       page.style.transform = positionTranslate(indexpage);
       page.classList.add("horizTranslate");
-
       footerButtons.classList.toggle("hide");
       updatePurchasePage();
       indexpage += 1;
@@ -100,10 +103,10 @@ function changePage() {
     case 5:
       page.style.transform = positionTranslate(indexpage);
       page.classList.add("horizTranslate");
-
       bullets[indexpage - 2].classList.add("completed-pbar");
       bars[indexpage - 3].classList.add("bar-pbar-completed");
       indexpage += 1;
+      removeUserData();
       break;
 
     default:
@@ -128,8 +131,9 @@ function translateAnimation() {
   }
 }
 /*
- * Here we ...
- * @ author:
+ * The function of the 'Buy now' button
+ * On the last page
+ * @ author: 
  */
 buyNowConditions.addEventListener('change', function changeBuyButton() {
   if (buyNowConditions.checked == true) {
@@ -188,20 +192,13 @@ function loadToOrder() {
   ).src;
 }
 /* Last pages constants */
-const yourPurchasePageText = document.getElementsByClassName(
-  "product-finish-text"
-)[0];
-const yourOrderPageText = document.getElementsByClassName(
-  "product-finish-text"
-)[1];
-const yourPurchasePagePrices = document.getElementsByClassName(
-  "right-wrapper-finish"
-)[0];
-const yourOrderPagePrices = document.getElementsByClassName(
-  "right-wrapper-finish"
-)[1];
+const yourPurchasePageText = document.getElementsByClassName("product-finish-text")[0];
+const yourOrderPageText = document.getElementsByClassName("product-finish-text")[1];
+const yourPurchasePagePrices = document.getElementsByClassName("right-wrapper-finish")[0];
+const yourOrderPagePrices = document.getElementsByClassName("right-wrapper-finish")[1];
 const purchasePic = document.getElementById("img-purchase-1");
 const orderPic = document.getElementById("img-purchase-2");
+
 function updatePurchasePage() {
   /* Product details */
   yourPurchasePageText.childNodes[1].innerText = myOrder.product;
@@ -252,3 +249,15 @@ giftMessageWrapper.style.display = "none";
 giftFileWrapper.style.display = "none";
 }
 
+function removeUserData() {
+  for (let i in myOrder) {
+    myOrder[i] = undefined;
+  }
+  myOrder.shippingPrice = 0;
+  for (let i in profileData){
+    profileData[i] = undefined;
+  }
+  for (let i in adressData){
+    adressData[i] = undefined;
+  }
+}
