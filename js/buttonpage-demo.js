@@ -230,9 +230,6 @@ function updatePurchasePage() {
   purchasePic.src = myOrder.photoAddress;
   orderPic.src = myOrder.photoAddress;
 }
-function removeValidation() {
-  pBuyNowValidation.classList.add("hide");
-}
 /*
  * eventlistener for clear
  * clear button
