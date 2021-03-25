@@ -392,6 +392,34 @@ input.form-checkbox__input:checked + span.form-checkbox__show--checkbox {
   background-image: url(/images/checkbox-check.png);
 }
 
+/* ? Form radio buttons */
+label.form-radio {
+  font-size: 1rem;
+  align-items: center;
+  cursor: pointer;
+  width: fit-content;
+}
+.form-radio__show--radio {
+  background-image: url(/images/radio-uncheck.png);
+}
+input.form-radio__input {
+  display: none;
+}
+span.form-radio__show {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-size: cover;
+}
+span.form-radio__text {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+input.form-radio__input:checked + span.form-radio__show--radio {
+  background-image: url(/images/radio-check.png);
+}
+
 /* ? Form select */
 select.select-form {
   margin: 5px 0 15px 0;
@@ -521,28 +549,22 @@ label[for="type"] {
   font-weight: bold;
 }
 
-div.shipping-type div {
+div.shipping-type label {
   padding: 0.8vh 0;
+  display: block;
 }
 
 div.gift {
   margin-top: 2vh;
 }
 
-/* label[for="gift-message"] {
-  display: block;
-  margin-top: 0.5vh;
-  font-weight: bolder;
-} */
-
 div.wrp-gift-message label {
-  display: block;
   margin-top: 12px;
-  /* font-weight: bolder; */
 }
 
 input#gift-title {
   margin-bottom: 0;
+  border: 2px solid var(--teamGreen);
 }
 
 textarea#gift-message {
@@ -866,7 +888,7 @@ label.timerFinal {
   color: var(--teamYellow);
   padding: 8px 25px;
   border-radius: 5px;
-  opacity: 0.5; 
+  opacity: 0.5;
   font-size: 20px;
   border: 2px;
   border: solid 2px transparent;

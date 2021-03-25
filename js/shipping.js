@@ -6,7 +6,6 @@ import { myOrder } from "./buttonpage-demo.js";
  */
 const checkbox = document.getElementById("check-gift");
 checkbox.addEventListener("change", function () {
-  console.log("check");
   // Get the divs to hide and show
   var giftMessageWrapper = document.querySelector(".wrp-gift-message");
   var giftFileWrapper = document.querySelector(".file-input");
