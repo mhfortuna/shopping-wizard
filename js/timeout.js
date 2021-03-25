@@ -22,6 +22,7 @@ btn.addEventListener("click", function (e) {
   timerResult = setInterval(() => {
     counterTime++;
     totalTime++;
+    console.log(totalTime, counterTime)
     if (counterTime >= 60 && totalTime < 299) {
       const header = document.querySelector("header");
       insertTimer(totalTime, header);
@@ -60,8 +61,13 @@ function insertTimer(counter, element, timeRemove = 5000) {
  */
 function stoptimer() {
   clearInterval(timerResult);
-  counterTime = 0;
-  totalTime = 0;
+  // counterTime = 0;
+  // totalTime = 0;
+}
+function reseTimer() {
+  clearInterval(timerResult);
+    counterTime = 0;
+    totalTime = 0;
 }
 
 /*
@@ -112,7 +118,7 @@ document
   .getElementById("btn-start-again")
   .addEventListener("click", function () {
     // stop interval
-    stoptimer();
+    reseTimer();
   });
 
 /*
