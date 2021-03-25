@@ -22,7 +22,7 @@ btn.addEventListener("click", function (e) {
       counterTime = 0;
     }
     // time up
-    if (totalTime === 300) {
+    if (totalTime === 5) {
       insertTimeUp();
     }
   }, 1000);
