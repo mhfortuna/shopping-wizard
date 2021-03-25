@@ -760,13 +760,15 @@ div.finished-container {
   margin: 0;
   padding: 20px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
-  /*justify-content: space-between;*/
-  justify-content: center;
-  align-items: flex-start;
+  /* justify-content: space-between; */
+  align-content: center;
+  justify-items: flex-start;
   gap: 20px;
   max-width: 1000px;
+  width: 100%;
+  max-height: 100%;
 }
 
 div.left-wrapper-finish {
@@ -779,8 +781,17 @@ div.left-wrapper-finish {
   margin-top: 20px;
   */
 }
+.right-big-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 65%;
+  max-width: 800px;
+  max-height: 100%;
+  gap: 10px;
+}
 div.central-wrapper-finish {
-  width: 320px;
+  width: 300px;
   /* background-color: #2e405744; */
   border-left: var(--teamYellow) solid 2px;
   padding: 10px;
@@ -790,17 +801,19 @@ div.right-wrapper-finish {
   border-radius: 8px;
   border: 2px solid var(--teamLightblue);
   height: fit-content;
-  width: 25%;
+  width: 300px;
   background: white;
   color: var(--teamBlue);
-  margin-top: 20px;
+  
   line-height: 1.8;
   padding: 10px;
 }
 div.finished-checkbox {
-  width: 90vw;
+  width: 100%;
   text-align: center;
   padding-top: 10px;
+  align-self: flex-start;
+  height: fit-content;
 }
 
 div.finished-checkbox p.p-buy-now-validation{
