@@ -40,6 +40,10 @@ lastBuyNowBtn.addEventListener("click", validationChangePage);
 buyNowConditions.addEventListener("change", removeValidation);
 const pBuyNowValidation = document.querySelector(".p-buy-now-validation");
 
+/* User Data */
+var profileData;
+var adressData;
+
 /* buttonpage.addEventListener('click', changePage); */
 function changePage() {
   // switch based on page
@@ -65,7 +69,7 @@ function changePage() {
         bullets[indexpage - 1].classList.add("completed-pbar");
         bars[indexpage - 2].classList.add("bar-pbar-completed");
         // store data in an abject and clear form
-        const profileData = getFormProfileData();
+        profileData = getFormProfileData();
         clearFormProfileData();
         indexpage += 1;
       }
@@ -79,7 +83,7 @@ function changePage() {
         bullets[indexpage - 1].classList.add("completed-pbar");
         bars[indexpage - 2].classList.add("bar-pbar-completed");
         // store data in an abject and clear form
-        const adressData = getFormAddressData();
+        adressData = getFormAddressData();
         clearFormAddressData();
         indexpage += 1;
       }
@@ -211,7 +215,13 @@ function removeValidation() {
 
 function removeUserData() {
   for (let i in myOrder) {
-    myOrder.i = undefined
+    myOrder[i] = undefined;
   }
-  shippingPrice: 0
+  myOrder.shippingPrice = 0;
+  for (let i in profileData){
+    profileData[i] = undefined;
+  }
+  for (let i in adressData){
+    adressData[i] = undefined;
+  }
 }
