@@ -8,9 +8,9 @@ One week project for Assembler School of Software Engineering. Only one HTML fil
 
 Contributors names and contact info
 
-ex. Brahim Benalia
-ex. https://github.com/ibraslay
-ex. Hugo Gomez
-ex. https://github.com/labietelabiete
-ex. Armando Vieira
-ex. https://github.com/armandovieirag
+Brahim Benalia  
+https://github.com/ibraslay  
+Hugo Gomez  
+https://github.com/labietelabiete  
+Armando Vieira  
+https://github.com/armandovieirag  
