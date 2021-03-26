@@ -559,7 +559,7 @@ div.wrp-gift-message label {
 }
 
 input#gift-title {
-  margin-bottom: 0;
+  margin-bottom: 10px;
   border: 2px solid var(--teamGreen);
 }
 
