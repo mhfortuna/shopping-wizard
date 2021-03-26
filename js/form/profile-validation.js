@@ -31,7 +31,7 @@ export function validaUsername() {
   const userLabel = document.querySelector('label[for="Uname"]');
   const userp = document.querySelector(".p-Uname");
   // toggle classes
-  if (user.value == "") {
+  if (user.value == "" || user.value.length < 5) {
     addClasses(user, userLabel, userp);
     return false;
   } else {
