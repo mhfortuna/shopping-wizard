@@ -77,7 +77,7 @@ function changePage() {
       indexpage += 1;
       break;
     case 2:
-      if (formProfileValidity() || true) {
+      if (formProfileValidity()) {
         page.style.transform = positionTranslate(indexpage);
         page.classList.add("horizTranslate");
         //  ...
@@ -90,7 +90,7 @@ function changePage() {
       }
       break;
     case 3:
-      if (formAdressValidity() || true) {
+      if (formAdressValidity()) {
         page.style.transform = positionTranslate(indexpage);
         page.classList.add("horizTranslate");
         // ...
